@@ -1,1 +1,1 @@
-# zekefrater.gihub.io
+# zekefrater.github.io
