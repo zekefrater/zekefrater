@@ -1,2 +1,2 @@
-Zekiel Frater | Portfolio
+Zekiel Frater
 Content Creation
