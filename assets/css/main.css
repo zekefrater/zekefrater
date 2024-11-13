@@ -3881,42 +3881,47 @@ input, select, textarea {
 
 	}
 	
-	/* Ensure image is responsive */
+/* Ensure image is responsive and fills the width */
 .image.fill img {
     width: 100%;
     height: auto;
-    display: block;
+    display: block;  /* Prevents unwanted space below the image */
     max-width: 100%;
+    margin: 0;       /* Remove any default margin */
+    padding: 0;      /* Remove any default padding */
 }
 
-/* Ensure the image fills the width of the container */
-.intro .content .image img {
-    width: 100%;
-    height: auto;
-    display: block; /* Remove any space below the image */
-    margin: 0; /* Remove any default margins */
+/* Ensures the intro section doesn't have extra space */
+.intro {
+    margin: 0;
+    padding: 0;
 }
 
-/* Remove margins/paddings around elements */
+/* Reset header and content margins/paddings */
 .intro header, .intro .content {
     margin: 0;
     padding: 0;
 }
 
-/* Ensure the wrapper doesn't add unnecessary space after image */
+/* Make sure there's no space around the wrapper */
 #wrapper {
     margin: 0;
     padding: 0;
 }
 
-/* Make sure the space after the image is not caused by a fixed height */
+/* Mobile-specific adjustments (if any) */
 @media (max-width: 767px) {
-    /* Remove any unnecessary margin or padding on mobile */
     .intro .content {
-        margin-bottom: 0;
+        margin-bottom: 0;  /* Remove any margin after the image */
     }
-    /* Optional: you can also adjust padding here if needed */
+
     .intro header {
-        padding: 20px 10px;
+        padding: 10px 15px; /* Adjust padding if needed */
     }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
