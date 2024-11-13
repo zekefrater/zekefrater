@@ -3888,3 +3888,35 @@ input, select, textarea {
     display: block;
     max-width: 100%;
 }
+
+/* Ensure the image fills the width of the container */
+.intro .content .image img {
+    width: 100%;
+    height: auto;
+    display: block; /* Remove any space below the image */
+    margin: 0; /* Remove any default margins */
+}
+
+/* Remove margins/paddings around elements */
+.intro header, .intro .content {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure the wrapper doesn't add unnecessary space after image */
+#wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+/* Make sure the space after the image is not caused by a fixed height */
+@media (max-width: 767px) {
+    /* Remove any unnecessary margin or padding on mobile */
+    .intro .content {
+        margin-bottom: 0;
+    }
+    /* Optional: you can also adjust padding here if needed */
+    .intro header {
+        padding: 20px 10px;
+    }
+}
