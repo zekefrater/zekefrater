@@ -3878,50 +3878,71 @@ input, select, textarea {
 		body.is-ie #wrapper section > footer {
 			padding: 4rem;
 		}
-
-	}
-	
-/* Ensure image is responsive and fills the width */
+/* Ensure image is responsive */
 .image.fill img {
     width: 100%;
     height: auto;
-    display: block;  /* Prevents unwanted space below the image */
+    display: block;
     max-width: 100%;
-    margin: 0;       /* Remove any default margin */
-    padding: 0;      /* Remove any default padding */
+    margin: 0;
+    vertical-align: top; /* Prevent space below the image */
 }
 
-/* Ensures the intro section doesn't have extra space */
+/* Remove any margin or padding from intro section */
 .intro {
     margin: 0;
     padding: 0;
+    display: flex; /* Added for better alignment */
+    flex-direction: column; /* Ensure elements stack vertically */
+    justify-content: center; /* Optional: Center content */
+    align-items: center; /* Center the image horizontally */
 }
 
-/* Reset header and content margins/paddings */
+/* Remove margin/padding around the content and header */
 .intro header, .intro .content {
     margin: 0;
     padding: 0;
 }
 
-/* Make sure there's no space around the wrapper */
+/* Prevent any unwanted margin on the wrapper */
 #wrapper {
     margin: 0;
     padding: 0;
 }
 
+/* Remove the gap after the image */
+.intro .content {
+    margin-bottom: 0;
+}
+
+/* Reset section and other block-level elements to avoid default spacing */
+section {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure no margin or padding on body/html */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Apply box-sizing globally to avoid issues with padding/borders */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 /* Mobile-specific adjustments (if any) */
 @media (max-width: 767px) {
-    .intro .content {
-        margin-bottom: 0;  /* Remove any margin after the image */
-    }
-
     .intro header {
         padding: 10px 15px; /* Adjust padding if needed */
     }
-}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    /* Ensure no space after the image */
+    .intro .content {
+        margin-bottom: 0;
+    }
 }
