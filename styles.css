@@ -1,0 +1,42 @@
+.zvisional {
+    text-align: left;            /* Center text inside the section */
+    padding: 20px;                /* Padding around the content */
+    background-color: transparent; /* Make background transparent to avoid the white box effect */
+    border-radius: 0;             /* Remove rounded corners */
+    box-shadow: none;             /* Remove any shadows */
+}
+
+.zvisional header {
+    margin-bottom: 20px;          /* Space below header */
+}
+
+.zvisional h2 {
+    margin: 10px 0;               /* Space above and below the subheading */
+}
+
+.zvisional p {
+    margin: 10px 0;               /* Space above and below paragraph */
+}
+
+.social-icons {
+    display: flex;                /* Use flexbox for horizontal alignment */
+    justify-content: left;      /* Center align icons */
+    flex-wrap: wrap;              /* Wrap them to the next line if necessary */
+}
+
+.social-icons a {
+    margin: 10px;                 /* Space between icons */
+    text-decoration: none;         /* Remove underline from links */
+    color: #333;                   /* Icon color */
+    transition: color 0.3s, transform 0.3s; /* Smooth hover effects */
+}
+
+.social-icons a:hover {
+    color: #0077cc;               /* Change color on hover */
+    transform: scale(1.1);        /* Slightly enlarge on hover */
+}
+
+/* Icon styles for better appearance */
+.icon {
+    font-size: 24px;              /* Adjust font size of icons */
+}
