@@ -42,7 +42,16 @@
     font-size: 24px;                /* Adjust font size of icons */
 }
 
-
+/* Aligning content-right to the right side */
+.content-right {
+    display: flex;
+    flex-direction: column;         /* Align items vertically in a column */
+    justify-content: flex-start;    /* Align content to the top */
+    align-items: flex-end;          /* Align the content to the right */
+    text-align: left;               /* Align text to the left inside the container */
+    padding-right: 20px;            /* Optional: Adjust padding if needed */
+    width: 100%;                    /* Ensure the container takes full width */
+}
 
 /* Ensure sections are properly spaced */
 .section {
