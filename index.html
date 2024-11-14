@@ -1,4 +1,551 @@
-<!DOCTYPE HTML>
+
+
+Share
+
+
+You said:
+why is this part of the code not on the right side of the page?  <!-- Third Section (Canterbury Cricket) -->
+    <section>
+        <header>
+            <h2>Canterbury Cricket</h2>
+        </header>
+        <div class="content">
+            <h3>Digital Content Creator</h3>
+            <strong>Oct 2023 - Apr 2024</strong>
+            <p>As the Digital Content Creator, I conceptualized and coordinated diverse projects, balancing social media administration, content development, and on-field sports videography.</p>
+            <ul class="feature-icons">
+                <li class="icon solid fa-home">Community</li>                            
+                <li class="icon solid fa-level-up-alt">High Performance</li>
+                <li class="icon solid fa-tv">Commercial</li>
+                <li class="icon solid fa-dollar-sign">Sponsors</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Fourth Section (Embedded LinkedIn Post) -->
+    <section class="responsive-iframe-container">
+        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7140976295697338368" 
+                frameborder="0" 
+                allowfullscreen="" 
+                title="Embedded post"></iframe>
+    </section>
+ChatGPT said:
+ChatGPT
+If this section isn’t aligning to the right side of the page as expected, the issue likely lies in the CSS. Here are some common reasons and fixes:
+
+Missing a float or flex styling: Ensure the section or its containing elements are set to float: right; or use a flexbox or grid layout with alignment properties.
+
+Parent container properties: If the parent container (such as a div or the main layout container) is set to a specific alignment, it can override child elements. Check if there is a CSS rule that centers or restricts child elements from floating to the right.
+
+Width specification: Without a set width, elements may not fully align as intended. Try setting a width (e.g., width: 50%;) for this section and the adjacent one to position them side by side.
+
+CSS specificity: If another CSS rule with higher specificity targets the section or elements within it, it might override your styling. Make sure your CSS selectors for this section are specific enough.
+
+Custom class: You could add a custom class (e.g., .right-align) to this section and apply float: right; or align-items: flex-end; in CSS, depending on the layout approach.
+
+Try these adjustments and see if the section aligns correctly. If it doesn’t, providing the CSS could help identify any other potential conflicts.
+
+
+
+
+
+
+You said:
+what do i change?
+ChatGPT said:
+ChatGPT
+To make this section align to the right side of the page, you can modify or add CSS rules directly. Here’s a quick step-by-step:
+
+Add a Custom Class to Your Section: First, add a class to your section so you can apply specific styles.
+
+html
+Copy code
+<!-- Third Section (Canterbury Cricket) -->
+<section class="right-align">
+    <header>
+        <h2>Canterbury Cricket</h2>
+    </header>
+    <div class="content">
+        <h3>Digital Content Creator</h3>
+        <strong>Oct 2023 - Apr 2024</strong>
+        <p>As the Digital Content Creator, I conceptualized and coordinated diverse projects, balancing social media administration, content development, and on-field sports videography.</p>
+        <ul class="feature-icons">
+            <li class="icon solid fa-home">Community</li>                            
+            <li class="icon solid fa-level-up-alt">High Performance</li>
+            <li class="icon solid fa-tv">Commercial</li>
+            <li class="icon solid fa-dollar-sign">Sponsors</li>
+        </ul>
+    </div>
+</section>
+Update the CSS to Align This Section: Now, add CSS for the .right-align class. Here are two common approaches:
+
+Using Float:
+
+css
+Copy code
+.right-align {
+    float: right;
+    width: 45%; /* Adjust width as needed */
+    margin-left: 20px; /* Optional, for spacing between sections */
+}
+Using Flexbox (if the parent container has display: flex;):
+
+css
+Copy code
+.right-align {
+    align-self: flex-end; /* Aligns this section to the end of the flex container */
+    width: 45%; /* Adjust width as needed */
+    margin-left: auto; /* Pushes the section to the right */
+}
+Clear Floats (if Using Float Method): If you use float: right;, you may need to clear the float afterward. You can add this CSS rule to the next section to prevent it from wrapping around the floated content.
+
+css
+Copy code
+.responsive-iframe-container {
+    clear: both;
+}
+Try these changes, and let me know if it aligns as expected.
+
+
+
+
+
+
+You said:
+fix this code to work on destop and mobile 
+ChatGPT said:
+ChatGPT
+To make your code responsive on both desktop and mobile, let's use CSS media queries. I'll add responsive styles to ensure that the sections align properly on larger screens (like desktops) and stack vertically on smaller screens (like mobile).
+
+Here’s an updated version of your HTML and CSS with responsiveness in mind:
+
+HTML
+First, add classes to the sections you want to style specifically. I’ll assume that you want the Canterbury Cricket section to align right on larger screens but stack on mobile.
+
+html
+Copy code
+<!-- Third Section (Canterbury Cricket) -->
+<section class="section right-align">
+    <header>
+        <h2>Canterbury Cricket</h2>
+    </header>
+    <div class="content">
+        <h3>Digital Content Creator</h3>
+        <strong>Oct 2023 -
+
+
+
+
+
+You said:
+    <!-- Fourth Section (Embedded LinkedIn Post) -->
+    <section class="responsive-iframe-container">
+        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7140976295697338368" 
+                frameborder="0" 
+                allowfullscreen="" 
+                title="Embedded post"></iframe>
+    </section>
+ChatGPT said:
+ChatGPT
+To make both sections responsive for desktop and mobile, here’s how to structure the CSS. This will ensure the Canterbury Cricket section is positioned on the right side on desktop but stacks above the LinkedIn iframe on mobile.
+
+Full HTML and CSS Example:
+Here's an updated version with classes for styling:
+
+HTML
+html
+Copy code
+<!-- Third Section (Canterbury Cricket) -->
+<section class="section right-align">
+    <header>
+        <h2>Canterbury Cricket</h2>
+    </header>
+    <div class="content">
+        <h3>Digital Content Creator</h3>
+        <strong>Oct 2023 - Apr 2024</strong>
+        <p>As the Digital Content Creator, I conceptualized and coordinated diverse projects, balancing social media administration, content development, and on-field sports videography.</p>
+        <ul class="feature-icons">
+            <li class="icon solid fa-home">Community</li>
+            <li class="icon solid fa-level-up-alt">High Performance</li>
+            <li class="icon solid fa-tv">Commercial</li>
+            <li class="icon solid fa-dollar-sign">Sponsors</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Fourth Section (Embedded LinkedIn Post) -->
+<section class="section responsive-iframe-container">
+    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7140976295697338368" 
+            frameborder="0" 
+            allowfullscreen="" 
+            title="Embedded post"></iframe>
+</section>
+CSS
+To style it responsively, use media queries:
+
+css
+Copy code
+/* General styles for both sections */
+.section {
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+    /* Container for both sections */
+    .section {
+        display: inline-block;
+        width: 48%; /* Adjust as needed */
+        vertical-align: top;
+    }
+
+    /* Right-align the Canterbury Cricket section */
+    .right-align {
+        float: right;
+        text-align: right;
+        margin-left: 2%;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    .section {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        float: none;
+    }
+    
+    .responsive-iframe-container iframe {
+        width: 100%;
+        height: auto; /* Ensures the iframe scales responsively */
+    }
+}
+Explanation
+Desktop Layout (min-width: 768px):
+
+On screens wider than 768px, each section takes up about 48% of the width, and the Canterbury Cricket section floats to the right. This creates a two-column layout.
+Mobile Layout (max-width: 767px):
+
+On smaller screens, each section stacks vertically with 100% width. The float properties are removed for better stacking.
+This approach should provide a clean and responsive layout that works across devices. Let me know if you have specific preferences for how the sections should appear on different screen sizes!
+
+
+2/2
+
+You said:
+the styles didnt apply
+ChatGPT said:
+ChatGPT
+If the styles didn’t apply, there could be a few reasons, such as incorrect CSS linking, specificity issues, or other CSS rules overriding the styles. Let's go through a few steps to ensure the CSS is correctly applied and troubleshoot.
+
+Check CSS Link:
+
+Make sure the CSS file is correctly linked in your HTML file. Your <link> tag should look like this and be placed in the <head> section of your HTML:
+html
+Copy code
+<link rel="stylesheet" href="styles.css">
+Replace "styles.css" with the actual path to your CSS file if it’s different.
+Inline CSS for Testing:
+
+To confirm that the styles are correct, you can temporarily add inline CSS in a <style> block within the HTML file. This can help isolate the issue if other CSS files are conflicting.
+
+html
+Copy code
+<style>
+    /* General styles for both sections */
+    .section {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    /* Desktop styles */
+    @media (min-width: 768px) {
+        /* Container for both sections */
+        .section {
+            display: inline-block;
+            width: 48%; /* Adjust as needed */
+            vertical-align: top;
+        }
+
+        /* Right-align the Canterbury Cricket section */
+        .right-align {
+            float: right;
+            text-align: right;
+            margin-left: 2%;
+        }
+    }
+
+    /* Mobile styles */
+    @media (max-width: 767px) {
+        .section {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            float: none;
+        }
+
+        .responsive-iframe-container iframe {
+            width: 100%;
+            height: auto; /* Ensures the iframe scales responsively */
+        }
+    }
+</style>
+Use DevTools to Inspect Elements:
+
+Open your browser’s developer tools (usually F12 or right-click > "Inspect") and check if the styles are applying to the .section and .right-align classes. If not, look for conflicting styles or see if another rule has higher specificity.
+Clear Cache:
+
+Sometimes, browsers cache CSS files. Clear your browser cache or use a "hard refresh" (Ctrl + Shift + R on Windows or Command + Shift + R on Mac) to ensure the latest CSS is loaded.
+Let me know if the inline CSS works, and we can further investigate from there!
+
+
+
+
+
+
+You said:
+fix styles sheet: .zvisional {
+    text-align: left;            /* Center text inside the section */
+    padding: 20px;                /* Padding around the content */
+    background-color: transparent; /* Make background transparent to avoid the white box effect */
+    border-radius: 0;             /* Remove rounded corners */
+    box-shadow: none;             /* Remove any shadows */
+}
+
+.zvisional header {
+    margin-bottom: 20px;          /* Space below header */
+}
+
+.zvisional h2 {
+    margin: 10px 0;               /* Space above and below the subheading */
+}
+
+.zvisional p {
+    margin: 10px 0;               /* Space above and below paragraph */
+}
+
+.social-icons {
+    display: flex;                /* Use flexbox for horizontal alignment */
+    justify-content: left;      /* Center align icons */
+    flex-wrap: wrap;              /* Wrap them to the next line if necessary */
+}
+
+.social-icons a {
+    margin: 10px;                 /* Space between icons */
+    text-decoration: none;         /* Remove underline from links */
+    color: #333;                   /* Icon color */
+    transition: color 0.3s, transform 0.3s; /* Smooth hover effects */
+}
+
+.social-icons a:hover {
+    color: #0077cc;               /* Change color on hover */
+    transform: scale(1.1);        /* Slightly enlarge on hover */
+}
+
+/* Icon styles for better appearance */
+.icon {
+    font-size: 24px;              /* Adjust font size of icons */
+}
+
+/* Make iframe container responsive */
+.responsive-iframe-container {
+    position: relative;
+    padding-bottom: 56.25%;  /* Aspect ratio of 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    width: 100%;  /* Ensures it fills the container */
+}
+
+/* Ensure iframe fills the container */
+.responsive-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* General Styling */
+.section {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content-right {
+    width: 100%;
+}
+
+/* Flexbox Layout for Desktop */
+@media (min-width: 768px) {
+    .section {
+        display: flex;
+        flex-direction: column;
+        width: 45%; /* Adjust as needed */
+        margin: 0 20px; /* Add margin for spacing */
+    }
+
+    /* Align .content-right section to the right */
+    .content-right {
+        order: 1;
+        float: right;
+    }
+}
+
+/* Responsive Iframe */
+.responsive-iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    max-width: 500px; /* Adjust max-width as needed */
+    border: none;
+}
+
+/* Mobile Styling */
+@media (max-width: 767px) {
+    .section {
+        display: block;
+        width: 100%; /* Full width on mobile */
+        margin: 0; /* Remove margin on mobile */
+    }
+}
+ChatGPT said:
+ChatGPT
+Here are some improvements and fixes to your stylesheet to make sure it aligns properly on desktop and mobile, corrects any conflicting styles, and simplifies responsiveness. Here’s a modified version of your CSS with comments on each change:
+
+css
+Copy code
+/* General Styling */
+.zvisional {
+    text-align: left;               /* Align text to the left inside the section */
+    padding: 20px;                  /* Padding around the content */
+    background-color: transparent;   /* Make background transparent */
+    border-radius: 0;               /* Remove rounded corners */
+    box-shadow: none;               /* Remove any shadows */
+}
+
+.zvisional header {
+    margin-bottom: 20px;            /* Space below header */
+}
+
+.zvisional h2 {
+    margin: 10px 0;                 /* Space above and below the subheading */
+}
+
+.zvisional p {
+    margin: 10px 0;                 /* Space above and below paragraph */
+}
+
+.social-icons {
+    display: flex;                  /* Flexbox for horizontal alignment */
+    justify-content: flex-start;    /* Align icons to the left */
+    flex-wrap: wrap;                /* Wrap icons to the next line if necessary */
+}
+
+.social-icons a {
+    margin: 10px;                   /* Space between icons */
+    text-decoration: none;          /* Remove underline from links */
+    color: #333;                    /* Icon color */
+    transition: color 0.3s, transform 0.3s; /* Smooth hover effects */
+}
+
+.social-icons a:hover {
+    color: #0077cc;                 /* Change color on hover */
+    transform: scale(1.1);          /* Slightly enlarge on hover */
+}
+
+/* Icon styles for better appearance */
+.icon {
+    font-size: 24px;                /* Adjust font size of icons */
+}
+
+/* Make iframe container responsive */
+.responsive-iframe-container {
+    position: relative;
+    padding-bottom: 56.25%;         /* Aspect ratio of 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Ensure iframe fills the container */
+.responsive-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* General Section Styling */
+.section {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+    .section {
+        display: flex;
+        flex-direction: column;
+        width: 45%;                /* Adjust section width */
+        margin: 0 20px;            /* Add spacing between sections */
+    }
+
+    /* Right-align content-right section on larger screens */
+    .content-right {
+        order: 1;
+        float: right;
+        width: 45%;                /* Adjust width as needed */
+    }
+}
+
+/* Responsive Iframe */
+.responsive-iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;              /* Adjust max-width as needed */
+    border: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+    .section {
+        display: block;
+        width: 100%;               /* Full width on mobile */
+        margin: 0;                 /* Remove margin on mobile */
+    }
+
+    /* Override content-right to stack on mobile */
+    .content-right {
+        width: 100%;
+        float: none;
+        order: 0;
+    }
+}
+Explanation of Key Fixes
+.social-icons alignment:
+
+Changed justify-content: left; to justify-content: flex-start; to ensure icons align correctly to the left.
+responsive-iframe-container iframe:
+
+Moved max-width: 500px; within the desktop styles or remove if you want it full-width. This ensures that on mobile it remains flexible without limiting the width.
+Updated .content-right for mobile:
+
+On mobile, float: none; and width: 100%; ensure that .content-right sections stack naturally.
+General Section Styling:
+
+Use width: 100%; on mobile for full-width stacking.
+These changes will ensure your layout is consistent on both desktop and mobile, with clean alignment and flexibility. Let me know if you see improvements or need further adjustments!
+
+
+
+
+
+
+You said:
+is that styling linked pproperly to this HTML, and uis there any conflicts: <!DOCTYPE HTML>
 <!--
 	Zekiel Frater | Portfolio
 	Videography | @zekielfrater
@@ -477,6 +1024,759 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 									<ul class="icons">
 										<li><a href="https://www.facebook.com/people/Zeke-Frater/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 										<li><a href="https://www.instagram.com/zekielfrater/" target="_blank" < class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://www.linkedin.com/in/zeke-frater-0a7178199/?originalSubdomain=nz" target="_blank" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li> 
+									</ul>
+								</li>
+							</ul>
+						</footer>
+					</section>
+
+				<!-- Copyright -->
+					<div class="copyright">&copy; Zekiel Frater. All rights reserved. </div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
+ChatGPT said:
+ChatGPT
+Your HTML seems mostly set up correctly, but there are a few things to check:
+
+Observations and Issues
+Double DOCTYPE Declaration: There’s a duplicate <!DOCTYPE html> declaration at the start, which should be removed to avoid confusion.
+
+CSS Link Order and Potential Conflicts:
+
+The two CSS files, styles.css and assets/css/main.css, are both included in the <head> section.
+Ensure that assets/css/main.css does not override styles in styles.css, unless intentional. If specific styles need to take precedence, load styles.css last or add specificity to the selectors in that file.
+Sections Outside <body>:
+
+Several sections, including the "Official Tumblers" and "Yoobee Colleges," are placed outside the <body> tag. All content should be inside the <body>...</body> tags for proper rendering.
+Broken Links:
+
+One of your Instagram links has a misplaced < tag:
+html
+Copy code
+<a href="https://www.instagram.com/zekielfrater/" target="_blank" < class="icon brands fa-instagram"><span class="label">Instagram</span></a>
+Remove the extraneous < to correct the HTML.
+Taggbox Widgets:
+
+The Taggbox widgets appear to be set up correctly, but check that their data-widget-id values are correct.
+If the Taggbox widget isn’t displaying as expected, confirm the script is loading correctly and the IDs match those from your Taggbox account.
+Footer Icons:
+
+The section labeled <!-- Elements --> appears commented out, but if it is meant to be visible, you’ll need to uncomment it.
+Form Submission Link:
+
+In the "Get in touch" section, the form action sends an email through FormSubmit. Verify that this email service is set up as expected.
+Recommendations for Clarity and Consistency
+HTML Validator:
+Run your HTML through a validator to catch any minor syntax errors (like missing closing tags or attributes).
+Browser Developer Console:
+Use the browser’s Developer Console (F12) to check for any errors related to the CSS or JavaScript links.
+Example of Fixes
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zekiel Frater</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="is-preload">
+
+<div id="wrapper">
+    <!-- Sections go here -->
+</div>
+
+</body>
+</html>
+With these adjustments, your HTML should be well-organized, with styles applied consistently. Let me know if you'd like specific assistance with CSS conflicts.
+
+
+
+
+
+
+You said:
+can you rewrite it for me to copy paste
+ChatGPT said:
+ChatGPT
+Here’s a streamlined and corrected version of your HTML. I’ve ensured the elements are well-organized, removed duplicated DOCTYPE tags, and fixed missing or mismatched tags and attributes.
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zekiel Frater</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Intro Section -->
+    <section class="intro">
+        <header>
+            <h1>Zekiel Frater</h1>
+            <p>Content Creator | Videography</p>
+
+            <!-- Social Links -->
+            <ul class="actions">
+                <li><a href="https://www.facebook.com/profile.php?id=61568211203923&mibextid=LQQJ4d" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="https://www.instagram.com/zekielfrater/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="https://www.linkedin.com/in/zeke-frater-0a7178199/" target="_blank" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+            </ul>
+
+            <!-- Scroll Link -->
+            <ul class="actions">
+                <li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
+            </ul>
+        </header>
+
+        <!-- Image -->
+        <div class="content">
+            <span class="image fill" data-position="center">
+                <img src="images/gallery/fulls/InternationalHosp-2.JPG" alt="Zekiel Frater Video" />
+            </span>
+        </div>
+    </section>
+
+    <!-- First Section (Official Tumblers) -->
+    <section id="first">
+        <header>
+            <h2>Official Tumblers</h2>
+        </header>
+        <div class="content">
+            <ul class="icons">
+                <li><a href="https://www.youtube.com/@OfficialTumblers/" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+                <li><a href="https://www.instagram.com/officialtumblers/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            </ul>
+            <p><strong>Content Creator</strong> <br> <strong>Dec 2013 - Aug 2016</strong></p>
+            <p>I created engaging video content for YouTube and Instagram, managed social media, and ran sponsorships and partnerships.</p>
+            <div class="taggbox" style="width:100%;height:100%" data-widget-id="2133080" data-tags="false"></div>
+            <script src="https://widget.taggbox.com/embed-lite.min.js" type="text/javascript"></script>
+        </div>
+    </section>
+
+    <!-- Second Section (Yoobee Colleges) -->
+    <section>
+        <header>
+            <h2>Yoobee Colleges</h2>
+        </header>
+        <div class="content">
+            <h3>Level 5 & 6 Diploma in Screen Production</h3>
+            <strong>2021 & 2022</strong>
+            <p>Showcased creativity and design skills on diverse projects.</p>
+            <ul class="feature-icons">
+                <li class="icon solid fa-laptop">Documentary</li>
+                <li class="icon solid fa-play">Live Studio</li>
+                <li class="icon solid fa-music">Music Video</li>
+                <li class="icon solid fa-film">Short Film</li>
+            </ul>
+            <div class="taggbox" style="width:100%;height:100%" data-widget-id="2133083" data-tags="false"></div>
+            <script src="https://widget.taggbox.com/embed-lite.min.js" type="text/javascript"></script>
+        </div>
+    </section>
+
+    <!-- Third Section (Canterbury Cricket) -->
+    <section class="section content-right">
+        <header>
+            <h2>Canterbury Cricket</h2>
+        </header>
+        <div class="content">
+            <h3>Digital Content Creator</h3>
+            <strong>Oct 2023 - Apr 2024</strong>
+            <p>Conceptualized and coordinated projects, focusing on social media and sports videography.</p>
+            <ul class="feature-icons">
+                <li class="icon solid fa-home">Community</li>
+                <li class="icon solid fa-level-up-alt">High Performance</li>
+                <li class="icon solid fa-tv">Commercial</li>
+                <li class="icon solid fa-dollar-sign">Sponsors</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Fourth Section (Embedded LinkedIn Post) -->
+    <section class="section responsive-iframe-container">
+        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7140976295697338368" frameborder="0" allowfullscreen title="Embedded post"></iframe>
+    </section>
+
+    <!-- Fifth Section (zvisional.) -->
+    <section>
+        <header>
+            <h2>zvisional.</h2>
+        </header>
+        <div class="content">
+            <h3>Content Creator</h3>
+            <strong>Established Nov 2024</strong>
+            <p>Connect with me on:</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61568211203923&mibextid=LQQJ4d" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
+                <a href="https://www.youtube.com/@zvisional" class="icon brands fa-youtube"><span class="label">YouTube</span></a>
+                <a href="https://www.tiktok.com/@zvisional" class="icon brands fa-tiktok"><span class="label">TikTok</span></a>
+                <a href="https://www.instagram.com/zvisional/" class="icon brands fa-instagram"><span class="label">Instagram</span></a>
+                <a href="https://vimeo.com/showcase/11450327" class="icon brands fa-vimeo"><span class="label">Vimeo</span></a>
+                <a href="https://www.behance.net/zekefrater" class="icon brands fa-behance"><span class="label">Behance</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section (Animation) -->
+    <section>
+        <header>
+            <h3>Animation</h3>
+            <p>University of Otago</p>
+        </header>
+        <div class="content">
+            <h3>Educational Video Editor</h3>
+            <strong>Jul 2022 - Sep 2022</strong>
+            <p>Created the short video "A Youth Guide To E-Cigarettes" for educational purposes.</p>
+            <div class="embed-container">
+                <iframe src="https://www.youtube.com/embed/lboJzLklSzk" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section (Sports) -->
+    <section>
+        <header>
+            <h3>Sports</h3>
+            <p>Wagner&Woolf - Elite College Sports Recruitment</p>
+        </header>
+        <div class="content">
+            <h3>JP Athlete Management</h3>
+            <strong>Jan 2023 - Aug 2023</strong>
+            <p>Developed brand identity and social media strategy for a college sports recruitment agency.</p>
+            <h4>Key Achievements</h4>
+            <ul>
+                <li><strong>Engagement:</strong> Increased followers by 2k across platforms.</li>
+                <li><strong>Strategy:</strong> Executed a video-focused social media strategy.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section>
+        <header>
+            <h2>Get in Touch</h2>
+        </header>
+        <div class="content">
+            <p><strong>Have a question?</strong> Reach out with a message, and I’ll get back to you ASAP!</p>
+            <form action="https://formsubmit.co/zekefrater@gmail.com" method="POST">
+                <div class="fields">
+                    <div class="field half">
+                        <input type="text" name="name" id="name" placeholder="Name" />
+                    </div>
+                    <div class="field half">
+                        <input type="email" name="email" id="email" placeholder="Email" />
+                    </div>
+                    <div class="field">
+                        <textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
+                    </div>
+                </div>
+                <ul class="actions">
+
+
+
+
+
+You said:
+theres  missing code, please include it all
+ChatGPT said:
+ChatGPT
+Certainly! Here’s the complete code with the final parts, including the closing tags for the form, sections, and document:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zekiel Frater</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Intro Section -->
+    <section class="intro">
+        <header>
+            <h1>Zekiel Frater</h1>
+            <p>Content Creator | Videography</p>
+
+            <!-- Social Links -->
+            <ul class="actions">
+                <li><a href="https://www.facebook.com/profile.php?id=61568211203923&mibextid=LQQJ4d" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="https://www.instagram.com/zekielfrater/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="https://www.linkedin.com/in/zeke-frater-0a7178199/" target="_blank" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+            </ul>
+
+            <!-- Scroll Link -->
+            <ul class="actions">
+                <li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
+            </ul>
+        </header>
+
+        <!-- Image -->
+        <div class="content">
+            <span class="image fill" data-position="center">
+                <img src="images/gallery/fulls/InternationalHosp-2.JPG" alt="Zekiel Frater Video" />
+            </span>
+        </div>
+    </section>
+
+    <!-- First Section (Official Tumblers) -->
+    <section id="first">
+        <header>
+            <h2>Official Tumblers</h2>
+        </header>
+        <div class="content">
+            <ul class="icons">
+                <li><a href="https://www.youtube.com/@OfficialTumblers/" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+                <li><a href="https://www.instagram.com/officialtumblers/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            </ul>
+            <p><strong>Content Creator</strong> <br> <strong>Dec 2013 - Aug 2016</strong></p>
+            <p>I created engaging video content for YouTube and Instagram, managed social media, and ran sponsorships and partnerships.</p>
+            <div class="taggbox" style="width:100%;height:100%" data-widget-id="2133080" data-tags="false"></div>
+            <script src="https://widget.taggbox.com/embed-lite.min.js" type="text/javascript"></script>
+        </div>
+    </section>
+
+    <!-- Second Section (Yoobee Colleges) -->
+    <section>
+        <header>
+            <h2>Yoobee Colleges</h2>
+        </header>
+        <div class="content">
+            <h3>Level 5 & 6 Diploma in Screen Production</h3>
+            <strong>2021 & 2022</strong>
+            <p>Showcased creativity and design skills on diverse projects.</p>
+            <ul class="feature-icons">
+                <li class="icon solid fa-laptop">Documentary</li>
+                <li class="icon solid fa-play">Live Studio</li>
+                <li class="icon solid fa-music">Music Video</li>
+                <li class="icon solid fa-film">Short Film</li>
+            </ul>
+            <div class="taggbox" style="width:100%;height:100%" data-widget-id="2133083" data-tags="false"></div>
+            <script src="https://widget.taggbox.com/embed-lite.min.js" type="text/javascript"></script>
+        </div>
+    </section>
+
+    <!-- Third Section (Canterbury Cricket) -->
+    <section class="section content-right">
+        <header>
+            <h2>Canterbury Cricket</h2>
+        </header>
+        <div class="content">
+            <h3>Digital Content Creator</h3>
+            <strong>Oct 2023 - Apr 2024</strong>
+            <p>Conceptualized and coordinated projects, focusing on social media and sports videography.</p>
+            <ul class="feature-icons">
+                <li class="icon solid fa-home">Community</li>
+                <li class="icon solid fa-level-up-alt">High Performance</li>
+                <li class="icon solid fa-tv">Commercial</li>
+                <li class="icon solid fa-dollar-sign">Sponsors</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Fourth Section (Embedded LinkedIn Post) -->
+    <section class="section responsive-iframe-container">
+        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7140976295697338368" frameborder="0" allowfullscreen title="Embedded post"></iframe>
+    </section>
+
+    <!-- Fifth Section (zvisional.) -->
+    <section>
+        <header>
+            <h2>zvisional.</h2>
+        </header>
+        <div class="content">
+            <h3>Content Creator</h3>
+            <strong>Established Nov 2024</strong>
+            <p>Connect with me on:</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61568211203923&mibextid=LQQJ4d" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
+                <a href="https://www.youtube.com/@zvisional" class="icon brands fa-youtube"><span class="label">YouTube</span></a>
+                <a href="https://www.tiktok.com/@zvisional" class="icon brands fa-tiktok"><span class="label">TikTok</span></a>
+                <a href="https://www.instagram.com/zvisional/" class="icon brands fa-instagram"><span class="label">Instagram</span></a>
+                <a href="https://vimeo.com/showcase/11450327" class="icon brands fa-vimeo"><span class="label">Vimeo</span></a>
+                <a href="https://www.behance.net/zekefrater" class="icon brands fa-behance"><span class="label">Behance</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section (Animation) -->
+    <section>
+        <header>
+            <h3>Animation</h3>
+            <p>University of Otago</p>
+        </header>
+        <div class="content">
+            <h3>Educational Video Editor</h3>
+            <strong>Jul 2022 - Sep 2022</strong>
+            <p>Created the short video "A Youth Guide To E-Cigarettes" for educational purposes.</p>
+            <div class="embed-container">
+                <iframe src="https://www.youtube.com/embed/lboJzLklSzk" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section (Sports) -->
+    <section>
+        <header>
+            <h3>Sports</h3>
+            <p>Wagner&Woolf - Elite College Sports Recruitment</p>
+        </header>
+        <div class="content">
+            <h3>JP Athlete Management</h3>
+            <strong>Jan 2023 - Aug 2023</strong>
+            <p>Developed brand identity and social media strategy for a college sports recruitment agency.</p>
+            <h4>Key Achievements</h4>
+            <ul>
+                <li><strong>Engagement:</strong> Increased followers by 2k across platforms.</li>
+                <li><strong>Strategy:</strong> Executed a video-focused social media strategy.</li>
+            </ul>
+        </div>
+    </section>
+
+				<!-- Elements -->
+				<!--
+					<section>
+						<header>
+							<h2>Elements</h2>
+						</header>
+						<div class="content">
+
+							<section>
+								<header>
+									<h3>Text</h3>
+								</header>
+								<div class="content">
+									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+									<hr />
+									<h2>Heading Level 2</h2>
+									<h3>Heading Level 3</h3>
+									<h4>Heading Level 4</h4>
+									<h5>Heading Level 5</h5>
+									<hr />
+									<h5>Blockquote</h5>
+									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+									<h5>Preformatted</h5>
+									<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+  print 'Iteration ' + i;
+  deck.shuffle();
+  i++;
+}
+
+print 'Sorted in ' + i + ' iterations.';</code></pre>
+								</div>
+							</section>
+
+							<section>
+								<header>
+									<h3>Lists</h3>
+								</header>
+								<div class="content">
+
+									<h4>Unordered</h4>
+									<ul>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Alternate</h4>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Ordered</h4>
+									<ol>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis viverra.</li>
+										<li>Felis enim feugiat.</li>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis lorem.</li>
+										<li>Felis enim et feugiat.</li>
+									</ol>
+									<h4>Icons</h4>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+
+									<h4>Actions</h4>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</div>
+							</section>
+
+							<section>
+								<header>
+									<h3>Table</h3>
+								</header>
+								<div class="content">
+									<h4>Default</h4>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+
+									<h4>Alternate</h4>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+								</div>
+							</section>
+
+							<section>
+								<header>
+									<h3>Buttons</h3>
+								</header>
+								<div class="content">
+									<ul class="actions">
+										<li><a href="#" class="button primary">Primary</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button large">Large</a></li>
+										<li><a href="#" class="button">Default</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+									</ul>
+									<ul class="actions">
+										<li><span class="button primary disabled">Disabled</span></li>
+										<li><span class="button disabled">Disabled</span></li>
+									</ul>
+								</div>
+							</section>
+
+							<section>
+								<header>
+									<h3>Form</h3>
+								</header>
+								<div class="content">
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field half">
+												<label for="demo-name">Name</label>
+												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+											</div>
+											<div class="field half">
+												<label for="demo-email">Email</label>
+												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+											</div>
+											<div class="field">
+												<label for="demo-category">Category</label>
+												<select name="demo-category" id="demo-category">
+													<option value="">-</option>
+													<option value="1">Manufacturing</option>
+													<option value="1">Shipping</option>
+													<option value="1">Administration</option>
+													<option value="1">Human Resources</option>
+												</select>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+												<label for="demo-priority-low">Low</label>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-high" name="demo-priority">
+												<label for="demo-priority-high">High</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-copy" name="demo-copy">
+												<label for="demo-copy">Email me a copy</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-human" name="demo-human" checked>
+												<label for="demo-human">Not a robot</label>
+											</div>
+											<div class="field">
+												<label for="demo-message">Message</label>
+												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+								</div>
+							</section>
+
+						</div>
+					</section>
+				-->
+
+				<!-- Contact Section -->
+<section>
+    <header>
+        <h2>Get in Touch</h2>
+    </header>
+    <div class="content">
+        <p><strong>Have a question?</strong> To get in contact, reach out with a message, and I’ll get back to you ASAP!</p>
+        <form action="https://formsubmit.co/zekefrater@gmail.com" method="POST">
+            <div class="fields">
+                <div class="field half">
+                    <input type="text" name="name" id="name" placeholder="Name" required />
+                </div>
+                <div class="field half">
+                    <input type="email" name="email" id="email" placeholder="Email" required />
+                </div>
+                <div class="field">
+                    <textarea name="message" id="message" placeholder="Message" rows="7" required></textarea>
+                </div>
+            </div>
+            <ul class="actions">
+                <li><input type="submit" value="Send Message" class="button primary" /></li>
+            </ul>
+        </form>
+    </div>
+</section>
+
+						<footer>
+							<ul class="items">
+								<li>
+									<h3>Email</h3>
+									<a href="#">zekefrater@gmail.com</a>
+								</li>
+								<li>
+									<h3>Phone</h3>
+									<a href="#">(021) 222 9152</a>
+								</li>
+								<li>
+									<h3>Address</h3>
+									<span>Christchurch, New Zealand</span>
+								</li>
+								<li>
+									<h3>Elsewhere</h3>
+									<ul class="icons">
+										<li><a href="https://www.facebook.com/people/Zeke-Frater/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<a href="https://www.instagram.com/zekielfrater/" target="_blank" < class="icon brands fa-instagram"><span class="label">Instagram</span></a>
 										<li><a href="https://www.linkedin.com/in/zeke-frater-0a7178199/?originalSubdomain=nz" target="_blank" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li> 
 									</ul>
 								</li>
