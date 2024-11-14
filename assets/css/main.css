@@ -3946,3 +3946,9 @@ body, html {
         margin-bottom: 0;
     }
 }
+/* Parent container of .content-right */
+.parent-container {
+    display: flex;              /* Enable flexbox */
+    justify-content: flex-start; /* Align items to the left by default */
+    /* Or use justify-content: space-between; or justify-content: flex-end; depending on how you want items spaced */
+}
