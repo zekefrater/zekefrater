@@ -77,7 +77,7 @@ section {
 }
 
 /* Adjustments for Mobile Devices */
-@media (max-width: 767px) {
+@media (max-width: 600px) {
     .intro header {
         padding: 10px 15px;  /* Specific adjustments for the header on mobile */
     }
