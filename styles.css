@@ -2,46 +2,6 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700,300i,600i,700i|Raleway:600,800");
 
-/* Ensure the content container spans full width */
-.content {
-  position: relative;
-  width: 100%;          /* Ensure the content takes the full width */
-  margin: 0;            /* Reset any unwanted margin */
-  padding: 0;           /* Reset padding if needed */
-  box-sizing: border-box; /* Include padding and borders in the width */
-}
-
-/* Image container - make it responsive */
-.content .image {
-  display: block;
-  position: relative;
-  width: 100%;          /* Full width */
-  height: auto;         /* Keep aspect ratio */
-  overflow: hidden;     /* Hide any overflow if image is larger */
-  box-sizing: border-box; /* Include padding and borders in the container */
-}
-
-/* Image styling */
-.content .image img {
-  width: 100%;          /* Image spans the full width */
-  height: auto;         /* Maintain aspect ratio */
-  display: block;       /* Remove inline-block spacing issues */
-}
-
-/* Optional: Maintain 16:9 aspect ratio for smaller screens */
-@media screen and (max-width: 768px) {
-  .content .image {
-    padding-top: 56.25%; /* 16:9 aspect ratio */
-  }
-}
-
-/* Additional content formatting */
-.content p, .content h3, .content .other-element {
-  margin-top: 20px;  /* Add spacing between sections */
-  padding: 0;        /* Remove any unwanted padding */
-  box-sizing: border-box; /* Prevent issues with padding */
-}}
-
 
 .youtube-embed-container {
     position: relative;
