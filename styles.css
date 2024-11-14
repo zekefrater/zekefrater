@@ -1,171 +1,123 @@
 /* Importing Font Awesome and Google Fonts */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700,300i,600i,700i|Raleway:600,800");
-
-
-.youtube-embed-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;  /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    margin-bottom: 20px;  /* Add space below the video */
+/* Ensure the content container spans full width */
+.content {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-p {
-    margin-top: 20px;  /* Optional: space above the paragraph for extra separation */
+/* Image container - make it responsive */
+.content .image {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-.youtube-embed-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+/* Image styling */
+.content .image img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* General Responsive Layout and Reset Styles */
-body.is-ie #wrapper section > footer {
-    padding: 4rem;
+/* Optional: Maintain 16:9 aspect ratio for smaller screens */
+@media screen and (max-width: 768px) {
+  .content .image {
+    padding-top: 56.25%;
+  }
 }
 
-/* Ensure image is responsive everywhere */
-.image.fill img {
-    width: 100%;                  /* Full width of the container */
-    height: 100%;                 /* Full height of the container */
-    object-fit: cover;            /* Maintain aspect ratio and cover the container */
-    margin: 0;                    /* Remove default margins */
-    vertical-align: top;          /* Prevent space below the image */
-}
-
-/* General Reset for the intro section */
-.intro {
-    margin: 0;
-    padding: 0;
-    display: flex;                /* Better alignment */
-    flex-direction: column;       
-    justify-content: center;       /* Center content vertically */
-    align-items: center;          /* Center content horizontally */
-}
-
-/* CSS Reset for elements */
-.intro header,
-.intro .content {
-    margin: 0;
-    padding: 0;
-}
-
-#wrapper {
-    margin: 0;
-    padding: 0;
-}
-
-.intro .content {
-    margin-bottom: 0;
-}
-
-section {
-    margin: 0;
-    padding: 0;
-}
-
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-/* Box-sizing globally */
+/* General Reset and Box-Sizing */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-/* Adjustments for mobile devices */
-@media (max-width: 767px) {
-    /* Specific adjustments for the header on mobile */
-    .intro header {
-        padding: 10px 15px; 
-    }
+/* Specific header styles */
+.intro header {
+  background-color: #333;   /* Dark background for header */
+  color: #fff;              /* White text */
+  padding: 20px 30px;       /* Ensure proper padding */
+  text-align: center;       /* Center the header text */
 }
 
-/* Adjustments for larger screens */
-@media (min-width: 768px) {
-    /* Additional styles can be added here if necessary */
-}
-
-/* Parent container of .content-right */
-.parent-container {
-    display: flex;               
-    justify-content: flex-start;  
-}
-
-/* General Styling */
+/* .zvisional styles */
 .zvisional {
-    text-align: left;              
-    padding: 20px;                 
-    background-color: transparent;  
-    border-radius: 0;              
-    box-shadow: none;              
+  text-align: left;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .zvisional header {
-    margin-bottom: 20px;          
+  margin-bottom: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 15px 20px;
 }
 
-.zvisional h2,
-.zvisional p {
-    margin: 10px 0;              
+/* Ensure proper spacing between sections */
+.section {
+  margin-bottom: 30px;
 }
 
-/* Social Icons Styles */
-.social-icons {
-    display: flex;                  
-    justify-content: flex-start;    
-    flex-wrap: wrap;                
-}
-
+/* General styling for social icons */
 .social-icons a {
-    margin: 10px;               
-    text-decoration: none;    
-    color: #333;              
-    transition: color 0.3s, transform 0.3s; 
+  margin: 10px;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .social-icons a:hover {
-    color: #0077cc;         
-    transform: scale(1.1);  
+  color: #0077cc;
+  transform: scale(1.1);
 }
 
-/* Icon styles */
-.icon {
-    font-size: 24px;        
+/* Responsive iframe container */
+.responsive-iframe-container iframe {
+  width: 100%;
+  height: 500px;
+  max-width: 100%;
+  border: none;
+  box-shadow: none;
 }
 
-/* Aligning .content-right to the right side */
-.content-right {
-    display: flex;
-    flex-direction: column;       
-    justify-content: flex-start;  
-    align-items: flex-end;        
-    text-align: left;             
-    padding-right: 20px;         
-    width: auto;                  
-    margin-left: auto;            
+/* Ensure video container has proper space below */
+.youtube-embed-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;  /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin-bottom: 20px; /* Add space below the video */
+}
+
+.youtube-embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Paragraph styling */
+p {
+  margin-top: 20px;
 }
 
 /* Ensure sections are properly spaced */
-.section {
-    margin-bottom: 30px; 
-}
-
-/* Responsive iframe styling */
-.responsive-iframe-container iframe {
-    width: 100%;                 
-    height: 500px;               
-    max-width: 100%;             
-    border: none;                
-    box-shadow: none;            
+section {
+  margin: 0;
+  padding: 0;
 }
