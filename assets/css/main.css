@@ -3949,7 +3949,7 @@ body, html {
 }
 
 /* General Styling */
-.zvisional {
+.zisional {
     text-align: left;               /* Align text to the left */
     padding: 20px;                  /* Padding around the content */
     background-color: transparent;   /* Make background transparent */
@@ -3957,12 +3957,12 @@ body, html {
     box-shadow: none;               /* Remove any shadows */
 }
 
-.zvisional header {
+.zisional header {
     margin-bottom: 20px;            /* Space below header */
 }
 
-.zvisional h2,
-.zvisional p {
+.zisional h2,
+.zisional p {
     margin: 10px 0;                 /* Space above and below elements */
 }
 
@@ -4008,8 +4008,7 @@ body, html {
 }
 
 /* Responsive iframe styling */
-.responsive-iframe-container iframe 
-{
+.responsive-iframe-container iframe {
     width: 100%;                 /* Make iframe take full width of its container */
     height: 500px;               /* Set your preferred height */
     max-width: 100%;             /* Prevent iframe from overflowing */
