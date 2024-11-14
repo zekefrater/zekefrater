@@ -2,17 +2,33 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700,300i,600i,700i|Raleway:600,800");
 
-.content .image {
-  display: block;       /* Ensures the container is treated as a block element */
+/* Ensure the image container spans full width */
+.content {
   position: relative;
-  width: 100%;          /* Make sure the image spans the full width of the container */
-  height: auto;         /* Maintain aspect ratio */
+  width: 100%;          /* Ensure the content takes the full width */
 }
 
+/* Make sure the container behaves like a responsive block */
+.content .image {
+  display: block;       /* Make the container a block-level element */
+  position: relative;
+  width: 100%;          /* Make sure the image container spans the full width of the parent */
+  height: auto;         /* Maintain the aspect ratio of the container */
+  overflow: hidden;     /* Hide any overflow if the image exceeds the container */
+}
+
+/* Responsive image styling */
 .content .image img {
-  width: 100%;          /* Make the image scale to the container width */
+  width: 100%;          /* Make the image scale with the container width */
   height: auto;         /* Maintain aspect ratio */
-  display: block;       /* Prevent any inline spacing issues */
+  display: block;       /* Ensure the image doesn’t have any unexpected margins/paddings */
+}
+
+/* Optional: If you need more control over aspect ratio for certain images (like 16:9 ratio) */
+@media screen and (max-width: 768px) {
+  .content .image {
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+  }
 }
 
 
