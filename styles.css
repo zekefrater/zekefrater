@@ -17,45 +17,6 @@
     height: 100%;
 }
 
-/* General Paragraph Styling */
-p {
-    margin-top: 20px;  /* Optional: space above the paragraph for extra separation */
-}
-
-/* General Reset for the Intro Section */
-.intro {
-    margin: 0;
-    padding: 0;
-    display: flex;                /* Better alignment */
-    flex-direction: column;
-    justify-content: center;      /* Center content vertically */
-    align-items: center;         /* Center content horizontally */
-}
-
-.intro header,
-.intro .content {
-    margin: 0;
-    padding: 0;
-}
-
-.intro .content {
-    margin-bottom: 0;
-}
-
-/* Body and HTML Global Reset */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-/* Box-sizing globally */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
 /* Wrapper and Section Styling */
 #wrapper {
     margin: 0;
