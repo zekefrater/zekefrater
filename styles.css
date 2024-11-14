@@ -42,7 +42,7 @@
     font-size: 24px;                /* Adjust font size of icons */
 }
 
-/* Aligning content-right to the right side */
+/* Aligning content-right to the right side within a gallery */
 .content-right {
     display: flex;
     flex-direction: column;         /* Align items vertically in a column */
@@ -50,7 +50,8 @@
     align-items: flex-end;          /* Align the content to the right */
     text-align: left;               /* Align text to the left inside the container */
     padding-right: 20px;            /* Optional: Adjust padding if needed */
-    width: 100%;                    /* Ensure the container takes full width */
+    width: auto;                    /* Ensure width is based on content size */
+    margin-left: auto;              /* Push content to the right side of the parent container */
 }
 
 /* Ensure sections are properly spaced */
