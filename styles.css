@@ -41,12 +41,15 @@
 .icon {
     font-size: 24px;                /* Adjust font size of icons */
 }
+
 /* Aligning content-right to the right side */
 .content-right {
     display: flex;
-    justify-content: flex-end; /* Align content to the right */
-    align-items: flex-start;  /* Optional: Align the items vertically */
-    text-align: right; /* Right-align text inside */
+    flex-direction: column;         /* Align items vertically in a column */
+    justify-content: flex-start;    /* Align content to the top */
+    align-items: flex-end;          /* Align the content to the right */
+    text-align: right;              /* Right-align text inside */
+    padding-right: 20px;            /* Optional: Adjust padding if needed */
 }
 
 /* Ensure sections are properly spaced */
@@ -61,3 +64,9 @@
     height: 500px; /* Or set your preferred height */
     border: none; /* Optional: to remove iframe border */
 }
+
+/* If needed, adjust the flex items of the content-right */
+.content-right > * {
+    margin-bottom: 10px; /* Space between the elements inside content-right */
+}
+
