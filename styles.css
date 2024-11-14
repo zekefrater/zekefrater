@@ -37,29 +37,17 @@ section {
     vertical-align: top;      /* Prevent space below the image */
 }
 
-/* Intro Header Styling (Restored to previous version with blue color) */
+/* Intro Header Styling (Only Blue Background Applied) */
 .intro header {
     background-color: #0077cc;   /* Blue background */
     color: #fff;                 /* White text */
     padding: 20px 30px;          /* Proper padding inside the header */
-    width: 100%;                 /* Ensure it spans the full width */
-    text-align: center;          /* Center the text inside */
-    position: relative;          /* For proper text positioning */
-    z-index: 10;                 /* Ensure it stays on top */
-    box-sizing: border-box;      /* Ensure padding doesn't affect width */
 }
 
 /* Adjustments for Mobile Devices */
 @media (max-width: 600px) {
     .intro header {
         padding: 10px 15px;      /* Adjust header padding for mobile */
-        text-align: center;      /* Center text on mobile */
-    }
-
-    /* Ensure the content does not shift too far to the left */
-    .intro header h1, .intro header h2 {
-        padding-left: 0;         /* Remove left padding on mobile */
-        padding-right: 0;        /* Remove right padding on mobile */
     }
 }
 
@@ -88,7 +76,6 @@ section {
     background-color: #0077cc;  /* Blue background for zvisional header */
     color: #fff;                /* White text */
     padding: 15px 20px;         /* Padding inside the header */
-    text-align: center;         /* Centered text in the zvisional header */
 }
 
 .zvisional h2,
