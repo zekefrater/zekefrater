@@ -41,69 +41,23 @@
 .icon {
     font-size: 24px;                /* Adjust font size of icons */
 }
-
-/* Make iframe container responsive */
-.responsive-iframe-container {
-    position: relative;
-    padding-bottom: 56.25%;         /* Aspect ratio of 16:9 */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    width: 100%;
+/* Aligning content-right to the right side */
+.content-right {
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    align-items: flex-start;  /* Optional: Align the items vertically */
+    text-align: right; /* Right-align text inside */
 }
 
-/* Ensure iframe fills the container */
-.responsive-iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* General Section Styling */
+/* Ensure sections are properly spaced */
 .section {
-    padding: 20px;
-    box-sizing: border-box;
+    margin-bottom: 30px; /* Space between sections */
 }
 
-/* Desktop Styles */
-@media (min-width: 768px) {
-    .section {
-        display: flex;
-        flex-direction: column;
-        width: 45%;                /* Adjust section width */
-        margin: 0 20px;            /* Add spacing between sections */
-    }
-
-    /* Right-align content-right section on larger screens */
-    .content-right {
-        order: 1;
-        float: right;
-        width: 45%;                /* Adjust width as needed */
-    }
-}
-
-/* Responsive Iframe */
+/* Styling the iframe to make it responsive */
 .responsive-iframe-container iframe {
     width: 100%;
-    height: 100%;
-    max-width: 500px;              /* Adjust max-width as needed */
-    border: none;
-}
-
-/* Mobile Styles */
-@media (max-width: 767px) {
-    .section {
-        display: block;
-        width: 100%;               /* Full width on mobile */
-        margin: 0;                 /* Remove margin on mobile */
-    }
-
-    /* Override content-right to stack on mobile */
-    .content-right {
-        width: 100%;
-        float: none;
-        order: 0;
-    }
+    max-width: 100%; /* Prevent iframe from overflowing */
+    height: 500px; /* Or set your preferred height */
+    border: none; /* Optional: to remove iframe border */
 }
