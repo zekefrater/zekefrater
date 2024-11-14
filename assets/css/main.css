@@ -3888,18 +3888,19 @@ input, select, textarea {
     vertical-align: top; /* Prevent space below the image */
 }
 
-/* Remove any margin or padding from intro section */
+/* General Reset for the intro section */
 .intro {
     margin: 0;
     padding: 0;
     display: flex; /* Added for better alignment */
-    flex-direction: column; /* Ensure elements stack vertically */
-    justify-content: center; /* Optional: Center content */
-    align-items: center; /* Center the image horizontally */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center the content horizontally */
 }
 
-/* Remove margin/padding around the content and header */
-.intro header, .intro .content {
+/* Remove margin/padding around the header and content */
+.intro header,
+.intro .content {
     margin: 0;
     padding: 0;
 }
@@ -3928,33 +3929,29 @@ body, html {
     height: 100%;
 }
 
-/* Apply box-sizing globally to avoid issues with padding/borders */
+/* Apply box-sizing globally */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/* Mobile-specific adjustments (if any) */
+/* Mobile-specific adjustments */
 @media (max-width: 767px) {
     .intro header {
         padding: 10px 15px; /* Adjust padding if needed */
     }
-
-    /* Ensure no space after the image */
-    .intro .content {
-        margin-bottom: 0;
-    }
 }
+
 /* Parent container of .content-right */
 .parent-container {
-    display: flex;              /* Enable flexbox */
-    justify-content: flex-start; /* Align items to the left by default */
-    /* Or use justify-content: space-between; or justify-content: flex-end; depending on how you want items spaced */
+    display: flex;                /* Enable flexbox */
+    justify-content: flex-start;  /* Align items to the left */
 }
+
 /* General Styling */
 .zvisional {
-    text-align: left;               /* Align text to the left inside the section */
+    text-align: left;               /* Align text to the left */
     padding: 20px;                  /* Padding around the content */
     background-color: transparent;   /* Make background transparent */
     border-radius: 0;               /* Remove rounded corners */
@@ -3965,14 +3962,12 @@ body, html {
     margin-bottom: 20px;            /* Space below header */
 }
 
-.zvisional h2 {
-    margin: 10px 0;                 /* Space above and below the subheading */
-}
-
+.zvisional h2,
 .zvisional p {
-    margin: 10px 0;                 /* Space above and below paragraph */
+    margin: 10px 0;                 /* Space above and below elements */
 }
 
+/* Social Icons Styles */
 .social-icons {
     display: flex;                  /* Flexbox for horizontal alignment */
     justify-content: flex-start;    /* Align icons to the left */
@@ -3991,21 +3986,21 @@ body, html {
     transform: scale(1.1);          /* Slightly enlarge on hover */
 }
 
-/* Icon styles for better appearance */
+/* Icon styles */
 .icon {
     font-size: 24px;                /* Adjust font size of icons */
 }
 
-/* Aligning content-right to the right side within a gallery */
+/* Aligning content-right to the right side */
 .content-right {
     display: flex;
-    flex-direction: column;         /* Align items vertically in a column */
+    flex-direction: column;         /* Align items vertically */
     justify-content: flex-start;    /* Align content to the top */
-    align-items: flex-end;          /* Align the content to the right */
-    text-align: left;               /* Align text to the left inside the container */
-    padding-right: 20px;            /* Optional: Adjust padding if needed */
-    width: auto;                    /* Ensure width is based on content size */
-    margin-left: auto;              /* Push content to the right side of the parent container */
+    align-items: flex-end;          /* Align items to the right */
+    text-align: left;               /* Align text to the left */
+    padding-right: 20px;            /* Right padding */
+    width: auto;                    /* Width based on content size */
+    margin-left: auto;              /* Push content to the right */
 }
 
 /* Ensure sections are properly spaced */
@@ -4013,15 +4008,15 @@ body, html {
     margin-bottom: 30px; /* Space between sections */
 }
 
-/* Styling the iframe to make it responsive */
+/* Responsive iframe styling */
 .responsive-iframe-container iframe {
     width: 100%;
+    height: 500px; /* Set your preferred height */
     max-width: 100%; /* Prevent iframe from overflowing */
-    height: 500px; /* Or set your preferred height */
-    border: none; /* Optional: to remove iframe border */
+    border: none; /* Remove iframe border */
 }
 
-/* If needed, adjust the flex items of the content-right */
+/* Space between elements inside content-right */
 .content-right > * {
-    margin-bottom: 10px; /* Space between the elements inside content-right */
+    margin-bottom: 10px; /* Space between elements */
 }
