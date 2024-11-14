@@ -17,33 +17,6 @@
     height: 100%;
 }
 
-/* Wrapper and Section Styling */
-#wrapper {
-    margin: 0;
-    padding: 0;
-}
-
-section {
-    margin: 0;
-    padding: 0;
-}
-
-/* Styling for Content Image */
-.image.fill img {
-    width: 100%;              /* Full width of the container */
-    height: 100%;             /* Full height of the container */
-    object-fit: cover;        /* Maintain aspect ratio and cover the container */
-    margin: 0;                /* Remove default margins */
-    vertical-align: top;      /* Prevent space below the image */
-}
-
-/* Intro Header Styling (Only Blue Background Applied) */
-.intro header {
-    background-color: #0077cc;   /* Blue background */
-    color: #fff;                 /* White text */
-    padding: 20px 30px;          /* Proper padding inside the header */
-}
-
 /* Adjustments for Mobile Devices */
 @media (max-width: 600px) {
     .intro header {
