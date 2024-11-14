@@ -1,98 +1,141 @@
-/* Importing Font Awesome and Google Fonts */
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700,300i,600i,700i|Raleway:600,800");
 /* Ensure the content container spans full width */
 .content {
   position: relative;
-  width: 100%;
+  width: 100%;      /* Make sure the content spans the full width of the container */
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;  /* Ensure padding and borders don't affect width/height */
 }
 
 /* Image container - make it responsive */
 .content .image {
   display: block;
   position: relative;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  box-sizing: border-box;
+  width: 100%;        /* Image spans full width */
+  height: auto;       /* Maintain aspect ratio */
+  overflow: hidden;   /* Prevent image from overflowing */
+  box-sizing: border-box;  /* Account for padding and borders */
 }
 
 /* Image styling */
 .content .image img {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 100%;        /* Ensure image spans the full width of the container */
+  height: auto;       /* Maintain aspect ratio */
+  display: block;     /* Remove any inline-block spacing */
 }
 
 /* Optional: Maintain 16:9 aspect ratio for smaller screens */
 @media screen and (max-width: 768px) {
   .content .image {
-    padding-top: 56.25%;
+    padding-top: 56.25%; /* 16:9 ratio */
   }
 }
 
-/* General Reset and Box-Sizing */
+/* General Reset for margins and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Apply border-box for all elements */
 }
 
-/* Specific header styles */
+/* Header styles for .intro section */
 .intro header {
   background-color: #333;   /* Dark background for header */
   color: #fff;              /* White text */
-  padding: 20px 30px;       /* Ensure proper padding */
-  text-align: center;       /* Center the header text */
+  padding: 20px 30px;       /* Proper padding inside the header */
+  width: 100%;              /* Ensure it spans the full width */
+  text-align: center;       /* Center the text inside */
 }
 
-/* .zvisional styles */
+/* Reset for intro content */
+.intro .content {
+  margin-bottom: 0;         /* Prevent unwanted margin */
+}
+
+/* zvisional section styles */
 .zvisional {
   text-align: left;
   padding: 20px;
-  background-color: transparent;
+  background-color: transparent; 
   border-radius: 0;
   box-shadow: none;
 }
 
 .zvisional header {
   margin-bottom: 20px;
-  background-color: #333;
-  color: #fff;
-  padding: 15px 20px;
+  background-color: #333;  /* Dark background */
+  color: #fff;             /* White text */
+  padding: 15px 20px;      /* Padding inside the header */
 }
 
-/* Ensure proper spacing between sections */
+/* General paragraph styling */
+p {
+  margin-top: 20px;  /* Add space above paragraphs */
+}
+
+/* Ensure sections have enough space */
 .section {
-  margin-bottom: 30px;
+  margin-bottom: 30px; 
 }
 
-/* General styling for social icons */
+/* Social Icons Styles */
+.social-icons {
+  display: flex;                 
+  justify-content: flex-start;    
+  flex-wrap: wrap;                
+}
+
 .social-icons a {
-  margin: 10px;
-  text-decoration: none;
-  color: #333;
-  transition: color 0.3s, transform 0.3s;
+  margin: 10px;               
+  text-decoration: none;    
+  color: #333;              
+  transition: color 0.3s, transform 0.3s; 
 }
 
 .social-icons a:hover {
-  color: #0077cc;
-  transform: scale(1.1);
+  color: #0077cc;         
+  transform: scale(1.1);  
 }
 
-/* Responsive iframe container */
+/* Icon styles */
+.icon {
+  font-size: 24px;        
+}
+
+/* Layout for .content-right */
+.content-right {
+  display: flex;
+  flex-direction: column;       
+  justify-content: flex-start;  
+  align-items: flex-end;        
+  text-align: left;             
+  padding-right: 20px;         
+  width: auto;                  
+  margin-left: auto;            
+}
+
+/* Ensure sections have proper margins */
+section {
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive iframe styling */
 .responsive-iframe-container iframe {
-  width: 100%;
-  height: 500px;
-  max-width: 100%;
-  border: none;
-  box-shadow: none;
+  width: 100%;                 
+  height: 500px;               
+  max-width: 100%;             
+  border: none;                
+  box-shadow: none;            
 }
 
-/* Ensure video container has proper space below */
+/* YouTube embed container styling */
 .youtube-embed-container {
   position: relative;
   width: 100%;
@@ -100,7 +143,7 @@
   height: 0;
   overflow: hidden;
   max-width: 100%;
-  margin-bottom: 20px; /* Add space below the video */
+  margin-bottom: 20px;  /* Space below the video */
 }
 
 .youtube-embed-container iframe {
@@ -109,15 +152,4 @@
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-/* Paragraph styling */
-p {
-  margin-top: 20px;
-}
-
-/* Ensure sections are properly spaced */
-section {
-  margin: 0;
-  padding: 0;
 }
