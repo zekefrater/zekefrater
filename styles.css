@@ -37,10 +37,21 @@ section {
     vertical-align: top;      /* Prevent space below the image */
 }
 
+/* Intro Header Styling (Restored to previous version) */
+.intro header {
+    background-color: #333;   /* Dark background for the header */
+    color: #fff;              /* White text */
+    padding: 20px 30px;       /* Proper padding inside the header */
+    width: 100%;              /* Ensure it spans the full width */
+    text-align: center;       /* Center the text inside */
+    position: relative;       /* For proper text positioning */
+    z-index: 10;              /* Ensure it stays on top */
+}
+
 /* Adjustments for Mobile Devices */
 @media (max-width: 600px) {
     .intro header {
-        padding: 10px 15px;  /* Specific adjustments for the header on mobile */
+        padding: 10px 15px;  /* Adjust header padding for mobile */
     }
 }
 
@@ -66,6 +77,9 @@ section {
 
 .zvisional header {
     margin-bottom: 20px;
+    background-color: #333;  /* Dark background for zvisional header */
+    color: #fff;             /* White text */
+    padding: 15px 20px;      /* Padding inside the header */
 }
 
 .zvisional h2,
