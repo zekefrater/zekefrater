@@ -1,7 +1,7 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700,300i,600i,700i|Raleway:600,800");
 
-/* Reset */
+/* Reset CSS */
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -26,6 +26,7 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
+/* Body styles */
 body {
     line-height: 1;
     -webkit-text-size-adjust: none;
@@ -34,10 +35,12 @@ body {
     color: #000000;
 }
 
+/* List styles */
 ol, ul {
     list-style: none;
 }
 
+/* Blockquote styles */
 blockquote, q {
     quotes: none;
 }
@@ -47,6 +50,7 @@ blockquote:before, blockquote:after, q:before, q:after {
     content: none;
 }
 
+/* Table styles */
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -60,7 +64,7 @@ html {
 }
 
 /* Box sizing */
-*, *:before, *:after {
+*, *::before, *::after {
     box-sizing: inherit;
 }
 
@@ -73,7 +77,7 @@ body, input, select, textarea {
     line-height: 2;
 }
 
-/* Heading Styles */
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
     color: #000000;
     font-family: "Raleway", Helvetica, sans-serif;
@@ -114,7 +118,7 @@ h6 {
     font-size: 0.625rem;
 }
 
-/* Link Styles */
+/* Links */
 a {
     text-decoration: none;
     color: #000000;
@@ -127,6 +131,7 @@ a:hover {
     border-bottom-color: transparent;
 }
 
+/* Strong and Italic */
 strong, b {
     font-weight: 600;
     color: #000000;
@@ -138,31 +143,6 @@ em, i {
 
 p {
     margin: 0 0 2rem 0;
-}
-
-/* Responsive Typography */
-@media screen and (max-width: 1920px) {
-    html {
-        font-size: 13pt;
-    }
-}
-
-@media screen and (max-width: 1152px) {
-    html {
-        font-size: 14pt;
-    }
-}
-
-@media screen and (max-width: 736px) {
-    html {
-        font-size: 12pt;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    html {
-        font-size: 11pt;
-    }
 }
 
 /* Row and Flexbox Styles */
@@ -195,6 +175,7 @@ button,
     text-transform: uppercase;
 }
 
+/* Submit Button */
 input[type="submit"].primary {
     background-color: #00ccff;
     color: #000000 !important;
@@ -212,9 +193,41 @@ form > .fields {
     text-align: center;
 }
 
-/* Media Queries */
+/* Image Styles */
+.image img {
+    border: 0;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 1920px) {
+    html {
+        font-size: 13pt;
+    }
+}
+
+@media (max-width: 1152px) {
+    html {
+        font-size: 14pt;
+    }
+}
+
+@media (max-width: 736px) {
+    html {
+        font-size: 12pt;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 11pt;
+    }
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
-    /* Mobile Styles */
     body {
         overflow-x: hidden; /* Prevent horizontal scrolling */
     }
@@ -224,14 +237,6 @@ form > .fields {
     }
 
     /* Adjust typography and spacing as needed */
-}
-
-/* Additional Styles and Elements */
-.image img {
-    border: 0;
-    display: block;
-    width: 100%;
-    height: auto;
 }
 
 /* Ensure Frame and Content Styles */
