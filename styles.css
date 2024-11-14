@@ -48,7 +48,7 @@
     flex-direction: column;         /* Align items vertically in a column */
     justify-content: flex-start;    /* Align content to the top */
     align-items: flex-end;          /* Align the content to the right */
-    text-align: right;              /* Right-align text inside */
+    text-align: left;              /* Right-align text inside */
     padding-right: 20px;            /* Optional: Adjust padding if needed */
 }
 
