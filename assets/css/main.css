@@ -3952,3 +3952,77 @@ body, html {
     justify-content: flex-start; /* Align items to the left by default */
     /* Or use justify-content: space-between; or justify-content: flex-end; depending on how you want items spaced */
 }
+/* General Styling */
+.zvisional {
+    text-align: left;               /* Align text to the left inside the section */
+    padding: 20px;                  /* Padding around the content */
+    background-color: transparent;   /* Make background transparent */
+    border-radius: 0;               /* Remove rounded corners */
+    box-shadow: none;               /* Remove any shadows */
+}
+
+.zvisional header {
+    margin-bottom: 20px;            /* Space below header */
+}
+
+.zvisional h2 {
+    margin: 10px 0;                 /* Space above and below the subheading */
+}
+
+.zvisional p {
+    margin: 10px 0;                 /* Space above and below paragraph */
+}
+
+.social-icons {
+    display: flex;                  /* Flexbox for horizontal alignment */
+    justify-content: flex-start;    /* Align icons to the left */
+    flex-wrap: wrap;                /* Wrap icons to the next line if necessary */
+}
+
+.social-icons a {
+    margin: 10px;                   /* Space between icons */
+    text-decoration: none;          /* Remove underline from links */
+    color: #333;                    /* Icon color */
+    transition: color 0.3s, transform 0.3s; /* Smooth hover effects */
+}
+
+.social-icons a:hover {
+    color: #0077cc;                 /* Change color on hover */
+    transform: scale(1.1);          /* Slightly enlarge on hover */
+}
+
+/* Icon styles for better appearance */
+.icon {
+    font-size: 24px;                /* Adjust font size of icons */
+}
+
+/* Aligning content-right to the right side within a gallery */
+.content-right {
+    display: flex;
+    flex-direction: column;         /* Align items vertically in a column */
+    justify-content: flex-start;    /* Align content to the top */
+    align-items: flex-end;          /* Align the content to the right */
+    text-align: left;               /* Align text to the left inside the container */
+    padding-right: 20px;            /* Optional: Adjust padding if needed */
+    width: auto;                    /* Ensure width is based on content size */
+    margin-left: auto;              /* Push content to the right side of the parent container */
+}
+
+/* Ensure sections are properly spaced */
+.section {
+    margin-bottom: 30px; /* Space between sections */
+}
+
+/* Styling the iframe to make it responsive */
+.responsive-iframe-container iframe {
+    width: 100%;
+    max-width: 100%; /* Prevent iframe from overflowing */
+    height: 500px; /* Or set your preferred height */
+    border: none; /* Optional: to remove iframe border */
+}
+
+/* If needed, adjust the flex items of the content-right */
+.content-right > * {
+    margin-bottom: 10px; /* Space between the elements inside content-right */
+}
+
