@@ -40,7 +40,7 @@
 
         <!-- Image -->
         <div class="content">
-            <span class="image fill" data-position="center">
+            <span class="image fill" data-position="flex">
                 <img src="images/gallery/fulls/InternationalHosp-2.JPG" alt="International Hospitality" />
             </span>
         </div>
@@ -139,7 +139,7 @@
     
     <!-- Experience Highlights Section -->
     <div class="experience-highlights">
-      <h3>Key Responsibilities & Achievements</h3>
+      <h3>Key Responsibilities</h3>
       <ul>
         <li>Created and managed content for social media platforms, including Instagram, Facebook, and YouTube.</li>
         <li>Developed digital marketing strategies to increase online visibility and engagement.</li>
@@ -175,7 +175,7 @@
     <h3>Content Creator</h3>
     <strong>Established Nov 2024</strong>
     <p>Connect with me on:</p>
-    <div class="social-icons">
+    <div class="icons">
       <a href="https://www.facebook.com/profile.php?id=61568211203923&mibextid=LQQJ4d" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
       <a href="https://www.youtube.com/@zvisional" class="icon brands fa-youtube"><span class="label">YouTube</span></a>
       <a href="https://www.tiktok.com/@zvisional" class="icon brands fa-tiktok"><span class="label">TikTok</span></a>
@@ -206,23 +206,23 @@
 
 <!-- Section (Sports) -->
 <section>
-        <header class="header-container">
-        <h2>Sports</h2>
-    </header>
-
+	<header class="header-container">
+		<h2 class="animated-heading">Sports</h2>
+	</header>
     <div class="content">
         <h3>JP Athlete Management</h3>
 
         <strong>Jan 2023 - Aug 2023</strong>
         <p>Developed a distinctive brand identity and social media strategy, growing the follower base and visibility for the college sports recruitment agency.</p>
-
-        <h4>Key Achievements</h4>
-        <ul>
-            <li><strong>Engagement:</strong> Increased 2k followers across platforms.</li>
-            <li><strong>Strategy:</strong> Executed a multi-platform social media strategy with a focus on video content.</li>
-        </ul>
-    </div>
-</section>
+		
+		<div class="experience-highlights">
+			<h3>Key Responsibilities</h3>
+			<ul>
+			  <li><strong>Engagement:</strong> Increased 2k followers across platforms.</li>
+			  <li><strong>Strategy:</strong> Executed a multi-platform social media strategy with a focus on video content.</li>
+			</ul>
+		  </div>
+     </section>
 
 				<!-- Elements -->
 				<!--
@@ -492,59 +492,110 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 					</section>
 				-->
 <!-- Get in Touch Section -->
+<!-- Get in Touch Section -->
 <div class="content">
-    <section class="section content" id="contact">
+    <section class="section" id="contact">
         <header class="header-container">
             <h2 class="animated-heading">Get in Touch</h2>
         </header>
-        <div class="content">
-            <p><strong>Got a question?</strong> Feel free to reach out, and I'll get back to you as soon as possible!</p>
-
+        <div class="contact-container">
+            <div class="text-container">
+                <p><strong>Got a question?</strong> Feel free to reach out, and I'll get back to you as soon as possible!</p>
+            </div>
             <!-- Contact Form -->
-            <form action="https://formsubmit.co/zekefrater@gmail.com" method="POST">
+            <form action="https://formsubmit.co/zekefrater@gmail.com" method="POST" class="form">
                 <div class="fields">
                     <div class="field half">
-                        <input type="text" name="name" id="name" placeholder="Your Name" />
+                        <input 
+                            type="text" 
+                            name="name" 
+                            id="name" 
+                            placeholder="Your Name" 
+                            required 
+                            aria-label="Your Name"
+                        />
                     </div>
                     <div class="field half">
-                        <input type="email" name="email" id="email" placeholder="Your Email" />
+                        <input 
+                            type="email" 
+                            name="email" 
+                            id="email" 
+                            placeholder="Your Email" 
+                            required 
+                            aria-label="Your Email"
+                        />
                     </div>
                     <div class="field">
-                        <textarea name="message" id="message" placeholder="Your Message" rows="7"></textarea>
+                        <textarea 
+                            name="message" 
+                            id="message" 
+                            placeholder="Your Message" 
+                            rows="7" 
+                            required 
+                            aria-label="Your Message"
+                        ></textarea>
                     </div>
                 </div>
                 <ul class="actions">
                     <li><input type="submit" value="Send Message" class="button primary" /></li>
                 </ul>
             </form>
-        </div> <!-- End of contact form content -->
-        </section> <!-- End of Contact Info Section -->
-        <!-- Contact Info Section -->
-        <section class="section content">
-            <ul class="items">
-                <li>
-                    <h3>Email</h3>
-                    <a href="mailto:zekefrater@gmail.com">zekefrater@gmail.com</a>
-                </li>
-                <li>
-                    <h3>Phone</h3>
-                    <a href="tel:(021) 222 9152">(021) 222 9152</a>
-                </li>
-                <li>
-                    <h3>Address</h3>
-                    <span>Christchurch, New Zealand</span>
-                </li>
-                <li>
-                    <h3>Follow Me</h3>
-                    <ul class="icons">
-                        <li><a href="https://www.facebook.com/people/Zeke-Frater/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                        <li><a href="https://www.instagram.com/zekielfrater/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                        <li><a href="https://www.linkedin.com/in/zeke-frater-0a7178199/?originalSubdomain=nz" target="_blank" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                    </ul>
-                </li>
-            </ul>
-    </section> <!-- End of Get in Touch Section -->
+
+    <!-- Contact Info Section -->
+    <section class="section">
+        <ul class="items">
+            <li>
+                <h3>Email</h3>
+                <a href="mailto:zekefrater@gmail.com">zekefrater@gmail.com</a>
+            </li>
+            <li>
+                <h3>Phone</h3>
+                <a href="tel:+64212229152">+64 21 222 9152</a>
+            </li>
+            <li>
+                <h3>Address</h3>
+                <span>Christchurch, New Zealand</span>
+            </li>
+            <li>
+                <h3>Follow Me</h3>
+                <ul class="icons">
+                    <li>
+                        <a 
+                            href="https://www.facebook.com/people/Zeke-Frater/" 
+                            class="icon brands fa-facebook-f" 
+                            aria-label="Facebook"
+                        >
+                            <span class="label">Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            href="https://www.instagram.com/zekielfrater/" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            class="icon brands fa-instagram" 
+                            aria-label="Instagram"
+                        >
+                            <span class="label">Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            href="https://www.linkedin.com/in/zeke-frater-0a7178199/?originalSubdomain=nz" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            class="icon brands fa-linkedin-in" 
+                            aria-label="LinkedIn"
+                        >
+                            <span class="label">LinkedIn</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section> <!-- End of Contact Info Section -->
 </div> <!-- End of content div -->
+
 
 <!-- Copyright -->
 <div class="copyright">&copy; Zekiel Frater. All rights reserved. </div>

@@ -3251,8 +3251,8 @@ input, select, textarea {
 
 			#wrapper section > header {
 				grid-area: header;
-				justify-self: end;
-				text-align: right;s
+				justify-self: flex-end;
+				text-align: right;
 			}
 
 				#wrapper section > header h2 {
@@ -3878,408 +3878,183 @@ input, select, textarea {
 	body.is-ie #wrapper > section > .content > section {
 		width: 100vw;
 	}
-/* Header Container */
-.header-container {
-  display: flex;
-  justify-content: right; /* Default: Center items on mobile */
-  align-items: flex-start; /* Align items to the top */
-}
-
-/* Align items to the left on desktop screens (larger screens) */
-@media (min-width: 768px) {
+/* Reset and Common Styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+  
+  body {
+	font-family: 'Source Sans Pro', sans-serif;
+  }
+  
+  /* Header Container Styling */
   .header-container {
-    justify-content: flex-start; /* Align items to the left on desktop */
+	display: flex;
+	justify-content: center; /* Default: Center items on mobile */
+	align-items: flex-start;
+	width: 100%;
+	padding: 0;
   }
-}
-
-/* Header Styling */
-h2 {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #333;
-  margin-bottom: 0;
-}
-/* YouTube Embed Container Styling */
-.youtube-embed-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;  /* 16:9 aspect ratio (height/width) */
-    height: 0;  /* Ensure the height is controlled by the padding-bottom */
-    overflow: hidden;
-    max-width: 100%;
-    margin-bottom: 20px;  /* Add space below the video */
-    box-sizing: border-box; /* Ensure padding is included in width/height calculation */
-}
-
-/* Ensuring iframe fits container */
-.youtube-embed-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none; /* Remove any border that might appear */
-}
-
-/* Adjustments for Mobile Devices */
-@media (max-width: 768px) {
-    .youtube-embed-container {
-        padding-bottom: 56.25%;  /* 16:9 aspect ratio for mobile */
-    }
-
-    /* Ensure iframe takes full width on mobile devices */
-    .youtube-embed-container iframe {
-        width: 100%;
-        height: 100%;  /* Ensure the height remains consistent */
-    }
-
-    /* Optional: Adjust content layout for mobile */
-    .content {
-        width: 100%; /* Ensure it takes full width on small screens */
-        padding-right: 0; /* Remove unnecessary right padding */
-    }
-}
-
-/* Adjustments for Larger Screens (e.g., tablets, desktops) */
-@media (min-width: 768px) {
-    .youtube-embed-container {
-        max-width: 90%;  /* Optional: limit width for larger screens */
-        margin: auto; /* Center the iframe on the screen */
-    }
-}
-
-/* Wrapper around the iframe to maintain aspect ratio */
-.responsive-iframe-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;  /* Aspect ratio for 16:9 (height/width = 9/16 = 56.25%) */
-    height: 0;  /* Ensure the height is controlled by the padding-bottom */
-    overflow: hidden;
-    max-width: 100%;
-    margin-bottom: 10px;  /* Optional: Space below the iframe */
-    box-sizing: border-box; /* Ensure padding is included in width/height calculation */
-}
-
-/* Ensure iframe takes full width and height of the container */
-.responsive-iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;  /* Full width */
-    height: 100%;  /* Full height */
-}
-
-/* General Mobile Fix for Layouts */
-@media (max-width: 768px) {
-    .responsive-iframe-container {
-        width: 100%;
-        margin-bottom: 20px; /* Space between the playlist sections */
-        padding: 0;  /* Ensure padding is 0 to prevent excess space */
-    }
-
-    .youtube-playlist-container {
-        padding: 0;  /* Ensure no padding in playlist container */
-    }
-
-.section {
-    margin-bottom: 0px; /* Add space between sections */
-}
-
-/* Header Styling */
-.header-container {
-    text-align: center;
-    margin-bottom: 0px;
-}
-
-h2.animated-heading {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 2rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: #333;
-    margin-bottom: 0px;
-}
-
-/* Contact Form Styling */
-form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-}
-
-.fields {
-    width: 100%;
-}
-
-.field {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.field.half {
-    width: 48%; /* Two fields per row */
-}
-
-textarea, input[type="text"], input[type="email"] {
-    width: 100%;
-    padding: 0px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-.actions .button.primary {
-    width: 100%; /* Full width button */
-    padding: 0px;
-    background-color: #5CE1E6;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-/* Contact Info Section Styling */
-.items {
-    list-style: none;
-    padding: 0;
-}
-
-.items li {
-    margin-bottom: 20px;
-}
-
-.items h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.items a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1rem;
-}
-
-.items a:hover {
-    color: #5CE1E6; /* Hover effect */
-}
-
-/* Icon List Styling */
-.icons {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 5px;
-    justify-content: center;
-}
-
-.icons .icon {
-    font-size: 30px; /* Adjust icon size */
-    color: #333;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.icons .icon:hover {
-    color: #5CE1E6;
-    transform: scale(1.1);
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    /* Ensure full-width for the contact form fields */
-    .field.half {
-        width: 100%; /* Stack form fields on small screens */
-    }
-
-    .fields {
-        display: block;
-    }
-
-    /* Stack items in the contact info section */
-    .items li {
-        width: 100%;
-    }
-
-    .icons {
-        justify-content: space-around;
-    }
-}
-
-  /* Ensure the container is responsive */
-  .experience-highlights {
-    width: 100%;         /* Ensures the container takes up full width */
-    max-width: 100%;     /* Prevents it from exceeding the available space */
-    margin: 0 auto;      /* Centers the container */
-    padding: 10px;       /* Optional: space around the content */
+  
+  @media (min-width: 768px) {
+	.header-container {
+	  justify-content: flex; /* Align to the right on larger screens */
+	  padding-right: 2rem; /* Add space from the right edge */
+	}
   }
-
-  /* Style for the header */
-  .experience-highlights h3 {
-    font-size: 1.5rem;   /* Adjust the size for readability */
-    margin-bottom: 10px;  /* Space between the heading and the list */
-  }
-
-  /* Style for the list */
-  .experience-highlights ul {
-    padding-left: 0px;   /* Add padding to the left for the list */
-    list-style-type: disc; /* Use bullet points */
-    margin: 0;            /* Remove default margin */
-  }
-
-  /* Style for each list item */
-  .experience-highlights ul li {
-    font-size: 1rem;      /* Make sure the font size is readable */
-    margin-bottom: 8px;   /* Add space between list items */
-  }
-
-  /* Make the content responsive */
-  @media (max-width: 768px) {
-    .experience-highlights h3 {
-      font-size: 1.2rem; /* Reduce font size on smaller screens */
-    }
-
-    .experience-highlights ul li {
-      font-size: 0.9rem;  /* Adjust list font size for mobile */
-    }
-
-    .experience-highlights {
-      padding: 15px;      /* Add some padding on smaller screens */
-    }
-  }
-
-  @media (max-width: 480px) {
-    .experience-highlights h3 {
-      font-size: 1rem;    /* Further reduce font size on very small screens */
-    }
-
-    .experience-highlights ul li {
-      font-size: 0.8rem;  /* Even smaller font size */
-    }
-  }
-}
-
-/* Social Icons Styling */
-.social-icons {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-}
-
-.social-icons a {
-    margin: 10px;
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s, transform 0.3s;
-}
-
-.social-icons a:hover {
-    color: #5CE1E6;
-    transform: scale(2.2);
-}
-
-/* Icon Styling */
-.icon {
-    font-size: 30px;
-}
-
-/* Ensure Sections Are Properly Spaced */
-.section {
-    margin-bottom: 0px;
-}
-
-
-/* Header Container Styling */
-.header-container {
-  display: flex;
-  justify-content: center; /* Center items on mobile by default */
-  align-items: flex-start; /* Align items to the top */
-  width: 100%; /* Ensure it takes up full width */
-}
-
-/* Align items to the right on larger screens (desktop and up) */
-@media (min-width: 768px) {
-  .header-container {
-    justify-content: flex-end; /* Align items to the right on desktop */
-  }
-}
-
-/* General h2 Styling */
-h2 {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #333;
-  margin-bottom: 0;
-  text-align: center; /* Center h2 text on mobile */
-}
-
-/* Animated Heading Styling */
-.animated-heading {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #333;
-  animation: fadeInUp 1s ease-out forwards;
-  opacity: 0;
-  margin: 0; /* Remove any extra margin */
-  padding: 0; /* Remove extra padding */
-  text-align: right; /* Align animated heading text to the center on mobile */
-  width: 100%; /* Ensure it takes up the full width of the container */
-}
-
-/* Fade-in and slide-up animation */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Media query for larger screens (desktop and above) */
-@media (min-width: 768px) {
+  
+  /* General Heading Styling */
   h2 {
-    text-align: right; /* Align h2 text to the right on desktop */
+	font-size: 2rem;
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: #333;
+	margin-bottom: 20px; /* Consistent spacing */
+	text-align: center; /* Default alignment for mobile */
   }
-
+  
+  /* Animated Heading */
   .animated-heading {
-    text-align: right; /* Align animated heading text to the right on desktop */
+	animation: fadeInUp 1s ease-out forwards;
+	opacity: 0; /* Initially hidden */
   }
-}
-
-/* Add spacing to the right on desktop */
-@media (min-width: 768px) {
-  .header-container {
-    margin-right: 0rem; /* Adjust as needed */
+  
+  @media (min-width: 768px) {
+	h2,
+	.animated-heading {
+	  text-align: right; /* Align to the right on larger screens */
+	}
   }
-}
-
-/* Style for the icon list */
-.icons {
-  list-style: none; /* Remove default list styling */
-  padding: 0;
-  display: flex;
-  justify-content: center; /* Center the icons horizontally */
-  gap: 10px; /* Add space between icons */
-}
-
-/* Style for each icon link */
-.icons a {
-  text-decoration: none;
-  color: #333;
-  font-size: 20px; /* Adjust size as needed */
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-/* Icon hover effect */
-.icons a:hover {
-  color: #5CE1E6; /* Change color on hover */
-  transform: scale(1.1); /* Slight zoom effect on hover */
-}
+  
+  /* Keyframes for Animation */
+  @keyframes fadeInUp {
+	0% {
+	  opacity: 0;
+	  transform: translateY(20px);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  
+  /* Video Section Styling (Preserve Margins and Framing) */
+  .youtube-embed-container,
+  .responsive-iframe-container {
+	position: relative;
+	width: 100%;
+	padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
+	height: 0;
+	overflow: hidden;
+  }
+  
+  .youtube-embed-container iframe,
+  .responsive-iframe-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+  }
+  
+  /* Contact Section Styling */
+  .section {
+	margin: 20px auto; /* Add spacing between sections */
+	padding: 10px;
+	max-width: 1200px;
+  }
+  
+  .content {
+	text-align: center;
+	padding: 0 15px;
+  }
+  
+  /* Contact Form Styling */
+  form {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: space-between;
+  }
+  
+  .fields {
+	width: 100%;
+  }
+  
+  .field {
+	width: 100%;
+	margin-bottom: 20px;
+  }
+  
+  .field.half {
+	width: 48%; /* Two fields per row on larger screens */
+  }
+  
+  textarea,
+  input[type='text'],
+  input[type='email'] {
+	width: 100%;
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+  }
+  
+  /* Contact Info Styling */
+  .items {
+	list-style: none;
+	padding: 0;
+	text-align: center; /* Align items to the left */
+  }
+  
+  .items li {
+	margin-bottom: 20px;
+  }
+  
+  .items h3 {
+	font-size: 1.5rem;
+	margin-bottom: 5px;
+  }
+  
+  .items a {
+	text-decoration: none;
+	color: #333;
+  }
+  
+  .items a:hover {
+	color: #5CE1E6;
+  }
+  
+  /* Icon List Styling */
+  .icons {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	gap: 10px;
+	justify-content: center; /* Center icons by default */
+  }
+  
+  .icons .icon {
+	font-size: 30px;
+	color: #333;
+	transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .icons .icon:hover {
+	color: #5CE1E6;
+	transform: scale(1.1);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+	.field.half {
+	  width: 100%; /* Stack form fields */
+	}
+  
+	.items li {
+	  text-align: center; /* Center contact info items */
+	}
+  }
+  
