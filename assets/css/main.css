@@ -3168,29 +3168,28 @@ input, select, textarea {
 /* Feature Icons List */
 ul.feature-icons {
   display: flex;
-  flex-direction: column;  /* Stack the icons and text vertically */
+  flex-wrap: wrap;
   list-style: none;
+  margin: 0;  /* Remove default margin */
   padding-left: 0;
-  margin: 0;
   width: 100%;
-  max-width: 800px;         /* Limit max width for better control */
-  text-align: left;         /* Align text left to prevent misalignment */
+  max-width: 800px;         /* Optional, can adjust based on preference */
+  text-align: left;         /* Align text left */
 }
 
 /* List Item Style (Icon and Text) */
 ul.feature-icons li {
-  display: flex;
-  align-items: center;     /* Vertically center the icon and text */
-  justify-content: flex-start; /* Align the text next to the icon */
-  margin: 1rem 0;          /* Vertical spacing between list items */
-  padding-left: 3rem;      /* Space for the icon on the left */
+  display: flex;                /* Make each list item a flex container */
+  justify-content: flex-start;  /* Align content horizontally (icons and text) */
+  align-items: center;          /* Vertically center the icon and text */
+  margin: 2.5rem 0 0 0;         /* Vertical spacing between list items */
+  padding: 0;                   /* Remove any padding around list items */
   position: relative;
-  width: auto;             /* Let the width adjust */
+  width: 50%;                   /* Two items per row on large screens */
 }
 
 /* Icon styling (before pseudo-element) */
 ul.feature-icons li:before {
-  content: "";  /* Make sure the pseudo-element is rendered */
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512'%3E%3Cpath d='M256,0l221.7,128v256L256,512L34.3,384V128L256,0z' fill='rgba(144, 144, 144, 0.1)' /%3E%3C/svg%3E");
   background-position: center;
   background-repeat: no-repeat;
@@ -3206,27 +3205,24 @@ ul.feature-icons li:before {
   transform: translateY(-50%); /* Adjust for perfect vertical centering */
 }
 
-/* Center the text in each list item */
+/* Text styling inside the list items */
 ul.feature-icons li span {
-  margin-left: 1rem; /* Space between icon and text */
-  text-align: center;
-  width: 100%; /* Allow the text to take full available space */
+  margin-left: 1rem; /* Small gap between icon and text */
+  width: 100%;       /* Allow the text to take the remaining space */
 }
 
 /* Mobile responsiveness */
 @media screen and (max-width: 736px) {
   ul.feature-icons {
-    width: 100%;  /* Make the list take up the full width on small screens */
+    margin: 0 0 3rem 0; /* Adjust bottom margin on smaller screens */
   }
 
   ul.feature-icons li {
-    width: 100%;  /* Stack items vertically */
-    padding-left: 3rem; /* Maintain space for the icon */
-    justify-content: flex-start;  /* Align the text and icon to the left */
+    width: 100%; /* Stack items vertically on small screens */
   }
 
   ul.feature-icons li:nth-child(2) {
-    margin-top: 1rem; /* Add spacing between items when stacked */
+    margin-top: 2rem; /* Add spacing between items when stacked */
   }
 }
 
