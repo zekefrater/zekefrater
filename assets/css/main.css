@@ -4090,3 +4090,55 @@ h2 {
 .content .actions .button.primary {
     width: 100%; /* Full width button on mobile */
 }
+
+/* Ensure the container is responsive */
+.experience-highlights {
+    width: 100%;         /* Ensures the container takes up full width */
+    max-width: 100%;     /* Prevents it from exceeding the available space */
+    margin: 0 auto;      /* Centers the container */
+    padding: 20px;       /* Optional: space around the content */
+}
+
+/* Style for the header */
+.experience-highlights h3 {
+    font-size: 1.5rem;   /* Adjust the size for readability */
+    margin-bottom: 10px;  /* Space between the heading and the list */
+}
+
+/* Style for the list */
+.experience-highlights ul {
+    padding-left: 20px;   /* Add padding to the left for the list */
+    list-style-type: disc; /* Use bullet points */
+    margin: 0;            /* Remove default margin */
+}
+
+/* Style for each list item */
+.experience-highlights ul li {
+    font-size: 1rem;      /* Make sure the font size is readable */
+    margin-bottom: 8px;   /* Add space between list items */
+}
+
+/* Make the content responsive */
+@media (max-width: 768px) {
+    .experience-highlights h3 {
+        font-size: 1.2rem; /* Reduce font size on smaller screens */
+    }
+
+    .experience-highlights ul li {
+        font-size: 0.9rem;  /* Adjust list font size for mobile */
+    }
+
+    .experience-highlights {
+        padding: 15px;      /* Add some padding on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .experience-highlights h3 {
+        font-size: 1rem;    /* Further reduce font size on very small screens */
+    }
+
+    .experience-highlights ul li {
+        font-size: 0.8rem;  /* Even smaller font size */
+    }
+}
