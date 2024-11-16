@@ -4033,7 +4033,7 @@ input, select, textarea {
 	padding: 0;
 	display: flex;
 	gap: 5px;
-	justify-content: left; /* Center icons by default */
+	justify-content: center; /* Center icons by default */
   }
   
   .icons .icon {
