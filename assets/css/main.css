@@ -3898,7 +3898,7 @@ input, select, textarea {
     }
 
     .responsive-iframe-container iframe {
-        height: auto;  /* Make iframe height flexible on mobile */
+        height: 100%;  /* Make iframe height flexible on mobile */
     }
 
     /* Optional: Adjust content-right layout for mobile */
