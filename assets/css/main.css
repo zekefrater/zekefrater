@@ -3971,10 +3971,10 @@ input, select, textarea {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
-    text-align: flex start;
-    padding-right: 0;  /* Remove padding on the right */
-    width: 100%;  /* Ensure this takes up full width */
+    align-items: flex-start; /* Align items to the left */
+    text-align: left; /* Ensure text aligns left */
+    padding-right: 0;  /* Remove unnecessary right padding */
+    width: 100%;  /* Ensure full width */
     margin-left: auto;
     margin-right: 0; /* Optional: Remove margin-right for better alignment */
 }
@@ -3997,23 +3997,23 @@ h2 {
   font-weight: bold;
   letter-spacing: 1px;
   color: #333;
-  text-align: flex-start; /* Ensure text is centered */
+  text-align: left; /* Align text to the left */
   margin-bottom: 20px; /* Adjust the margin for spacing */
 }
 
 /* Animated Heading */
 .animated-heading {
-    font-family: 'Source Sans Pro', sans-serif; /* Ensure it matches your current h2 font */
-    font-size: 2rem; /* Adjust as needed */
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2rem;
     font-weight: bold;
     letter-spacing: 1px;
-    color: #333; /* Change to match your theme */
+    color: #333;
     animation: fadeInUp 1s ease-out forwards;
     opacity: 0;
-    margin: 0 auto 20px;  /* Centers the heading */
-    padding-left: 0px;  /* Removed padding on left */
-    padding-right: 0px;  /* Removed padding on right */
-    text-align: center; /* Ensure text is centered within the container */
+    margin: 0 auto 20px;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left; /* Align animated heading to the left */
 }
 
 /* Fade-in and slide-up animation */
@@ -4039,24 +4039,90 @@ h2 {
 
 /* General Mobile Fix for Layouts */
 @media (max-width: 768px) {
-    .animated-heading {
-        font-size: 1.5rem;  /* Smaller text for mobile screens */
-        margin-left: 20px;
-        margin-right: 20px;
-    }
+  .animated-heading {
+    font-size: 1.5rem;  /* Smaller text for mobile screens */
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 
-    .responsive-iframe-container {
-        padding: 0px;  /* No padding on smaller screens */
-    }
+  .responsive-iframe-container {
+    padding: 0px;  /* No padding on smaller screens */
+  }
 
-    /* Reduce padding on the playlist container for smaller screens */
-    .youtube-playlist-container {
-        padding: 0;  /* Remove padding */
-    }
+  /* Reduce padding on the playlist container for smaller screens */
+  .youtube-playlist-container {
+    padding: 0;  /* Remove padding */
+  }
+
+  /* Contact Form Field Layout */
+  .content .fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds space between fields */
+  }
+
+  .content .field {
+    width: 100%; /* Full width by default */
+    margin-bottom: 20px;
+  }
+
+  .content .field.half {
+    width: 48%; /* Two fields per row */
+  }
+
+  .content textarea,
+  .content input[type="text"], 
+  .content input[type="email"] {
+    width: 100%;  /* Full width of their container */
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  .actions .button.primary {
+    width: 100%;  /* Full width button on mobile */
+  }
+
+  /* Stacking social icons vertically on mobile */
+  .icons {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* Image responsive fix */
 .image img {
     width: 100%;
     height: auto;
+}
+
+/* Contact Form Layout */
+.content .fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.content .field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.content .field.half {
+    width: 48%; /* Two fields per row */
+}
+
+.content textarea,
+.content input[type="text"],
+.content input[type="email"] {
+    width: 100%; /* Full width of their container */
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.content .actions .button.primary {
+    width: 100%; /* Full width button on mobile */
 }
