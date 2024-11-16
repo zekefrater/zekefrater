@@ -3202,7 +3202,7 @@ ul.feature-icons li i {
 
 /* Text styling inside the list items */
 ul.feature-icons li span {
-  text-align: left; /* Align the text to the left next to the icon */
+  text-align: center; /* Align the text to the left next to the icon */
   display: block;   /* Make the text take the remaining space */
   flex-grow: 1;     /* Allow the text to take up available space */
 }
