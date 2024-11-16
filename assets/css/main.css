@@ -2841,9 +2841,11 @@ input, select, textarea {
   box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5; /* Replace #inherit with a valid background color */
+  background-color: #f5f5f5;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Wrapper Styles */
@@ -2855,9 +2857,9 @@ body {
 /* Intro Section */
 .intro {
   position: relative;
-  z-index: 10; /* Ensures header content stays on top */
+  z-index: 10;
   text-align: center;
-  padding: 0rem 0rem;
+  padding: 0;
   background-color: #f5f5f5;
 }
 
@@ -2884,35 +2886,41 @@ ul.actions a {
 
 /* Add hover effect for better UX */
 ul.actions a:hover {
-  color: #007bff; /* Change to a blue color on hover */
+  color: #007bff;
 }
 
-/* Image Section */
+/* Image Section - Ensuring the image takes full screen */
 .intro .content {
   position: relative;
+  width: 100%;
+  height: 100vh; /* Ensure it takes up full viewport height */
 }
 
 .intro .content .image {
   display: block;
   width: 100%;
-  height: 50vh; /* If needed, adjust this height to suit your design */
-  object-fit: cover;
+  height: 100%; /* Take full height of the parent container */
+  object-fit: cover; /* Makes sure the image covers the container */
+  position: absolute; /* Makes sure the image stays in place */
+  top: 0;
+  left: 0;
 }
 
-/* Arrow Styles */
+/* Arrow Styles - Fixing positioning and visibility */
 a.arrow {
   display: inline-block;
   height: 4rem;
   width: 6rem;
   position: absolute; /* Ensures the arrow is positioned relative to its container */
-  top: 80%; /* Moves the arrow lower on the screen */
+  top: 80%; /* Move arrow lower on the screen */
   left: 50%;
-  z-index: 1500; /* Stays above other content */
+  z-index: 1500; /* Ensure it is above the image */
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
   transform: translateX(-50%);
-  text-decoration: none; /* No underline */
+  text-decoration: none;
+  opacity: 1; /* Ensure arrow is fully visible */
 }
 
 /* Arrow Icon Styling */
@@ -2933,26 +2941,26 @@ a.arrow:before {
 /* Hover Effect for the Arrow */
 a.arrow:hover {
   opacity: 0.7;
-  transform: translate(-50%, -50%) translateY(-5px); /* Adds slight movement */
+  transform: translate(-50%, -50%) translateY(-5px);
 }
 
 /* Mobile responsiveness */
 @media screen and (max-width: 736px) {
-  /* Make sure the links are displayed vertically on mobile */
+  /* Social Links Stack Vertically */
   ul.actions {
     flex-direction: column;
     align-items: center;
   }
 
   ul.actions li {
-    margin: 10px 0; /* Stack the items vertically */
+    margin: 10px 0;
   }
 
-  /* Adjust social icon size for mobile */
   ul.actions a {
     font-size: 1.2rem;
   }
 
+  /* Mobile Arrow Size */
   a.arrow {
     width: 4rem;
     height: 3rem;
@@ -2962,7 +2970,7 @@ a.arrow:hover {
     width: 2.5rem;
     height: auto;
   }
-}
+}}
 /* Gallery */
 
 	@-moz-keyframes gallery-modal-spinner {
