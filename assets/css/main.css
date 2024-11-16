@@ -3180,13 +3180,13 @@ ul.feature-icons li {
 ul.feature-icons li:before {
   content: "";  /* Ensure pseudo-element renders */
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512'%3E%3Cpath d='M256,0l221.7,128v256L256,512L34.3,384V128L256,0z' fill='rgba(144, 144, 144, 0.1)' /%3E%3C/svg%3E");
-  background-position: center;
+  background-position: left center;
   background-repeat: no-repeat;
   background-size: contain;
   color: #000000;
   display: block;
   font-size: 1.25rem;
-  height: 3.25rem;
+  height: 4rem;
   width: 4rem;
   position: absolute;
   left: 0;                     /* Align the icon to the left */
@@ -3197,9 +3197,9 @@ ul.feature-icons li:before {
 /* Font Icon styling */
 ul.feature-icons li i {
   font-size: 2rem; /* Adjust font size of the icon (smaller size) */
-  margin-right: 1rem; /* Space between icon and text */
-  width: 2rem;  /* Set width of the icon */
-  height: 2rem; /* Set height of the icon */
+  margin-right: 1.5rem; /* Space between icon and text */
+  width: 1.5rem;  /* Set width of the icon */
+  height: 1.5rem; /* Set height of the icon */
   display: flex;
   align-items: center; /* Vertically center icon */
   justify-content: center; /* Horizontally center icon */
