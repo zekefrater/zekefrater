@@ -3872,7 +3872,7 @@ input, select, textarea {
 	body.is-ie #wrapper > section > .content > section {
 		width: 100vw;
 	}
-	/* YouTube Embed Container Styling */
+/* YouTube Embed Container Styling */
 .youtube-embed-container {
     position: relative;
     width: 100%;
@@ -3963,6 +3963,7 @@ input, select, textarea {
 .icon {
     font-size: 24px;
 }
+
 /* Aligning .content-right to the right side */
 .content-right {
   display: flex;
@@ -3970,10 +3971,10 @@ input, select, textarea {
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  padding-right: 20px;
+  padding-right: 0;  /* Remove padding on the right */
   width: 100%;  /* Ensure this takes up full width */
   margin-left: auto;
-  margin-right: 10px; /* Optional: Adding right margin to avoid edge contact */
+  margin-right: 0; /* Optional: Remove margin-right for better alignment */
 }
 
 /* Ensure Sections Are Properly Spaced */
@@ -3985,7 +3986,7 @@ input, select, textarea {
 .responsive-iframe-container {
   width: 100%;
   margin-bottom: 40px; /* Space between the playlist sections */
-  padding: 0 10px;  /* Optional: Adds padding on left and right */
+  padding: 0;  /* Remove padding from the iframe container */
 }
 
 /* Animated Heading (unchanged from previous) */
@@ -3997,9 +3998,10 @@ input, select, textarea {
   color: #333; /* Change to match your theme */
   animation: fadeInUp 1s ease-out forwards;
   opacity: 0;
-  margin: 0 auto 20px;  /* Centers the heading with auto margin */
-  padding-left: 0px;  /* Add left padding to prevent misalignment */
-  padding-right: 0px;  /* Add right padding to prevent misalignment */
+  margin: 0 auto 20px;  /* Centers the heading */
+  padding-left: 0px;  /* Removed padding on left */
+  padding-right: 0px;  /* Removed padding on right */
+  text-align: center; /* Ensure text is centered within the container */
 }
 
 /* Fade-in and slide-up animation */
@@ -4032,12 +4034,12 @@ input, select, textarea {
   }
 
   .responsive-iframe-container {
-    padding: 0px;  /* Ensures there is space on left and right */
+    padding: 0px;  /* No padding on smaller screens */
   }
 
   /* Reduce padding on the playlist container for smaller screens */
   .youtube-playlist-container {
-    padding: 0 10px;
+    padding: 0;  /* Remove padding */
   }
 }
 
