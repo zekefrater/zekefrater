@@ -2835,49 +2835,52 @@ input, select, textarea {
 				border-top: 0;
 			}
 
-/* Arrow styles */
+/* General Arrow Styles */
 a.arrow {
   display: inline-block;
   height: 4rem;
   width: 6rem;
-  position: absolute; /* Keeps it on top of the image or wherever you'd like */
-  top: 50px; /* Adjust to move the arrow vertically */
-  left: 50px; /* Adjust to move the arrow horizontally */
-  z-index: 1000; /* Ensure it's above other content */
-  cursor: pointer; /* Makes it clear the arrow is clickable */
-  transition: all 0.3s ease; /* Add a transition effect on hover */
+  position: relative; /* Allows positioning inside the container */
+  z-index: 1000; /* Ensures it stays on top */
+  cursor: pointer; /* Indicates it's clickable */
+  transition: all 0.3s ease; /* Smooth transition effect on hover */
+  text-align: center; /* Centers the text inside the link if used */
+  padding: 10px;
+  /* Remove absolute positioning and center the link container */
+  margin: 0 auto;
 }
 
-/* Arrow icon styling */
+/* Arrow Icon Styling */
 a.arrow:before {
   content: "";
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512'%3E%3Cpath d='M442.53,346.28L293.65,495.16c-0.33,0.33-0.7,0.62-1.05,0.94c-9.16,9.77-22.15,15.9-36.6,15.9 c-14.44,0-27.43-6.13-36.59-15.88c-0.35-0.33-0.72-0.62-1.06-0.96L69.47,346.28c-19.62-19.62-19.62-51.44,0-71.05 c19.62-19.62,51.43-19.62,71.06,0l65.23,65.23V50.24C205.76,22.5,228.25,0,256,0s50.24,22.5,50.24,50.24v290.21l65.23-65.23 c19.62-19.62,51.43-19.62,71.05,0C462.15,294.84,462.15,326.66,442.53,346.28z' fill='%23000000' /%3E%3C/svg%3E");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  display: inline-block;
   height: 100%;
   width: 3rem; /* Adjust icon size */
-  position: relative;
+  position: absolute;
+  top: 50%; /* Vertically center the icon */
+  left: 50%; /* Horizontally center the icon */
+  transform: translate(-50%, -50%); /* Adjust for perfect centering */
 }
 
-/* Optional: Hover effect for the arrow to show it's interactive */
+/* Hover Effect for the Arrow */
 a.arrow:hover {
   opacity: 0.7; /* Slight opacity change on hover */
-  transform: translateY(-5px); /* Add slight movement on hover */
+  transform: translate(-50%, -50%) translateY(-5px); /* Add slight movement */
 }
 
 /* Mobile responsiveness */
 @media screen and (max-width: 736px) {
   a.arrow {
-    top: 20px; /* Adjust position for mobile */
-    left: 20px; /* Adjust position for mobile */
-    height: 3rem;
-    width: 4rem;
+    width: 4rem; /* Adjust width for mobile */
+    height: 3rem; /* Adjust height for mobile */
   }
 
   a.arrow:before {
-    width: 2.5rem; /* Adjust icon size on mobile */
+    width: 2.5rem; /* Adjust icon size for mobile */
+    height: auto;  /* Adjust height for mobile */
   }
 }
 /* Gallery */
