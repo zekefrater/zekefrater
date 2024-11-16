@@ -3981,11 +3981,48 @@ input, select, textarea {
     margin-bottom: 30px;
 }
 
-/* Responsive Iframe Styling */
+/* Adjusted styling for the container */
+.responsive-iframe-container {
+  width: 100%;
+  text-align: center; /* Centers the content */
+  margin-bottom: 40px; /* Space between the playlist sections */
+}
+
+/* Animated Heading (unchanged from previous) */
+.animated-heading {
+  font-family: 'YourFontFamily', sans-serif; /* Ensure it matches your current h2 font */
+  font-size: 2rem; /* Adjust as needed */
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #333; /* Change to match your theme */
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+  margin-bottom: 20px; /* Space between the heading and iframe */
+}
+
+/* Fade-in and slide-up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive iframe container adjustments (you can keep this if already used) */
 .responsive-iframe-container iframe {
-    width: 100%;
-    height: 100%; /* Adjust height for responsiveness */
-    max-width: 100%;
-    border: none;
-    box-shadow: none;
+  width: 100%;
+  height: 100%; /* Adjust as needed for responsiveness */
+  max-width: 100%;
+  border: none;
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .animated-heading {
+    font-size: 1.5rem; /* Smaller text for mobile screens */
+  }
 }
