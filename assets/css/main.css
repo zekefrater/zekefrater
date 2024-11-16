@@ -4046,10 +4046,8 @@ ul.feature-icons li:before {
 /* Text styling inside the list items */
 ul.feature-icons li span {
   margin-left: 1rem;  /* Small gap between icon and text */
-  text-align: left;   /* Align text to the left */
-  display: block;     /* Make the text take up available space */
+  text-align: center;   /* Align text to the left */
   font-size: 1.25rem; /* Text size */
-  flex-grow: 1;       /* Allow text to take up available space */
 }
 
 /* Mobile responsiveness */
