@@ -3963,29 +3963,29 @@ input, select, textarea {
 .icon {
     font-size: 24px;
 }
-
 /* Aligning .content-right to the right side */
 .content-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
-    text-align: left;
-    padding-right: 20px;
-    width: auto;
-    margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  text-align: left;
+  padding-right: 20px;
+  width: 100%;  /* Ensure this takes up full width */
+  margin-left: auto;
+  margin-right: 10px; /* Optional: Adding right margin to avoid edge contact */
 }
 
 /* Ensure Sections Are Properly Spaced */
 .section {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 /* Adjusted styling for the container */
 .responsive-iframe-container {
   width: 100%;
-  text-align: center; /* Centers the content */
   margin-bottom: 40px; /* Space between the playlist sections */
+  padding: 0 10px;  /* Optional: Adds padding on left and right */
 }
 
 /* Animated Heading (unchanged from previous) */
@@ -3997,7 +3997,9 @@ input, select, textarea {
   color: #333; /* Change to match your theme */
   animation: fadeInUp 1s ease-out forwards;
   opacity: 0;
-  margin-bottom: 20px; /* Space between the heading and iframe */
+  margin: 0 auto 20px;  /* Centers the heading with auto margin */
+  padding-left: 20px;  /* Add left padding to prevent misalignment */
+  padding-right: 20px;  /* Add right padding to prevent misalignment */
 }
 
 /* Fade-in and slide-up animation */
@@ -4012,7 +4014,7 @@ input, select, textarea {
   }
 }
 
-/* Responsive iframe container adjustments (you can keep this if already used) */
+/* Responsive iframe container adjustments */
 .responsive-iframe-container iframe {
   width: 100%;
   height: 100%; /* Adjust as needed for responsiveness */
@@ -4021,12 +4023,25 @@ input, select, textarea {
   box-shadow: none;
 }
 
+/* General Mobile Fix for Layouts */
 @media (max-width: 768px) {
   .animated-heading {
-    font-size: 1.5rem; /* Smaller text for mobile screens */
+    font-size: 1.5rem;  /* Smaller text for mobile screens */
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .responsive-iframe-container {
+    padding: 0 10px;  /* Ensures there is space on left and right */
+  }
+
+  /* Reduce padding on the playlist container for smaller screens */
+  .youtube-playlist-container {
+    padding: 0 10px;
   }
 }
 
+/* Image responsive fix */
 .image img {
   width: 100%;
   height: auto;
