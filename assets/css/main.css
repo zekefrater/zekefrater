@@ -2840,15 +2840,12 @@ a.arrow {
   display: inline-block;
   height: 4rem;
   width: 6rem;
-  position: absolute; /* Keeps it on top of the image */
+  position: absolute; /* Keeps it on top of the image or wherever you'd like */
   top: 50px; /* Adjust to move the arrow vertically */
   left: 50px; /* Adjust to move the arrow horizontally */
   z-index: 1000; /* Ensure it's above other content */
-}
-
-/* Arrow label (hidden by default) */
-a.arrow .label {
-  display: none;
+  cursor: pointer; /* Makes it clear the arrow is clickable */
+  transition: all 0.3s ease; /* Add a transition effect on hover */
 }
 
 /* Arrow icon styling */
@@ -2860,18 +2857,23 @@ a.arrow:before {
   background-size: contain;
   display: inline-block;
   height: 100%;
-  width: 3rem; /* Icon size */
+  width: 3rem; /* Adjust icon size */
   position: relative;
+}
+
+/* Optional: Hover effect for the arrow to show it's interactive */
+a.arrow:hover {
+  opacity: 0.7; /* Slight opacity change on hover */
+  transform: translateY(-5px); /* Add slight movement on hover */
 }
 
 /* Mobile responsiveness */
 @media screen and (max-width: 736px) {
-  /* Adjust the position and size for smaller screens */
   a.arrow {
-    top: 20px; /* Adjust top for mobile */
-    left: 20px; /* Adjust left for mobile */
-    height: 3rem; /* Reduce size on mobile */
-    width: 4rem; /* Adjust width on mobile */
+    top: 20px; /* Adjust position for mobile */
+    left: 20px; /* Adjust position for mobile */
+    height: 3rem;
+    width: 4rem;
   }
 
   a.arrow:before {
