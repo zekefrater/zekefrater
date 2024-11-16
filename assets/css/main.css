@@ -3399,18 +3399,6 @@ input, select, textarea {
     display: inline-block;  /* Keeps the header text inline */
 }
 
-/* Before pseudo-element: Line from the left side of the dot */
-#wrapper > section > header h1:before, #wrapper > section > header h2:before {
-    background: #ffffff;  /* Line color */
-    content: '';
-    display: block;
-    height: 2px;  /* Height of the line */
-    position: absolute;
-    top: 50%;  /* Vertically center the line with respect to the text */
-    left: -2.5rem;  /* Start the line from the left side of the dot */
-    width: 5rem;  /* Adjust this value to make the line stretch further to the right */
-}
-
 /* After pseudo-element: Dot on the right side of the text */
 #wrapper > section > header h1:after, #wrapper > section > header h2:after {
     content: '';  /* Define content for the :after element */
@@ -3419,9 +3407,21 @@ input, select, textarea {
     height: 0.5rem;  /* Size of the circle */
     background: #ffffff;  /* Color of the circle */
     border-radius: 50%;  /* Make it circular */
-    top: 50%;  /* Align the dot vertically with the text */
+    top: 50%;  /* Vertically align the dot with the text */
     left: 100%;  /* Position the dot immediately after the text */
     transform: translateY(-50%);  /* Center the dot vertically */
+}
+
+/* Before pseudo-element: Line from the right of the dot to the far right side of the screen */
+#wrapper > section > header h1:before, #wrapper > section > header h2:before {
+    background: #ffffff;  /* Line color */
+    content: '';
+    display: block;
+    height: 2px;  /* Height of the line */
+    position: absolute;
+    top: 50%;  /* Vertically center the line with respect to the text */
+    left: 100%;  /* Position the line at the right edge of the dot */
+    width: 100vw;  /* Make the line span from the dot to the far right of the viewport */
 }
 		#wrapper > section > .content > section {
 			left: calc(-50vw - 5rem);
