@@ -3997,20 +3997,20 @@ h2 {
   font-weight: bold;
   letter-spacing: 1px;
   color: #333;
-  text-align: left; /* Align text to the left */
-  margin-bottom: 20px; /* Adjust the margin for spacing */
+  text-align: flex-start; /* Align text to the left */
+  margin-bottom: 0px; /* Adjust the margin for spacing */
 }
 
 /* Animated Heading */
 .animated-heading {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
     letter-spacing: 1px;
     color: #333;
     animation: fadeInUp 1s ease-out forwards;
     opacity: 0;
-    margin: 0 auto 20px;
+    margin: 0 auto 0px;
     padding-left: 0;
     padding-right: 0;
     text-align: left; /* Align animated heading to the left */
@@ -4054,36 +4054,6 @@ h2 {
     padding: 0;  /* Remove padding */
   }
 
-  /* Contact Form Field Layout */
-  .content .fields {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Adds space between fields */
-  }
-
-  .content .field {
-    width: 100%; /* Full width by default */
-    margin-bottom: 20px;
-  }
-
-  .content .field.half {
-    width: 48%; /* Two fields per row */
-  }
-
-  .content textarea,
-  .content input[type="text"], 
-  .content input[type="email"] {
-    width: 100%;  /* Full width of their container */
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-
-  .actions .button.primary {
-    width: 100%;  /* Full width button on mobile */
-  }
-
   /* Stacking social icons vertically on mobile */
   .icons {
     flex-direction: column;
@@ -4094,7 +4064,7 @@ h2 {
 /* Image responsive fix */
 .image img {
     width: 100%;
-    height: auto;
+    height: 50%;
 }
 
 /* Contact Form Layout */
