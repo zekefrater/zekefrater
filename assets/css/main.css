@@ -3393,7 +3393,13 @@ input, select, textarea {
 			left: calc(50vw - 5rem);
 		}
 
-
+:#wrapper > section > header h1:after, #wrapper > section > header h2:after {
+    content: '';  /* Define content for the :after element */
+    position: absolute;  /* Absolute positioning */
+    left: 50%;  /* Position it 50% from the left */
+    transform: translateX(-50%);  /* Move it back by 50% of its own width to center */
+    bottom: -2.5rem;  /* Adjust the position of the element */
+}
 /* Make sure h1 and h2 are positioned relative */
 #wrapper > section > header h1, #wrapper > section > header h2 {
     position: relative;
