@@ -3155,7 +3155,6 @@ input, select, textarea {
 
 		}
 
-/* Feature Icons and Text Container */
 /* Feature Container */
 .feature-container {
   display: flex;
@@ -3164,7 +3163,6 @@ input, select, textarea {
   width: 100%;              /* Full width */
   margin-top: 3rem;         /* Adjust space from top */
   padding: 0 2rem;          /* Optional padding for spacing */
-  text-align: center;       /* Ensure text is centered inside list items */
 }
 
 /* Feature Icons List */
@@ -3176,6 +3174,8 @@ ul.feature-icons {
   margin: 0;
   width: 100%;
   max-width: 800px;         /* Limit max width for better control */
+  text-align: left;         /* Align text left to prevent misalignment */
+  position: relative;
 }
 
 /* List Item Style (Icon and Text) */
@@ -3205,6 +3205,13 @@ ul.feature-icons li:before {
   left: 0;                     /* Align the icon to the left */
   top: 50%;                    /* Vertically center the icon */
   transform: translateY(-50%); /* Adjust for perfect vertical centering */
+}
+
+/* Center the text in each list item */
+ul.feature-icons li span {
+  margin-left: 1rem; /* Space between icon and text */
+  text-align: center;
+  width: 100%; /* Allow the text to take full available space */
 }
 
 /* Mobile responsiveness */
