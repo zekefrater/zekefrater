@@ -4026,3 +4026,8 @@ input, select, textarea {
     font-size: 1.5rem; /* Smaller text for mobile screens */
   }
 }
+
+.image img {
+  width: 100%;
+  height: auto;
+}
