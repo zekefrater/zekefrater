@@ -3395,11 +3395,11 @@ input, select, textarea {
 
 /* Ensure h1 and h2 are positioned relative */
 #wrapper > section > header h1, #wrapper > section > header h2 {
-    position: relative;  /* Ensure the text can position pseudo-elements relative to it */
+    position: relative;  /* Make the header a containing block for absolute positioning */
     display: inline-block;  /* Keeps the header text inline */
 }
 
-/* Before pseudo-element: Line from the right */
+/* Before pseudo-element: Line from the left side of the dot */
 #wrapper > section > header h1:before, #wrapper > section > header h2:before {
     background: #ffffff;  /* Line color */
     content: '';
@@ -3407,11 +3407,11 @@ input, select, textarea {
     height: 2px;  /* Height of the line */
     position: absolute;
     top: 50%;  /* Vertically center the line with respect to the text */
-    left: 100%;  /* Start the line from the right end of the text */
-    width: 1.5rem;  /* Adjust this value to make the line the desired length */
+    left: -2.5rem;  /* Start the line from the left side of the dot */
+    width: 5rem;  /* Adjust this value to make the line stretch further to the right */
 }
 
-/* After pseudo-element: Dot at the end of the line */
+/* After pseudo-element: Dot on the right side of the text */
 #wrapper > section > header h1:after, #wrapper > section > header h2:after {
     content: '';  /* Define content for the :after element */
     position: absolute;  /* Absolute positioning */
@@ -3419,8 +3419,8 @@ input, select, textarea {
     height: 0.5rem;  /* Size of the circle */
     background: #ffffff;  /* Color of the circle */
     border-radius: 50%;  /* Make it circular */
-    top: 50%;  /* Align the dot vertically with the line */
-    left: calc(100% + 1.5rem);  /* Position the dot just after the line */
+    top: 50%;  /* Align the dot vertically with the text */
+    left: 100%;  /* Position the dot immediately after the text */
     transform: translateY(-50%);  /* Center the dot vertically */
 }
 		#wrapper > section > .content > section {
