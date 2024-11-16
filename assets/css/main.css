@@ -3156,39 +3156,40 @@ input, select, textarea {
 		}
 
 /* Feature Icons and Text Container */
+/* Feature Container */
 .feature-container {
   display: flex;
-  flex-direction: column;  /* Stack the icons and text vertically */
-  align-items: center;     /* Center the content horizontally */
-  width: 100%;             /* Full width of the parent container */
-  margin-top: 3rem;        /* Space between top of the container and content */
-  padding: 0 2rem;         /* Optional: Add padding to give space on left and right */
+  justify-content: center;  /* Center the content horizontally */
+  align-items: center;      /* Vertically center the content */
+  width: 100%;              /* Full width */
+  margin-top: 3rem;         /* Adjust space from top */
+  padding: 0 2rem;          /* Optional padding for spacing */
+  text-align: center;       /* Ensure text is centered inside list items */
 }
 
 /* Feature Icons List */
 ul.feature-icons {
   display: flex;
-  flex-direction: column; /* Stack the icons and text vertically */
+  flex-direction: column;  /* Stack the icons and text vertically */
   list-style: none;
   padding-left: 0;
   margin: 0;
   width: 100%;
-  max-width: 800px;        /* Optional: Limit the max width to prevent it from stretching too wide */
-  text-align: center;      /* Center text in each list item */
+  max-width: 800px;         /* Limit max width for better control */
 }
 
-/* List Item Style */
+/* List Item Style (Icon and Text) */
 ul.feature-icons li {
   display: flex;
   align-items: center;     /* Vertically center the icon and text */
-  justify-content: center; /* Center the icon and text horizontally */
-  margin: 1rem 0;          /* Add space between list items */
-  padding-left: 2rem;      /* Add space for the icon */
+  justify-content: flex-start; /* Align the text next to the icon */
+  margin: 1rem 0;          /* Vertical spacing between list items */
+  padding-left: 3rem;      /* Space for the icon on the left */
   position: relative;
-  width: auto;             /* Let the items adjust to fit content */
+  width: auto;             /* Let the width adjust */
 }
 
-/* Icon styling (before pseudo-element) */
+/* Icon styling */
 ul.feature-icons li:before {
   content: "";  /* Make sure the pseudo-element is rendered */
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512'%3E%3Cpath d='M256,0l221.7,128v256L256,512L34.3,384V128L256,0z' fill='rgba(144, 144, 144, 0.1)' /%3E%3C/svg%3E");
