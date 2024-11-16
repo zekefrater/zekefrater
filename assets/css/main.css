@@ -3196,13 +3196,18 @@ ul.feature-icons li:before {
 
 /* Font Icon styling */
 ul.feature-icons li i {
-  font-size: 2.5rem; /* Adjust font size of the icon */
+  font-size: 2rem; /* Adjust font size of the icon (smaller size) */
   margin-right: 1rem; /* Space between icon and text */
+  width: 2rem;  /* Set width of the icon */
+  height: 2rem; /* Set height of the icon */
+  display: flex;
+  align-items: center; /* Vertically center icon */
+  justify-content: center; /* Horizontally center icon */
 }
 
 /* Text styling inside the list items */
 ul.feature-icons li span {
-  text-align: center; /* Align the text to the left next to the icon */
+  text-align: left; /* Align the text to the left next to the icon */
   display: block;   /* Make the text take the remaining space */
   flex-grow: 1;     /* Allow the text to take up available space */
 }
