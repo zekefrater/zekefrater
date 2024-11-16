@@ -3876,13 +3876,14 @@ input, select, textarea {
 .youtube-embed-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%;  /* 16:9 aspect ratio */
-    height: 100%;
+    padding-bottom: 56.25%;  /* 16:9 aspect ratio (height/width) */
+    height: 0;
     overflow: hidden;
     max-width: 100%;
     margin-bottom: 20px;  /* Add space below the video */
 }
 
+/* Ensuring iframe fits container */
 .youtube-embed-container iframe {
     position: absolute;
     top: 0;
@@ -3893,12 +3894,14 @@ input, select, textarea {
 
 /* Adjustments for Mobile Devices */
 @media (max-width: 600px) {
-    .intro header {
-        padding: 10px 15px;      /* Adjust header padding for mobile */
+    .youtube-embed-container {
+        padding-bottom: 56.25%;  /* 16:9 aspect ratio for mobile */
     }
 
-    .responsive-iframe-container iframe {
-        height: 100%;  /* Make iframe height flexible on mobile */
+    /* Ensure iframe takes up full width on mobile devices */
+    .youtube-embed-container iframe {
+        width: 100%;
+        height: auto;
     }
 
     /* Optional: Adjust content-right layout for mobile */
@@ -3908,24 +3911,28 @@ input, select, textarea {
     }
 }
 
+/* Adjustments for Larger Screens (e.g., tablets, desktops) */
+@media (min-width: 768px) {
+    .youtube-embed-container {
+        padding-bottom: 56.25%;  /* Maintain 16:9 aspect ratio on larger screens */
+    }
+
+    .youtube-embed-container iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
 /* Adjustments for Larger Screens */
 @media (min-width: 768px) {
     /* Additional styles for larger screens can be added here */
-}
-
-/* Parent Container of .content-right */
-.parent-container {
-    display: flex;
-    justify-content: center; /* Centers the content */
-    flex-direction: column; /* Optional: Stack content vertically */
-    align-items: center; /* Center items */
 }
 
 /* General Styling for Zvisional Section */
 .zvisional {
     text-align: left;
     padding: 20px;
-    background-color: transparent;
+    background-color: #404040;
     border-radius: 0;
     box-shadow: none;
 }
@@ -3963,7 +3970,7 @@ input, select, textarea {
 
 /* Icon Styling */
 .icon {
-    font-size: 30px;
+    font-size: 15px;
 }
 
 /* Aligning .content-right to the right side */
@@ -3987,7 +3994,7 @@ input, select, textarea {
 /* Adjusted styling for the container */
 .responsive-iframe-container {
     width: 100%;
-    margin-bottom: 40px; /* Space between the playlist sections */
+    margin-bottom: 10px; /* Space between the playlist sections */
     padding: 0;  /* Remove padding from the iframe container */
 }
 
@@ -4031,7 +4038,7 @@ h2 {
 /* Responsive iframe container adjustments */
 .responsive-iframe-container iframe {
     width: 100%;
-    height: 100%; /* Adjust as needed for responsiveness */
+    height: 0%; /* Adjust as needed for responsiveness */
     max-width: 100%;
     border: none;
     box-shadow: none;
