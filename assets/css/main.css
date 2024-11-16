@@ -3212,18 +3212,19 @@ ul.feature-icons li span {
   flex-grow: 1;     /* Allow the text to take up available space */
 }
 
-/* Mobile responsiveness */
 @media screen and (max-width: 736px) {
   ul.feature-icons {
-    margin: 0 0 3rem 0; /* Adjust bottom margin on smaller screens */
+    margin: 0; /* Remove excessive margin */
+    padding-left: 0; /* Ensure no unwanted padding */
   }
 
   ul.feature-icons li {
-    width: 100%; /* Stack items vertically on small screens */
+    width: 50%; /* Keep icons side-by-side if there's room */
+    margin: 0;  /* Remove extra margin for a tighter layout */
   }
 
   ul.feature-icons li:nth-child(2) {
-    margin-top: 2rem; /* Add spacing between items when stacked */
+    margin-top: 1rem; /* Use a smaller gap between items */
   }
 }
 /* Wrapper */
