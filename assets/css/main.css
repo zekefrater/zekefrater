@@ -3155,7 +3155,7 @@ input, select, textarea {
 
 		}
 
-/* Feature Icons */
+//* Feature Icons */
 
 ul.feature-icons {
   display: flex;
@@ -3175,6 +3175,8 @@ ul.feature-icons li {
   padding: 0;                   /* Remove any padding around list items */
   position: relative;
   width: 50%;                   /* Two items per row on large screens */
+  display: flex;                /* Use flex to control alignment of text */
+  align-items: center;          /* Vertically center the text in the li */
 }
 
 /* Icon styling (before pseudo-element) */
@@ -3189,10 +3191,10 @@ ul.feature-icons li:before {
   height: 3.25rem;
   width: 4rem;
   position: absolute;
-  top: 0;
-  left: 0;
-  line-height: 3.25rem;
-  text-align: center;
+  left: 0;                  /* Align the icon to the left of the li */
+  top: 50%;                 /* Vertically center the icon within the li */
+  transform: translateY(-50%);  /* Ensure perfect vertical centering */
+  line-height: 3.25rem;     /* Vertically center text within the icon (if any) */
 }
 
 /* Ensure the margin-top is reset for the first two list items */
@@ -3213,43 +3215,6 @@ ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
     margin-top: 2rem; /* Add spacing between items when stacked */
   }
 }
-
-			ul.feature-icons li:before {
-				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512'%3E%3Cpath d='M256,0l221.7,128v256L256,512L34.3,384V128L256,0z' fill='rgba(144, 144, 144, 0.1)' /%3E%3C/svg%3E");
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: contain;
-				color: #000000;
-				display: block;
-				font-size: 1.25rem;
-				height: 3.25rem;
-				left: 0;
-				line-height: 3.25rem;
-				position: absolute;
-				text-align: center;
-				top: 0;
-				width: 4rem;
-			}
-
-			ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
-				margin-top: 0;
-			}
-
-		@media screen and (max-width: 736px) {
-
-			ul.feature-icons {
-				margin: 0 0 3rem 0;
-			}
-
-				ul.feature-icons li {
-					width: 100%;
-				}
-
-					ul.feature-icons li:nth-child(2) {
-						margin-top: 2rem;
-					}
-
-		}
 
 /* Wrapper */
 
