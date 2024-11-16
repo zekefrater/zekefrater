@@ -2835,46 +2835,114 @@ input, select, textarea {
 				border-top: 0;
 			}
 
-/* General Arrow Styles */
+/* General Reset for Layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+/* Wrapper Styles */
+#wrapper {
+  position: relative;
+  overflow: hidden; /* Prevents elements from overflowing */
+}
+
+/* Intro Section */
+.intro {
+  position: relative;
+  z-index: 10; /* Ensures header content stays on top */
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #f5f5f5;
+}
+
+/* Social Links Styles */
+ul.actions {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+ul.actions li {
+  margin: 0 15px;
+}
+
+ul.actions a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+/* Image Section */
+.intro .content {
+  position: relative;
+}
+
+.intro .content .image {
+  display: block;
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+}
+
+/* Arrow Styles */
 a.arrow {
   display: inline-block;
-  width: 6rem;
   height: 4rem;
-  position: absolute;
-  top: 50%;
+  width: 6rem;
+  position: absolute; /* Ensures the arrow is positioned relative to its container */
+  top: 80%; /* Moves the arrow lower on the screen */
   left: 50%;
-  z-index: 1000;
+  z-index: 1000; /* Stays above other content */
   cursor: pointer;
   transition: all 0.3s ease;
-  transform: translate(-50%, -50%);
-  text-decoration: none;
+  text-align: center;
+  transform: translateX(-50%);
+  text-decoration: none; /* No underline */
 }
 
 /* Arrow Icon Styling */
 a.arrow:before {
   content: "";
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512'%3E%3Cpath d='M442.53,346.28L293.65,495.16c-0.33,0.33-0.7,0.62-1.05,0.94c-9.16,9.77-22.15,15.9-36.6,15.9 c-14.44,0-27.43-6.13-36.59-15.88c-0.35-0.33-0.72-0.62-1.06-0.96L69.47,346.28c-19.62-19.62-19.62-51.44,0-71.05 c19.62-19.62,51.43-19.62,71.06,0l65.23,65.23V50.24C205.76,22.5,228.25,0,256,0s50.24,22.5,50.24,50.24v290.21l65.23-65.23 c19.62-19.62,51.43-19.62,71.05,0C462
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512'%3E%3Cpath d='M442.53,346.28L293.65,495.16c-0.33,0.33-0.7,0.62-1.05,0.94c-9.16,9.77-22.15,15.9-36.6,15.9 c-14.44,0-27.43-6.13-36.59-15.88c-0.35-0.33-0.72-0.62-1.06-0.96L69.47,346.28c-19.62-19.62-19.62-51.44,0-71.05 c19.62-19.62,51.43-19.62,71.06,0l65.23,65.23V50.24C205.76,22.5,228.25,0,256,0s50.24,22.5,50.24,50.24v290.21l65.23-65.23 c19.62-19.62,51.43-19.62,71.05,0C462.15,294.84,462.15,326.66,442.53,346.28z' fill='%23000000' /%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the icon */
+}
 
 /* Hover Effect for the Arrow */
 a.arrow:hover {
   opacity: 0.7;
-  transform: translate(-50%, -50%) translateY(-5px); /* Adds a slight upward movement on hover */
+  transform: translate(-50%, -50%) translateY(-5px); /* Adds slight movement */
 }
 
 /* Mobile responsiveness */
 @media screen and (max-width: 736px) {
   a.arrow {
-    width: 4rem; /* Adjust width for mobile */
-    height: 3rem; /* Adjust height for mobile */
-    top: 60%; /* Adjust position on smaller screens */
-    left: 50%; /* Keep it horizontally centered */
+    width: 4rem;
+    height: 3rem;
   }
 
   a.arrow:before {
-    width: 10rem; /* Adjust icon size for mobile */
-    height: auto;  /* Adjust height for mobile */
+    width: 2.5rem;
+    height: auto;
   }
 }
+
 /* Gallery */
 
 	@-moz-keyframes gallery-modal-spinner {
