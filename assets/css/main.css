@@ -3877,7 +3877,7 @@ input, select, textarea {
     position: relative;
     width: 100%;
     padding-bottom: 56.25%;  /* 16:9 aspect ratio */
-    height: 0;
+    height: 100%;
     overflow: hidden;
     max-width: 100%;
     margin-bottom: 20px;  /* Add space below the video */
@@ -3963,7 +3963,7 @@ input, select, textarea {
 
 /* Icon Styling */
 .icon {
-    font-size: 24px;
+    font-size: 30px;
 }
 
 /* Aligning .content-right to the right side */
@@ -3975,7 +3975,7 @@ input, select, textarea {
     text-align: left; /* Ensure text aligns left */
     padding-right: 0;  /* Remove unnecessary right padding */
     width: 100%;  /* Ensure full width */
-    margin-left: auto;
+    margin-left: 0;
     margin-right: 0; /* Optional: Remove margin-right for better alignment */
 }
 
@@ -3997,14 +3997,14 @@ h2 {
   font-weight: bold;
   letter-spacing: 1px;
   color: #333;
-  text-align: flex-start; /* Align text to the left */
-  margin-bottom: 0px; /* Adjust the margin for spacing */
+  text-align: right; /* Align text to the left */
+  margin-bottom: 40px; /* Adjust the margin for spacing */
 }
 
 /* Animated Heading */
 .animated-heading {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     letter-spacing: 1px;
     color: #333;
@@ -4041,8 +4041,8 @@ h2 {
 @media (max-width: 768px) {
   .animated-heading {
     font-size: 1.5rem;  /* Smaller text for mobile screens */
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .responsive-iframe-container {
@@ -4053,19 +4053,6 @@ h2 {
   .youtube-playlist-container {
     padding: 0;  /* Remove padding */
   }
-
-  /* Stacking social icons vertically on mobile */
-  .icons {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-/* Image responsive fix */
-.image img {
-    width: 100%;
-    height: 50%;
-}
 
 /* Contact Form Layout */
 .content .fields {
