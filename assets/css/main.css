@@ -4032,8 +4032,8 @@ input, select, textarea {
 	list-style: none;
 	padding: 0;
 	display: flex;
-	gap: 10px;
-	justify-content: center; /* Center icons by default */
+	gap: 5px;
+	justify-content: left; /* Center icons by default */
   }
   
   .icons .icon {
