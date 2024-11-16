@@ -4006,6 +4006,7 @@ input, select, textarea {
   box-sizing: border-box;
 }
 
+
 /* Feature Icons List */
 ul.feature-icons {
   display: flex;
@@ -4045,8 +4046,7 @@ ul.feature-icons li:before {
 
 /* Text styling inside the list items */
 ul.feature-icons li span {
-  margin-left: 1rem;  /* Small gap between icon and text */
-  text-align: center;   /* Align text to the left */
+  text-align: left;   /* Align text to the left */
   font-size: 1.25rem; /* Text size */
 }
 
