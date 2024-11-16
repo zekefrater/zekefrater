@@ -3425,7 +3425,7 @@ input, select, textarea {
     position: absolute;  /* Absolute positioning */
     left: 50%;  /* Position it 50% from the left */
     transform: translateX(-50%);  /* Move it back by 50% of its own width to center */
-    bottom: -2.5rem;  /* Adjust the position of the element */
+    bottom: 0;  /* Original position of the element */
 }
 
 		#wrapper > section > .content > section {
