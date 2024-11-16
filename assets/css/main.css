@@ -4038,13 +4038,14 @@ h2 {
     position: relative;
     width: 100%;
     padding-bottom: 56.25%;  /* Aspect ratio for 16:9 (height/width = 9/16 = 56.25%) */
-    height: 0;  /* Make sure the height is 0 so padding-bottom controls the height */
+    height: 0;  /* Ensure the height is controlled by the padding-bottom */
     overflow: hidden;
     max-width: 100%;
     margin-bottom: 20px;  /* Optional: Space below the iframe */
+    box-sizing: border-box; /* Ensure padding is included in width/height calculation */
 }
 
-/* Make sure iframe takes full width and height of the container */
+/* Ensure iframe takes full width and height of the container */
 .responsive-iframe-container iframe {
     position: absolute;
     top: 0;
@@ -4107,7 +4108,7 @@ h2 {
     width: 100%;         /* Ensures the container takes up full width */
     max-width: 100%;     /* Prevents it from exceeding the available space */
     margin: 0 auto;      /* Centers the container */
-    padding: 20px;       /* Optional: space around the content */
+    padding: 10px;       /* Optional: space around the content */
 }
 
 /* Style for the header */
@@ -4118,7 +4119,7 @@ h2 {
 
 /* Style for the list */
 .experience-highlights ul {
-    padding-left: 20px;   /* Add padding to the left for the list */
+    padding-left: 10px;   /* Add padding to the left for the list */
     list-style-type: disc; /* Use bullet points */
     margin: 0;            /* Remove default margin */
 }
