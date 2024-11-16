@@ -3393,6 +3393,11 @@ input, select, textarea {
 			left: calc(50vw - 5rem);
 		}
 
+#wrapper > section > header h1, #wrapper > section > header h2 {
+    line-height: 1; /* Adjust line height if necessary */
+    margin: 0;  /* Ensure no extra margin around the text */
+}
+
 /* Ensure h1 and h2 are positioned relative */
 #wrapper > section > header h1, #wrapper > section > header h2 {
     position: relative;  /* Make the header a containing block for absolute positioning */
