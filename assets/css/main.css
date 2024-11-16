@@ -3177,6 +3177,7 @@ ul.feature-icons li {
   width: 50%;                   /* Two items per row on large screens */
   display: flex;                /* Use flex to control alignment of text */
   align-items: center;          /* Vertically center the text in the li */
+  justify-content: center;      /* Center the text horizontally */
 }
 
 /* Icon styling (before pseudo-element) */
