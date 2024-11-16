@@ -3158,30 +3158,36 @@ input, select, textarea {
 //* Feature Icons */
 
 /* Feature Icons Container */
+ul.feature-icons-container {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center;     /* Center the content vertically */
+  width: 100%;             /* Full width container */
+  margin-top: 2rem;        /* Adjust the margin as needed */
+  flex-direction: column;  /* Stack the icons and text vertically */
+  gap: 2rem;               /* Space between the icons and text */
+}
+
+/* Feature Icons List */
 ul.feature-icons {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin: 3rem 0;
+  margin: 0;
   padding-left: 0;
-  justify-content: center; /* Center the list items horizontally on the page */
-  width: 100%; /* Ensure the container spans the full width */
-}
-
-/* First-child - No margin on top */
-ul.feature-icons:first-child {
-  margin-top: 0;
+  justify-content: center; /* Center the list items horizontally */
+  width: 100%;
 }
 
 /* List Item Style */
 ul.feature-icons li {
-  margin: 2.5rem 0 0 0;         /* Spacing between list items */
-  padding: 0;                   /* Remove any padding around list items */
+  margin: 2.5rem 0 0 0;        /* Spacing between list items */
+  padding: 0;                  /* Remove any padding around list items */
   position: relative;
-  width: 50%;                   /* Two items per row on large screens */
-  display: flex;                /* Flexbox to control alignment */
-  align-items: center;          /* Vertically center the text */
-  justify-content: flex-start;  /* Keep the text aligned to the left */
+  width: 50%;                  /* Two items per row on large screens */
+  display: flex;               /* Use flex to control alignment of text */
+  align-items: center;         /* Vertically center the text in the li */
+  justify-content: flex-start; /* Keep the text aligned to the left */
 }
 
 /* Icon styling (before pseudo-element) */
@@ -3202,20 +3208,7 @@ ul.feature-icons li:before {
   line-height: 3.25rem;         /* Vertically center text within the icon (if any) */
 }
 
-/* Ensure the margin-top is reset for the first two list items */
-ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
-  margin-top: 0;
-}
-
-/* Center the content in the group */
-ul.feature-icons-container {
-  display: flex;
-  justify-content: center; /* Center the content horizontally */
-  align-items: center;     /* Center the content vertically */
-  width: 100%;             /* Full width container */
-  margin-top: 2rem;        /* Adjust the margin as needed */
-}
-
+/* Mobile responsiveness */
 @media screen and (max-width: 736px) {
   ul.feature-icons {
     margin: 0 0 3rem 0; /* Adjust bottom margin on smaller screens */
