@@ -27,7 +27,7 @@ section, summary, time, mark, audio, video {
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;}
+	display: relative;}
 
 body {
 	line-height: 1;
@@ -3338,9 +3338,9 @@ input, select, textarea {
 #wrapper > section > header h1, 
 #wrapper > section > header h2 {
     position: relative;  /* Make the header a containing block for absolute positioning */
-    display: flex;  /* Keeps the header text inline */
+    display: block;  /* Keeps the header text inline */
     margin: 0;  /* Remove any default margin to avoid affecting text spacing */
-    align-items: right; /* Center items vertically */
+    align-items: flex-end; /* Center items vertically */
 }
 
 /* After pseudo-element: Dot on the right side of the text */
@@ -3398,6 +3398,7 @@ input, select, textarea {
 			}
 
 		}
+		
 
 		#wrapper > section:last-of-type > header:after {
 			left: calc(50vw - 5rem - 0.25rem + 1px);
@@ -3505,12 +3506,12 @@ input, select, textarea {
 					#wrapper section > header {
 						justify-self: start;
 						padding: 0;
-						text-align: left;
+						text-align: center;
 						width: 100%;
 					}
 
 						#wrapper section > header ul.actions {
-							justify-content: flex-start;
+							justify-content: flex;
 						}
 
 					#wrapper section > .content {
@@ -3521,11 +3522,11 @@ input, select, textarea {
 
 					#wrapper section > footer {
 						padding: 0;
-						text-align: left;
+						text-align: flex;
 					}
 
 						#wrapper section > footer ul.actions {
-							justify-content: flex-start;
+							justify-content: center;
 						}
 
 				#wrapper > section {
@@ -3774,6 +3775,7 @@ input, select, textarea {
 			body.is-preload #wrapper > section.intro > .content {
 				transform: translateY(-1rem);
 			}
+			
 
 		@media screen and (max-width: 1280px) {
 
@@ -3813,18 +3815,12 @@ input, select, textarea {
 			width: 50%;
 			text-align: center;
 			margin-left: 50%;
-			padding: 5rem;
+			padding: 0rem;
 		}
 
-	body.is-ie #wrapper > section > .content > section {
-		width: 100vw;
-	}
-/* Reset and Common Styles */
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-  }
+		body.is-ie #wrapper > section > .content > section > * {
+			max-width: 100vw;
+		}
   
   body {
 	font-family: 'Source Sans Pro', sans-serif;
@@ -3841,8 +3837,8 @@ input, select, textarea {
   
   @media (min-width: 768px) {
 	.header-container {
-	  justify-content: flex-start; /* Align to the left on larger screens */
-	  padding-right: 2rem; /* Add space from the right edge */
+	  justify-content: flex; /* Align to the left on larger screens */
+	  padding-right: 0rem; /* Add space from the right edge */
 	}
   }
   
@@ -3893,7 +3889,7 @@ input, select, textarea {
   
   .youtube-embed-container iframe,
   .responsive-iframe-container iframe {
-	position: absolute;
+	position: absolute;			
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -3910,7 +3906,7 @@ input, select, textarea {
   
   .content {
 	text-align: center;
-	padding: 0 15px;
+	padding: 0 0px;
   }
   
   /* Contact Form Styling */
