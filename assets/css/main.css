@@ -3155,43 +3155,41 @@ input, select, textarea {
 
 		}
 
-//* Feature Icons */
-
-/* Feature Icons Container */
-ul.feature-icons-container {
+/* Feature Icons and Text Container */
+.feature-container {
   display: flex;
-  justify-content: center; /* Center the content horizontally */
-  align-items: center;     /* Center the content vertically */
-  width: 100%;             /* Full width container */
-  margin-top: 2rem;        /* Adjust the margin as needed */
-  flex-direction: column;  /* Stack the icons and text vertically */
-  gap: 2rem;               /* Space between the icons and text */
+  flex-direction: column;
+  align-items: center;  /* Center the content horizontally */
+  justify-content: center;  /* Center the content vertically if needed */
+  width: 100%;  /* Full width of the parent container */
+  margin-top: 3rem; /* Space between top of the container and content */
+  text-align: center;  /* Center the text in the feature-text-group */
 }
 
 /* Feature Icons List */
 ul.feature-icons {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;  /* Allow the list to wrap if needed */
   list-style: none;
   margin: 0;
-  padding-left: 0;
-  justify-content: center; /* Center the list items horizontally */
-  width: 100%;
+  padding: 0;
+  justify-content: center;  /* Center the icons horizontally within the container */
+  width: 100%;  /* Ensure the list occupies full width */
 }
 
 /* List Item Style */
 ul.feature-icons li {
-  margin: 2.5rem 0 0 0;        /* Spacing between list items */
-  padding: 0;                  /* Remove any padding around list items */
+  display: flex;
+  align-items: center;  /* Vertically center the icon and text */
+  margin: 2.5rem 2rem;  /* Add space between list items */
+  padding-left: 4rem;  /* Space to the left for the icon */
   position: relative;
-  width: 50%;                  /* Two items per row on large screens */
-  display: flex;               /* Use flex to control alignment of text */
-  align-items: center;         /* Vertically center the text in the li */
-  justify-content: flex-start; /* Keep the text aligned to the left */
+  width: 200px;  /* Limit the width of each list item */
 }
 
 /* Icon styling (before pseudo-element) */
 ul.feature-icons li:before {
+  content: "";  /* Make sure the pseudo-element is rendered */
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512'%3E%3Cpath d='M256,0l221.7,128v256L256,512L34.3,384V128L256,0z' fill='rgba(144, 144, 144, 0.1)' /%3E%3C/svg%3E");
   background-position: center;
   background-repeat: no-repeat;
@@ -3202,18 +3200,13 @@ ul.feature-icons li:before {
   height: 3.25rem;
   width: 4rem;
   position: absolute;
-  left: 0;                      /* Align the icon to the left of the li */
-  top: 50%;                     /* Vertically center the icon within the li */
+  top: 50%;  /* Vertically center the icon */
+  left: 0;  /* Align the icon to the left */
   transform: translateY(-50%);  /* Ensure perfect vertical centering */
-  line-height: 3.25rem;         /* Vertically center text within the icon (if any) */
 }
 
 /* Mobile responsiveness */
 @media screen and (max-width: 736px) {
-  ul.feature-icons {
-    margin: 0 0 3rem 0; /* Adjust bottom margin on smaller screens */
-  }
-
   ul.feature-icons li {
     width: 100%; /* Stack items vertically on small screens */
   }
