@@ -3393,32 +3393,25 @@ input, select, textarea {
 			left: calc(50vw - 5rem);
 		}
 
-:#wrapper > section > header h1:after, #wrapper > section > header h2:after {
-    content: '';  /* Define content for the :after element */
-    position: absolute;  /* Absolute positioning */
-    left: 50%;  /* Position it 50% from the left */
-    transform: translateX(-50%);  /* Move it back by 50% of its own width to center */
-    bottom: -2.5rem;  /* Adjust the position of the element */
-}
-/* Make sure h1 and h2 are positioned relative */
+/* Ensure h1 and h2 are positioned relative */
 #wrapper > section > header h1, #wrapper > section > header h2 {
-    position: relative;
-    display: inline-block;  /* Ensure the header stays inline so we can position the dot */
+    position: relative;  /* Ensure the text can position pseudo-elements relative to it */
+    display: inline-block;  /* Keeps the header text inline */
 }
 
-/* Before pseudo-element: Line starts from the right side */
+/* Before pseudo-element: Line from the right */
 #wrapper > section > header h1:before, #wrapper > section > header h2:before {
     background: #ffffff;  /* Line color */
     content: '';
     display: block;
     height: 2px;  /* Height of the line */
     position: absolute;
-    top: 1.5rem;  /* Position the line below the text */
-    right: 0;  /* Start from the right edge */
-    width: 100%;  /* Make the line span the full width of the header */
+    top: 50%;  /* Vertically center the line with respect to the text */
+    left: 100%;  /* Start the line from the right end of the text */
+    width: 1.5rem;  /* Adjust this value to make the line the desired length */
 }
 
-/* After pseudo-element: Dot on the right of the text */
+/* After pseudo-element: Dot at the end of the line */
 #wrapper > section > header h1:after, #wrapper > section > header h2:after {
     content: '';  /* Define content for the :after element */
     position: absolute;  /* Absolute positioning */
@@ -3426,8 +3419,9 @@ input, select, textarea {
     height: 0.5rem;  /* Size of the circle */
     background: #ffffff;  /* Color of the circle */
     border-radius: 50%;  /* Make it circular */
-    top: 1.5rem;  /* Align the circle vertically with the line */
-    right: -0.5rem;  /* Place the circle slightly outside the text */
+    top: 50%;  /* Align the dot vertically with the line */
+    left: calc(100% + 1.5rem);  /* Position the dot just after the line */
+    transform: translateY(-50%);  /* Center the dot vertically */
 }
 		#wrapper > section > .content > section {
 			left: calc(-50vw - 5rem);
