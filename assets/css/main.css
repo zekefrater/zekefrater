@@ -2836,6 +2836,18 @@ input, select, textarea {
 			}
 
 
+/* General Reset for Layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5; /* Replace #inherit with a valid background color */
+}
+
 /* Wrapper Styles */
 #wrapper {
   position: relative;
@@ -2878,7 +2890,7 @@ ul.actions a {
 .intro .content .image {
   display: block;
   width: 100%;
-  height: 50vh;
+  height: 50vh; /* If needed, adjust this height to suit your design */
   object-fit: cover;
 }
 
@@ -2931,7 +2943,6 @@ a.arrow:hover {
     height: auto;
   }
 }
-
 /* Gallery */
 
 	@-moz-keyframes gallery-modal-spinner {
