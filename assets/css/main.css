@@ -4057,22 +4057,4 @@ input, select, textarea {
 	  text-align: center; /* Center contact info items on smaller screens */
 	}
   }
-  /* Responsibilities Section */
-.responsibilities {
-	font-size: 1.2rem; /* Adjust this value to your desired size */
-	line-height: 1.6; /* Adjust line-height for better readability */
-  }
-  
-  /* If you want it to be smaller or larger for specific screen sizes */
-  @media (max-width: 768px) {
-	.responsibilities {
-	  font-size: 1rem; /* Adjust font size for mobile screens */
-	}
-  }
-  
-  @media (min-width: 1024px) {
-	.responsibilities {
-	  font-size: 1.4rem; /* Adjust font size for larger screens */
-	}
-  }
   
