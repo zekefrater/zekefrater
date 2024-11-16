@@ -2834,8 +2834,6 @@ input, select, textarea {
 			table.alt tfoot {
 				border-top: 0;
 			}
-
-
 /* General Reset for Layout */
 * {
   margin: 0;
@@ -2880,6 +2878,13 @@ ul.actions a {
   text-decoration: none;
   color: #333;
   font-size: 1.5rem;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+/* Add hover effect for better UX */
+ul.actions a:hover {
+  color: #007bff; /* Change to a blue color on hover */
 }
 
 /* Image Section */
@@ -2933,6 +2938,21 @@ a.arrow:hover {
 
 /* Mobile responsiveness */
 @media screen and (max-width: 736px) {
+  /* Make sure the links are displayed vertically on mobile */
+  ul.actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul.actions li {
+    margin: 10px 0; /* Stack the items vertically */
+  }
+
+  /* Adjust social icon size for mobile */
+  ul.actions a {
+    font-size: 1.2rem;
+  }
+
   a.arrow {
     width: 4rem;
     height: 3rem;
