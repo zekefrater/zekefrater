@@ -4185,19 +4185,22 @@ textarea, input[type="text"], input[type="email"] {
 }
 
 
+/* Header Container Styling */
 .header-container {
   display: flex;
-  justify-content: center; /* Default: Center items on mobile */
+  justify-content: center; /* Center items on mobile by default */
   align-items: flex-start; /* Align items to the top */
+  width: 100%; /* Ensure it takes up full width */
 }
 
-/* Align items to the left on desktop screens (larger screens) */
+/* Align items to the right on larger screens (desktop and up) */
 @media (min-width: 768px) {
   .header-container {
-    justify-content: flex-start; /* Align items to the left on desktop */
+    justify-content: flex-end; /* Align items to the right on desktop */
   }
 }
 
+/* General h2 Styling */
 h2 {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 2rem;
@@ -4205,33 +4208,52 @@ h2 {
   letter-spacing: 1px;
   color: #333;
   margin-bottom: 0;
+  text-align: center; /* Center h2 text on mobile */
 }
 
-/* Animated Heading */
+/* Animated Heading Styling */
 .animated-heading {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 2rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: #333;
-    animation: fadeInUp 1s ease-out forwards;
-    opacity: 0;
-    margin: 0 auto 0px;
-    padding-left: 0;
-    padding-right: 0;
-    text-align: left; /* Align animated heading to the left */
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #333;
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+  margin: 0; /* Remove any extra margin */
+  padding: 0; /* Remove extra padding */
+  text-align: center; /* Align animated heading text to the center on mobile */
+  width: 100%; /* Ensure it takes up the full width of the container */
 }
 
 /* Fade-in and slide-up animation */
 @keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media query for larger screens (desktop and above) */
+@media (min-width: 768px) {
+  h2 {
+    text-align: right; /* Align h2 text to the right on desktop */
+  }
+
+  .animated-heading {
+    text-align: right; /* Align animated heading text to the right on desktop */
+  }
+}
+
+/* Add spacing to the right on desktop */
+@media (min-width: 768px) {
+  .header-container {
+    margin-right: 2rem; /* Adjust as needed */
+  }
 }
 
 /* Style for the icon list */
