@@ -3397,6 +3397,7 @@ input, select, textarea {
 #wrapper > section > header h1, #wrapper > section > header h2 {
     position: relative;  /* Make the header a containing block for absolute positioning */
     display: inline-block;  /* Keeps the header text inline */
+    margin: 0;  /* Remove any default margin to avoid affecting text spacing */
 }
 
 /* After pseudo-element: Dot on the right side of the text */
@@ -3421,8 +3422,10 @@ input, select, textarea {
     position: absolute;
     top: 50%;  /* Vertically center the line with respect to the text */
     left: 100%;  /* Position the line at the right edge of the dot */
-    width: 100vw;  /* Make the line span from the dot to the far right of the viewport */
+    width: 50vw;  /* Make the line span from the dot to the far right of the viewport */
+    transform: translateY(-50%);  /* Ensure the line is aligned properly */
 }
+
 		#wrapper > section > .content > section {
 			left: calc(-50vw - 5rem);
 		}
