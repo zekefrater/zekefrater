@@ -2835,17 +2835,6 @@ input, select, textarea {
 				border-top: 0;
 			}
 
-/* General Reset for Layout */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #fff;
-}
 
 /* Wrapper Styles */
 #wrapper {
@@ -2858,7 +2847,7 @@ body {
   position: relative;
   z-index: 10; /* Ensures header content stays on top */
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 0rem 0rem;
   background-color: #f5f5f5;
 }
 
@@ -2901,7 +2890,7 @@ a.arrow {
   position: absolute; /* Ensures the arrow is positioned relative to its container */
   top: 80%; /* Moves the arrow lower on the screen */
   left: 50%;
-  z-index: 1000; /* Stays above other content */
+  z-index: 1500; /* Stays above other content */
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
