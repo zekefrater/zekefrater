@@ -3937,7 +3937,7 @@ input, select, textarea {
 
 .zvisional header {
     margin-bottom: 20px;
-    background-color: #5CE1E6;  /* Blue background for zvisional header */
+    background-color: #404040;  /* Blue background for zvisional header */
     color: #fff;                /* White text */
     padding: 15px 20px;         /* Padding inside the header */
 }
@@ -3963,7 +3963,7 @@ input, select, textarea {
 
 .social-icons a:hover {
     color: #5CE1E6;
-    transform: scale(1.1);
+    transform: scale(2.2);
 }
 
 /* Icon Styling */
