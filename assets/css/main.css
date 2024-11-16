@@ -2846,8 +2846,9 @@ a.arrow {
   transition: all 0.3s ease; /* Smooth transition effect on hover */
   text-align: center; /* Centers the text inside the link if used */
   padding: 10px;
-  /* Remove absolute positioning and center the link container */
+  /* Removed absolute positioning to center the link */
   margin: 0 auto;
+  text-decoration: none; /* Ensures there's no underline */
 }
 
 /* Arrow Icon Styling */
@@ -2882,7 +2883,7 @@ a.arrow:hover {
     width: 2.5rem; /* Adjust icon size for mobile */
     height: auto;  /* Adjust height for mobile */
   }
-}
+}}
 /* Gallery */
 
 	@-moz-keyframes gallery-modal-spinner {
