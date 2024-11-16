@@ -3968,8 +3968,8 @@ input, select, textarea {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-end;
-  text-align: left;
+  align-items: center;
+  text-align: center;
   padding-right: 20px;
   width: 100%;  /* Ensure this takes up full width */
   margin-left: auto;
@@ -3998,8 +3998,8 @@ input, select, textarea {
   animation: fadeInUp 1s ease-out forwards;
   opacity: 0;
   margin: 0 auto 20px;  /* Centers the heading with auto margin */
-  padding-left: 20px;  /* Add left padding to prevent misalignment */
-  padding-right: 20px;  /* Add right padding to prevent misalignment */
+  padding-left: 0px;  /* Add left padding to prevent misalignment */
+  padding-right: 0px;  /* Add right padding to prevent misalignment */
 }
 
 /* Fade-in and slide-up animation */
@@ -4032,7 +4032,7 @@ input, select, textarea {
   }
 
   .responsive-iframe-container {
-    padding: 0 10px;  /* Ensures there is space on left and right */
+    padding: 0px;  /* Ensures there is space on left and right */
   }
 
   /* Reduce padding on the playlist container for smaller screens */
