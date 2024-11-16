@@ -3155,41 +3155,32 @@ input, select, textarea {
 
 		}
 
-/* Feature Container */
-.feature-container {
-  display: flex;
-  justify-content: center;  /* Center the content horizontally */
-  align-items: center;      /* Vertically center the content */
-  width: 100%;              /* Full width */
-  margin-top: 3rem;         /* Adjust space from top */
-  padding: 0 2rem;          /* Optional padding for spacing */
-}
-
 /* Feature Icons List */
 ul.feature-icons {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin: 0;  /* Remove default margin */
+  margin: 3rem 0;
   padding-left: 0;
+  justify-content: center; /* Center the list items horizontally */
+  text-align: left; /* Align text left */
   width: 100%;
-  max-width: 800px;         /* Optional, can adjust based on preference */
-  text-align: center;         /* Align text left */
 }
 
 /* List Item Style (Icon and Text) */
 ul.feature-icons li {
   display: flex;                /* Make each list item a flex container */
-  justify-content: flex;  /* Align content horizontally (icons and text) */
+  justify-content: flex-start;  /* Align content horizontally (icons and text) */
   align-items: center;          /* Vertically center the icon and text */
-  margin: 2.5rem 0 0 0;         /* Vertical spacing between list items */
-  padding: 0;                   /* Remove any padding around list items */
+  margin: 1.5rem;               /* Spacing between list items */
+  padding-left: 3rem;           /* Create space for the icon */
   position: relative;
   width: 50%;                   /* Two items per row on large screens */
 }
 
 /* Icon styling (before pseudo-element) */
 ul.feature-icons li:before {
+  content: "";  /* Ensure pseudo-element renders */
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512'%3E%3Cpath d='M256,0l221.7,128v256L256,512L34.3,384V128L256,0z' fill='rgba(144, 144, 144, 0.1)' /%3E%3C/svg%3E");
   background-position: center;
   background-repeat: no-repeat;
@@ -3208,7 +3199,7 @@ ul.feature-icons li:before {
 /* Text styling inside the list items */
 ul.feature-icons li span {
   margin-left: 1rem; /* Small gap between icon and text */
-  width: 100%;       /* Allow the text to take the remaining space */
+  text-align: center; /* Center the text horizontally */
 }
 
 /* Mobile responsiveness */
