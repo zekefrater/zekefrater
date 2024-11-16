@@ -3991,6 +3991,16 @@ input, select, textarea {
     padding: 0;  /* Remove padding from the iframe container */
 }
 
+h2 {
+  font-family: 'YourFontFamily', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #333;
+  text-align: center; /* Ensure text is centered */
+  margin-bottom: 20px; /* Adjust the margin for spacing */
+}
+
 /* Animated Heading */
 .animated-heading {
     font-family: 'YourFontFamily', sans-serif; /* Ensure it matches your current h2 font */
