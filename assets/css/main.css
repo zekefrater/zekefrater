@@ -3407,17 +3407,20 @@ input, select, textarea {
     height: 2px;
     position: absolute;
     top: 1rem;
-    right: -5rem;
-    width: 2.5rem;
+    left: 0;
+    right: 0;
 }
 
 /* After pseudo-element */
 #wrapper > section > header h1:after, #wrapper > section > header h2:after {
     content: '';  /* Define content for the :after element */
     position: absolute;  /* Absolute positioning */
-    left: 50%;  /* Position it 50% from the left */
-    transform: translateX(-50%);  /* Move it back by 50% of its own width to center */
-    bottom: 0;  /* Original position of the element */
+    height: 0.5rem;  /* Size of the circle */
+    width: 0.5rem;  /* Size of the circle */
+    background: #ffffff;  /* Color of the circle */
+    border-radius: 50%;  /* Make it circular */
+    top: 1.5rem;  /* Align it vertically with the text */
+    right: 0;  /* Position it on the far right of the header text */
 }
 
 		#wrapper > section > .content > section {
