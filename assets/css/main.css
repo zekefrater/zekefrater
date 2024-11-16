@@ -4155,3 +4155,26 @@ h2 {
         transform: translateY(0);
     }
 }
+
+/* Style for the icon list */
+.icons {
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center the icons horizontally */
+  gap: 20px; /* Add space between icons */
+}
+
+/* Style for each icon link */
+.icons a {
+  text-decoration: none;
+  color: #333;
+  font-size: 30px; /* Adjust size as needed */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Icon hover effect */
+.icons a:hover {
+  color: #5CE1E6; /* Change color on hover */
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
