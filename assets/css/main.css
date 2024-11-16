@@ -3971,19 +3971,6 @@ input, select, textarea {
     font-size: 30px;
 }
 
-/* Aligning .content to the right side */
-.content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start; /* Align items to the left */
-    text-align: left; /* Ensure text aligns left */
-    padding-right: 0;  /* Remove unnecessary right padding */
-    width: 100%;  /* Ensure full width */
-    margin-left: 0;
-    margin-right: 0; /* Optional: Remove margin-right for better alignment */
-}
-
 /* Ensure Sections Are Properly Spaced */
 .section {
     margin-bottom: 0px;
