@@ -3394,35 +3394,30 @@ input, select, textarea {
 		}
 
 
-	/* Make sure h1 and h2 are positioned relative */
+/* Make sure h1 and h2 are positioned relative */
 #wrapper > section > header h1, #wrapper > section > header h2 {
     position: relative;
 }
 
 /* Before pseudo-element */
 #wrapper > section > header h1:before, #wrapper > section > header h2:before {
-    background: #ffffff;  /* Line color */
-    content: '';  /* Define content for the :before element */
+    background: #ffffff;
+    content: '';
     display: block;
-    height: 2px;  /* Height of the line */
+    height: 2px;
     position: absolute;
-    top: 1.5rem;  /* Position slightly below the header text */
-    left: 0;  /* Align it to the left of the header */
-    right: 0;  /* Ensure it spans across the full width of the header */
+    top: 1rem;
+    right: -5rem;
+    width: 2.5rem;
 }
 
-/* After pseudo-element (circle or small block) */
+/* After pseudo-element */
 #wrapper > section > header h1:after, #wrapper > section > header h2:after {
-    background: #ffffff;  /* Color of the circle */
-    border-radius: 50%;  /* Make it circular */
     content: '';  /* Define content for the :after element */
-    display: block;
-    height: 0.5rem;  /* Size of the circle */
-    position: absolute;
-    top: 2.25rem;  /* Position the circle below the line */
-    left: 50%;  /* Center it horizontally */
-    transform: translateX(-50%);  /* Center it by moving back 50% of its own width */
-    width: 0.5rem;  /* Size of the circle */
+    position: absolute;  /* Absolute positioning */
+    left: 50%;  /* Position it 50% from the left */
+    transform: translateX(-50%);  /* Move it back by 50% of its own width to center */
+    bottom: 0;  /* Original position of the element */
 }
 
 		#wrapper > section > .content > section {
