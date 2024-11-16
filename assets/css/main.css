@@ -3915,7 +3915,7 @@ input, select, textarea {
 @media (min-width: 768px) {
     .responsive-iframe-container {
         max-width: 90%; /* Optional: limit width for larger screens */
-        margin: 0 auto; /* Center the iframe on the screen */
+        margin: auto; /* Center the iframe on the screen */
     }
 
     /* No need to modify iframe's height and width in this case, as they are already full */
@@ -3968,7 +3968,7 @@ input, select, textarea {
 
 /* Icon Styling */
 .icon {
-    font-size: 25px;
+    font-size: 30px;
 }
 
 /* Aligning .content-right to the right side */
@@ -3980,7 +3980,7 @@ input, select, textarea {
     text-align: left; /* Ensure text aligns left */
     padding-right: 0;  /* Remove unnecessary right padding */
     width: 100%;  /* Ensure full width */
-    margin-left: 0;
+    margin-left: 20px;
     margin-right: 0; /* Optional: Remove margin-right for better alignment */
 }
 
