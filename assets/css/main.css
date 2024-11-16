@@ -3923,26 +3923,14 @@ h2 {
 
 /* General Mobile Fix for Layouts */
 @media (max-width: 768px) {
-  .animated-heading {
-    font-size: 1.5rem;  /* Smaller text for mobile screens */
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-
   .responsive-iframe-container {
-    padding: 0px;  /* No padding on smaller screens */
+    width: 100%;
+    margin-bottom: 20px; /* Space between the playlist sections */
+    padding: 0;  /* Remove padding from the iframe container */
   }
-
-  /* Reduce padding on the playlist container for smaller screens */
   .youtube-playlist-container {
     padding: 0;  /* Remove padding */
   }
-
-/* General Content Styling */
-.content {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .section {
@@ -4201,12 +4189,6 @@ textarea, input[type="text"], input[type="email"] {
     margin-bottom: 0px;
 }
 
-/* Adjusted styling for the container */
-.responsive-iframe-container {
-    width: 100%;
-    margin-bottom: 20px; /* Space between the playlist sections */
-    padding: 0;  /* Remove padding from the iframe container */
-}
 
 .header-container {
   display: flex;
