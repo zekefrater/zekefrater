@@ -3252,7 +3252,7 @@ input, select, textarea {
 			#wrapper section > header {
 				grid-area: header;
 				justify-self: end;
-				text-align: right;
+				text-align: right;s
 			}
 
 				#wrapper section > header h2 {
@@ -3399,7 +3399,7 @@ input, select, textarea {
     position: relative;  /* Make the header a containing block for absolute positioning */
     display: flex;  /* Keeps the header text inline */
     margin: 0;  /* Remove any default margin to avoid affecting text spacing */
-    align-items: center; /* Center items vertically */
+    align-items: right; /* Center items vertically */
 }
 
 /* After pseudo-element: Dot on the right side of the text */
@@ -3426,7 +3426,7 @@ input, select, textarea {
     position: absolute;
     top: 50%;  /* Vertically center the line with respect to the text */
     left: calc(100% + 0.5rem);  /* Position the line so it starts right after the dot */
-    width: 40%;  /* Make the line span from the dot to the far right of the viewport */
+    width: 22.5%;  /* Make the line span from the dot to the far right of the viewport */
     transform: translateY(-50%);  /* Ensure the line is aligned properly */
 }
 
@@ -3495,12 +3495,12 @@ input, select, textarea {
 				}
 
 				#wrapper > section > header h1:before, #wrapper > section > header h2:before {
-					right: -4rem;
+					right: 0rem;
 					width: 2rem;
 				}
 
 				#wrapper > section > header h1:after, #wrapper > section > header h2:after {
-					right: -2rem;
+					right: rem;
 				}
 
 				#wrapper > section > .content > section {
@@ -3870,7 +3870,7 @@ input, select, textarea {
 
 		body.is-ie #wrapper section > footer {
 			width: 50%;
-			text-align: left;
+			text-align: center;
 			margin-left: 50%;
 			padding: 5rem;
 		}
@@ -3881,7 +3881,7 @@ input, select, textarea {
 /* Header Container */
 .header-container {
   display: flex;
-  justify-content: center; /* Default: Center items on mobile */
+  justify-content: right; /* Default: Center items on mobile */
   align-items: flex-start; /* Align items to the top */
 }
 
@@ -3958,7 +3958,7 @@ h2 {
     height: 0;  /* Ensure the height is controlled by the padding-bottom */
     overflow: hidden;
     max-width: 100%;
-    margin-bottom: 20px;  /* Optional: Space below the iframe */
+    margin-bottom: 10px;  /* Optional: Space below the iframe */
     box-sizing: border-box; /* Ensure padding is included in width/height calculation */
 }
 
@@ -3984,7 +3984,7 @@ h2 {
     }
 
 .section {
-    margin-bottom: 40px; /* Add space between sections */
+    margin-bottom: 0px; /* Add space between sections */
 }
 
 /* Header Styling */
@@ -4071,7 +4071,7 @@ textarea, input[type="text"], input[type="email"] {
     list-style: none;
     padding: 0;
     display: flex;
-    gap: 15px;
+    gap: 5px;
     justify-content: center;
 }
 
@@ -4123,7 +4123,7 @@ textarea, input[type="text"], input[type="email"] {
 
   /* Style for the list */
   .experience-highlights ul {
-    padding-left: 10px;   /* Add padding to the left for the list */
+    padding-left: 0px;   /* Add padding to the left for the list */
     list-style-type: disc; /* Use bullet points */
     margin: 0;            /* Remove default margin */
   }
@@ -4227,7 +4227,7 @@ h2 {
   opacity: 0;
   margin: 0; /* Remove any extra margin */
   padding: 0; /* Remove extra padding */
-  text-align: center; /* Align animated heading text to the center on mobile */
+  text-align: right; /* Align animated heading text to the center on mobile */
   width: 100%; /* Ensure it takes up the full width of the container */
 }
 
@@ -4257,7 +4257,7 @@ h2 {
 /* Add spacing to the right on desktop */
 @media (min-width: 768px) {
   .header-container {
-    margin-right: 2rem; /* Adjust as needed */
+    margin-right: 0rem; /* Adjust as needed */
   }
 }
 
