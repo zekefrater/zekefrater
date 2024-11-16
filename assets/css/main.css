@@ -3174,7 +3174,7 @@ ul.feature-icons {
   padding-left: 0;
   width: 100%;
   max-width: 800px;         /* Optional, can adjust based on preference */
-  text-align: left;         /* Align text left */
+  text-align: center;         /* Align text left */
 }
 
 /* List Item Style (Icon and Text) */
