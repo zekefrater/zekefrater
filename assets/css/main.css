@@ -3876,6 +3876,30 @@ input, select, textarea {
 	body.is-ie #wrapper > section > .content > section {
 		width: 100vw;
 	}
+/* Header Container */
+.header-container {
+  display: flex;
+  justify-content: center; /* Default: Center items on mobile */
+  align-items: flex-start; /* Align items to the top */
+}
+
+/* Align items to the left on desktop screens (larger screens) */
+@media (min-width: 768px) {
+  .header-container {
+    justify-content: flex-start; /* Align items to the left on desktop */
+  }
+}
+
+/* Header Styling */
+h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #333;
+  margin-bottom: 0;
+}
+
 /* Wrapper around the iframe to maintain aspect ratio */
 .responsive-iframe-container {
     position: relative;
@@ -3888,15 +3912,113 @@ input, select, textarea {
     box-sizing: border-box; /* Ensure padding is included in width/height calculation */
 }
 
-/* Ensuring iframe fits container */
+/* Ensure iframe takes full width and height of the container */
 .responsive-iframe-container iframe {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;  /* Full width */
+    height: 100%;  /* Full height */
+}
+
+/* General Mobile Fix for Layouts */
+@media (max-width: 768px) {
+  .animated-heading {
+    font-size: 1.5rem;  /* Smaller text for mobile screens */
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .responsive-iframe-container {
+    padding: 0px;  /* No padding on smaller screens */
+  }
+
+  /* Reduce padding on the playlist container for smaller screens */
+  .youtube-playlist-container {
+    padding: 0;  /* Remove padding */
+  }
+
+  /* Contact Form Layout */
+  .content .fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .content .field {
     width: 100%;
-    height: 100%;
-    border: none;
-    box-shadow: none;
+    margin-bottom: 20px;
+  }
+
+  .content .field.half {
+    width: 48%; /* Two fields per row */
+  }
+
+  .content textarea,
+  .content input[type="text"],
+  .content input[type="email"] {
+    width: 100%; /* Full width of their container */
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  .content .actions .button.primary {
+    width: 100%; /* Full width button on mobile */
+  }
+
+  /* Ensure the container is responsive */
+  .experience-highlights {
+    width: 100%;         /* Ensures the container takes up full width */
+    max-width: 100%;     /* Prevents it from exceeding the available space */
+    margin: 0 auto;      /* Centers the container */
+    padding: 10px;       /* Optional: space around the content */
+  }
+
+  /* Style for the header */
+  .experience-highlights h3 {
+    font-size: 1.5rem;   /* Adjust the size for readability */
+    margin-bottom: 10px;  /* Space between the heading and the list */
+  }
+
+  /* Style for the list */
+  .experience-highlights ul {
+    padding-left: 10px;   /* Add padding to the left for the list */
+    list-style-type: disc; /* Use bullet points */
+    margin: 0;            /* Remove default margin */
+  }
+
+  /* Style for each list item */
+  .experience-highlights ul li {
+    font-size: 1rem;      /* Make sure the font size is readable */
+    margin-bottom: 8px;   /* Add space between list items */
+  }
+
+  /* Make the content responsive */
+  @media (max-width: 768px) {
+    .experience-highlights h3 {
+      font-size: 1.2rem; /* Reduce font size on smaller screens */
+    }
+
+    .experience-highlights ul li {
+      font-size: 0.9rem;  /* Adjust list font size for mobile */
+    }
+
+    .experience-highlights {
+      padding: 15px;      /* Add some padding on smaller screens */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .experience-highlights h3 {
+      font-size: 1rem;    /* Further reduce font size on very small screens */
+    }
+
+    .experience-highlights ul li {
+      font-size: 0.8rem;  /* Even smaller font size */
+    }
+  }
 }
 
 /* YouTube Embed Container Styling */
@@ -3919,100 +4041,33 @@ input, select, textarea {
     height: 100%;
 }
 
-/* General Mobile Fix for Layouts */
-@media (max-width: 768px) {
-    .animated-heading {
-        font-size: 1.5rem;  /* Smaller text for mobile screens */
-        margin-left: 0px;
-        margin-right: 0px;
-    }
+/* Adjustments for Mobile Devices */
+@media (max-width: 600px) {
+  .youtube-embed-container {
+    padding-bottom: 56.25%;  /* 16:9 aspect ratio for mobile */
+  }
 
-    .responsive-iframe-container {
-        padding: 0px;  /* No padding on smaller screens */
-    }
+  /* Ensure iframe takes up full width on mobile devices */
+  .youtube-embed-container iframe {
+    width: 100%;
+    height: auto;
+  }
 
-    .youtube-embed-container {
-        padding-bottom: 56.25%;  /* 16:9 aspect ratio for mobile */
-    }
-
-    /* Ensure iframe takes up full width on mobile devices */
-    .youtube-embed-container iframe {
-        width: 100%;
-        height: 100%; /* Keep aspect ratio */
-    }
-
-    /* Contact Form Layout */
-    .content .fields {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .content .field {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .content .field.half {
-        width: 48%; /* Two fields per row */
-    }
-
-    .content textarea,
-    .content input[type="text"],
-    .content input[type="email"] {
-        width: 100%; /* Full width of their container */
-        padding: 10px;
-        border-radius: 4px;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-    }
-
-    .content .actions .button.primary {
-        width: 100%; /* Full width button on mobile */
-    }
-
-    /* Experience Highlights Section */
-    .experience-highlights {
-        width: 100%;         /* Ensures the container takes up full width */
-        max-width: 100%;     /* Prevents it from exceeding the available space */
-        margin: 0 auto;      /* Centers the container */
-        padding: 10px;       /* Optional: space around the content */
-    }
-
-    .experience-highlights h3 {
-        font-size: 1.2rem;   /* Adjust the size for readability */
-        margin-bottom: 10px;  /* Space between the heading and the list */
-    }
-
-    /* Style for the list */
-    .experience-highlights ul {
-        padding-left: 10px;   /* Add padding to the left for the list */
-        list-style-type: disc; /* Use bullet points */
-        margin: 0;            /* Remove default margin */
-    }
-
-    .experience-highlights ul li {
-        font-size: 0.9rem;    /* Adjust list font size for mobile */
-        margin-bottom: 8px;   /* Add space between list items */
-    }
-
-    .experience-highlights {
-        padding: 15px;      /* Add some padding on smaller screens */
-    }
+  /* Optional: Adjust content layout for mobile */
+  .content {
+    width: 100%; /* Ensure it takes full width on small screens */
+    padding-right: 0; /* Remove unnecessary right padding */
+  }
 }
 
 /* Adjustments for Larger Screens (e.g., tablets, desktops) */
 @media (min-width: 768px) {
-    .responsive-iframe-container {
-        max-width: 90%; /* Optional: limit width for larger screens */
-        margin: auto; /* Center the iframe on the screen */
-    }
-  
-    /* No additional iframe modifications for larger screens */
-    .youtube-embed-container {
-        max-width: 90%;
-        margin: auto;
-    }
+  .responsive-iframe-container {
+    max-width: 90%; /* Optional: limit width for larger screens */
+    margin: auto; /* Center the iframe on the screen */
+  }
+
+  /* No need to modify iframe's height and width in this case, as they are already full */
 }
 
 /* Social Icons Styling */
@@ -4031,17 +4086,17 @@ input, select, textarea {
 
 .social-icons a:hover {
     color: #5CE1E6;
-    transform: scale(1.5); /* Reduced scale for subtler hover effect */
+    transform: scale(2.2);
 }
 
 /* Icon Styling */
 .icon {
-    font-size: 2rem;  /* Using rem for scalability */
+    font-size: 30px;
 }
 
 /* Ensure Sections Are Properly Spaced */
 .section {
-    margin-bottom: 20px; /* Ensure there's space between sections */
+    margin-bottom: 0px;
 }
 
 /* Adjusted styling for the container */
@@ -4051,14 +4106,19 @@ input, select, textarea {
     padding: 0;  /* Remove padding from the iframe container */
 }
 
-/* Header Container */
 .header-container {
   display: flex;
-  justify-content: flex-end; /* Align items to the right */
+  justify-content: center; /* Default: Center items on mobile */
   align-items: flex-start; /* Align items to the top */
 }
 
-/* Header Styling */
+/* Align items to the left on desktop screens (larger screens) */
+@media (min-width: 768px) {
+  .header-container {
+    justify-content: flex-start; /* Align items to the left on desktop */
+  }
+}
+
 h2 {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 2rem;
