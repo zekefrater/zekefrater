@@ -3158,23 +3158,59 @@ input, select, textarea {
 /* Feature Icons */
 
 	ul.feature-icons {
-		display: flex;
-		flex-wrap: wrap;
-		list-style: none;
-		margin: 3rem 0;
-		padding-left: 0;
-	}
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 3rem 0;
+  padding-left: 0;
+  align-items: center; /* Vertically center items within the flex container */
+}
 
-		ul.feature-icons:first-child {
-			margin-top: 0;
-		}
+ul.feature-icons:first-child {
+  margin-top: 0;
+}
 
-		ul.feature-icons li {
-			margin: 2.5rem 0 0 0;
-			padding: 0rem 0 0 0rem;
-			position: relative;
-			width: 50%;
-		}
+ul.feature-icons li {
+  display: flex;                /* Make each list item a flex container */
+  justify-content: flex-start;  /* Align content horizontally (icons and text) */
+  align-items: center;          /* Vertically center the icon and text */
+  margin: 2.5rem 0 0 0;         /* Spacing between list items */
+  padding: 0;                   /* Remove any padding around list items */
+  position: relative;
+  width: 50%;                   /* Two items per row on large screens */
+}
+
+/* Icon styling (before pseudo-element) */
+ul.feature-icons li:before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512'%3E%3Cpath d='M256,0l221.7,128v256L256,512L34.3,384V128L256,0z' fill='rgba(144, 144, 144, 0.1)' /%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #000000;
+  display: block;
+  font-size: 1.25rem;
+  height: 3.25rem;
+  width: 4rem;
+  position: absolute;
+  top: 50%;                       /* Vertically center the icon */
+  left: 0;
+  transform: translateY(-50%);    /* Adjust positioning to exactly center vertically */
+  line-height: 3.25rem;           /* Vertically center text within the icon (if any) */
+}
+
+@media screen and (max-width: 736px) {
+  ul.feature-icons {
+    margin: 0 0 3rem 0; /* Adjust bottom margin on smaller screens */
+  }
+
+  ul.feature-icons li {
+    width: 100%; /* Stack items vertically on small screens */
+  }
+
+  ul.feature-icons li:nth-child(2) {
+    margin-top: 2rem; /* Add spacing between items when stacked */
+  }
+}
 
 			ul.feature-icons li:before {
 				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512'%3E%3Cpath d='M256,0l221.7,128v256L256,512L34.3,384V128L256,0z' fill='rgba(144, 144, 144, 0.1)' /%3E%3C/svg%3E");
