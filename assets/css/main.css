@@ -3299,29 +3299,7 @@ input, select, textarea {
 				width: 2px;
 			}
 
-			#wrapper > section > header h1, #wrapper > section > header h2 {
-				position: relative;
-			}
 
-				#wrapper > section > header h1:before, #wrapper > section > header h2:before {
-					background: #ffffff;
-					content: '';
-					display: block;
-					height: 2px;
-					position: absolute;
-					top: 1rem;
-				}
-
-				#wrapper > section > header h1:after, #wrapper > section > header h2:after {
-					background: #ffffff;
-					border-radius: 0.5rem;
-					content: '';
-					display: block;
-					height: 0.5rem;
-					position: absolute;
-					top: 0.75rem;
-					width: 0.5rem;
-				}
 
 			#wrapper > section > header h1 {
 				margin-top: -2rem;
@@ -3415,17 +3393,36 @@ input, select, textarea {
 			left: calc(50vw - 5rem);
 		}
 
-		#wrapper > section > header h1:before, #wrapper > section > header h2:before {
-			right: -5rem;
-			width: 2.5rem;
-		}
 
+	/* Make sure h1 and h2 are positioned relative */
+#wrapper > section > header h1, #wrapper > section > header h2 {
+    position: relative;
+}
+
+/* Before pseudo-element */
+#wrapper > section > header h1:before, #wrapper > section > header h2:before {
+    background: #ffffff;  /* Line color */
+    content: '';  /* Define content for the :before element */
+    display: block;
+    height: 2px;  /* Height of the line */
+    position: absolute;
+    top: 1.5rem;  /* Position slightly below the header text */
+    left: 0;  /* Align it to the left of the header */
+    right: 0;  /* Ensure it spans across the full width of the header */
+}
+
+/* After pseudo-element (circle or small block) */
 #wrapper > section > header h1:after, #wrapper > section > header h2:after {
+    background: #ffffff;  /* Color of the circle */
+    border-radius: 50%;  /* Make it circular */
     content: '';  /* Define content for the :after element */
-    position: absolute;  /* Absolute positioning */
-    left: 50%;  /* Position it 50% from the left */
-    transform: translateX(-50%);  /* Move it back by 50% of its own width to center */
-    bottom: 0;  /* Original position of the element */
+    display: block;
+    height: 0.5rem;  /* Size of the circle */
+    position: absolute;
+    top: 2.25rem;  /* Position the circle below the line */
+    left: 50%;  /* Center it horizontally */
+    transform: translateX(-50%);  /* Center it by moving back 50% of its own width */
+    width: 0.5rem;  /* Size of the circle */
 }
 
 		#wrapper > section > .content > section {
