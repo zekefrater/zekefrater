@@ -2838,16 +2838,15 @@ input, select, textarea {
 /* General Arrow Styles */
 a.arrow {
   display: inline-block;
-  height: 4rem;
   width: 6rem;
-  position: relative; /* Allows positioning inside the container */
-  z-index: 1000; /* Ensures it stays on top */
+  height: 4rem;
+  position: absolute; /* Use absolute positioning to place it anywhere in the container */
+  top: 50%; /* Vertically center it */
+  left: 50%; /* Horizontally center it */
+  z-index: 1000; /* Ensure it stays on top */
   cursor: pointer; /* Indicates it's clickable */
   transition: all 0.3s ease; /* Smooth transition effect on hover */
-  text-align: center; /* Centers the text inside the link if used */
-  padding: 10px;
-  /* Removed absolute positioning to center the link */
-  margin: 0 auto;
+  transform: translate(-50%, -50%); /* Adjust to perfectly center the arrow */
   text-decoration: none; /* Ensures there's no underline */
 }
 
@@ -2861,15 +2860,15 @@ a.arrow:before {
   height: 100%;
   width: 3rem; /* Adjust icon size */
   position: absolute;
-  top: 50%; /* Vertically center the icon */
-  left: 50%; /* Horizontally center the icon */
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%); /* Adjust for perfect centering */
 }
 
 /* Hover Effect for the Arrow */
 a.arrow:hover {
-  opacity: 0.7; /* Slight opacity change on hover */
-  transform: translate(-50%, -50%) translateY(-5px); /* Add slight movement */
+  opacity: 0.7;
+  transform: translate(-50%, -50%) translateY(-5px); /* Adds a slight upward movement on hover */
 }
 
 /* Mobile responsiveness */
@@ -2877,13 +2876,15 @@ a.arrow:hover {
   a.arrow {
     width: 4rem; /* Adjust width for mobile */
     height: 3rem; /* Adjust height for mobile */
+    top: 60%; /* Adjust position on smaller screens */
+    left: 50%; /* Keep it horizontally centered */
   }
 
   a.arrow:before {
     width: 2.5rem; /* Adjust icon size for mobile */
     height: auto;  /* Adjust height for mobile */
   }
-}}
+}
 /* Gallery */
 
 	@-moz-keyframes gallery-modal-spinner {
