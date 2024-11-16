@@ -3180,7 +3180,7 @@ ul.feature-icons {
 /* List Item Style (Icon and Text) */
 ul.feature-icons li {
   display: flex;                /* Make each list item a flex container */
-  justify-content: flex-start;  /* Align content horizontally (icons and text) */
+  justify-content: flex;  /* Align content horizontally (icons and text) */
   align-items: center;          /* Vertically center the icon and text */
   margin: 2.5rem 0 0 0;         /* Vertical spacing between list items */
   padding: 0;                   /* Remove any padding around list items */
