@@ -3926,27 +3926,6 @@ input, select, textarea {
     /* Additional styles for larger screens can be added here */
 }
 
-/* General Styling for Zvisional Section */
-.zvisional {
-    text-align: left;
-    padding: 20px;
-    background-color: #404040;
-    border-radius: 0;
-    box-shadow: none;
-}
-
-.zvisional header {
-    margin-bottom: 20px;
-    background-color: #404040;  /* Blue background for zvisional header */
-    color: #fff;                /* White text */
-    padding: 15px 20px;         /* Padding inside the header */
-}
-
-.zvisional h2,
-.zvisional p {
-    margin: 10px 0;
-}
-
 /* Social Icons Styling */
 .social-icons {
     display: flex;
@@ -3983,15 +3962,21 @@ input, select, textarea {
     padding: 0;  /* Remove padding from the iframe container */
 }
 
+.header-container {
+  display: flex; /* Turn the container into a flexbox */
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center; /* Vertically align the items in the center (optional) */
+}
+
 h2 {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 2rem;
   font-weight: bold;
   letter-spacing: 1px;
   color: #333;
-  text-align: right; /* Align text to the left */
-  margin-bottom: 40px; /* Adjust the margin for spacing */
+  margin-bottom: 0px;
 }
+
 
 /* Animated Heading */
 .animated-heading {
