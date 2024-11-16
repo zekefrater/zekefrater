@@ -3397,30 +3397,32 @@ input, select, textarea {
 /* Make sure h1 and h2 are positioned relative */
 #wrapper > section > header h1, #wrapper > section > header h2 {
     position: relative;
+    display: inline-block;  /* Ensure the header stays inline so we can position the dot */
 }
 
-/* Before pseudo-element */
+/* Before pseudo-element: Line from the right edge to the dot */
 #wrapper > section > header h1:before, #wrapper > section > header h2:before {
-    background: #ffffff;
+    background: #ffffff;  /* Line color */
     content: '';
     display: block;
-    height: 2px;
+    height: 2px;  /* Height of the line */
     position: absolute;
-    top: 1rem;
-    left: 0;
-    right: 0;
+    top: 1.5rem;  /* Position the line below the text */
+    left: 0;  /* Start from the left side */
+    width: 100%;  /* Make the line span the full width of the header */
+    transform: translateX(0);  /* No need to center it, just extend from left to right */
 }
 
-/* After pseudo-element */
+/* After pseudo-element: Dot on the right of the text */
 #wrapper > section > header h1:after, #wrapper > section > header h2:after {
     content: '';  /* Define content for the :after element */
     position: absolute;  /* Absolute positioning */
-    height: 0.5rem;  /* Size of the circle */
     width: 0.5rem;  /* Size of the circle */
+    height: 0.5rem;  /* Size of the circle */
     background: #ffffff;  /* Color of the circle */
     border-radius: 50%;  /* Make it circular */
-    top: 1.5rem;  /* Align it vertically with the text */
-    right: 0;  /* Position it on the far right of the header text */
+    top: 1.5rem;  /* Align the circle vertically with the text */
+    right: -0.5rem;  /* Adjust to place it at the right of the header (push it slightly out of the text) */
 }
 
 		#wrapper > section > .content > section {
