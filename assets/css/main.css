@@ -3899,6 +3899,54 @@ h2 {
   color: #333;
   margin-bottom: 0;
 }
+/* YouTube Embed Container Styling */
+.youtube-embed-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;  /* 16:9 aspect ratio (height/width) */
+    height: 0;  /* Ensure the height is controlled by the padding-bottom */
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 20px;  /* Add space below the video */
+    box-sizing: border-box; /* Ensure padding is included in width/height calculation */
+}
+
+/* Ensuring iframe fits container */
+.youtube-embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove any border that might appear */
+}
+
+/* Adjustments for Mobile Devices */
+@media (max-width: 768px) {
+    .youtube-embed-container {
+        padding-bottom: 56.25%;  /* 16:9 aspect ratio for mobile */
+    }
+
+    /* Ensure iframe takes full width on mobile devices */
+    .youtube-embed-container iframe {
+        width: 100%;
+        height: 100%;  /* Ensure the height remains consistent */
+    }
+
+    /* Optional: Adjust content layout for mobile */
+    .content {
+        width: 100%; /* Ensure it takes full width on small screens */
+        padding-right: 0; /* Remove unnecessary right padding */
+    }
+}
+
+/* Adjustments for Larger Screens (e.g., tablets, desktops) */
+@media (min-width: 768px) {
+    .youtube-embed-container {
+        max-width: 90%;  /* Optional: limit width for larger screens */
+        margin: auto; /* Center the iframe on the screen */
+    }
+}
 
 /* Wrapper around the iframe to maintain aspect ratio */
 .responsive-iframe-container {
@@ -3923,15 +3971,15 @@ h2 {
 
 /* General Mobile Fix for Layouts */
 @media (max-width: 768px) {
-  .responsive-iframe-container {
-    width: 100%;
-    margin-bottom: 20px; /* Space between the playlist sections */
-    padding: 0;  /* Remove padding from the iframe container */
-  }
-  .youtube-playlist-container {
-    padding: 0;  /* Remove padding */
-  }
-}
+    .responsive-iframe-container {
+        width: 100%;
+        margin-bottom: 20px; /* Space between the playlist sections */
+        padding: 0;  /* Ensure padding is 0 to prevent excess space */
+    }
+
+    .youtube-playlist-container {
+        padding: 0;  /* Ensure no padding in playlist container */
+    }
 
 .section {
     margin-bottom: 40px; /* Add space between sections */
@@ -4108,56 +4156,6 @@ textarea, input[type="text"], input[type="email"] {
       font-size: 0.8rem;  /* Even smaller font size */
     }
   }
-}
-
-/* YouTube Embed Container Styling */
-.youtube-embed-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;  /* 16:9 aspect ratio (height/width) */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    margin-bottom: 20px;  /* Add space below the video */
-}
-
-/* Ensuring iframe fits container */
-.youtube-embed-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none; /* Remove any border that might appear */
-}
-
-/* Adjustments for Mobile Devices */
-@media (max-width: 600px) {
-  .youtube-embed-container {
-    padding-bottom: 56.25%;  /* 16:9 aspect ratio for mobile */
-  }
-
-  /* Ensure iframe takes up full width on mobile devices */
-  .youtube-embed-container iframe {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Optional: Adjust content layout for mobile */
-  .content {
-    width: 100%; /* Ensure it takes full width on small screens */
-    padding-right: 0; /* Remove unnecessary right padding */
-  }
-}
-
-/* Adjustments for Larger Screens (e.g., tablets, desktops) */
-@media (min-width: 768px) {
-  .responsive-iframe-container {
-    max-width: 90%; /* Optional: limit width for larger screens */
-    margin: auto; /* Center the iframe on the screen */
-  }
-
-  /* No need to modify iframe's height and width in this case, as they are already full */
 }
 
 /* Social Icons Styling */
