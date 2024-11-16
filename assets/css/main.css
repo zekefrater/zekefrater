@@ -3157,13 +3157,13 @@ input, select, textarea {
 
 /* Feature Icons */
 
-	ul.feature-icons {
+ul.feature-icons {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   margin: 3rem 0;
   padding-left: 0;
-  align-items: center; /* Vertically center items within the flex container */
+  justify-content: center; /* Center the list items horizontally on the page */
 }
 
 ul.feature-icons:first-child {
@@ -3171,9 +3171,6 @@ ul.feature-icons:first-child {
 }
 
 ul.feature-icons li {
-  display: flex;                /* Make each list item a flex container */
-  justify-content: flex-start;  /* Align content horizontally (icons and text) */
-  align-items: center;          /* Vertically center the icon and text */
   margin: 2.5rem 0 0 0;         /* Spacing between list items */
   padding: 0;                   /* Remove any padding around list items */
   position: relative;
@@ -3192,10 +3189,15 @@ ul.feature-icons li:before {
   height: 3.25rem;
   width: 4rem;
   position: absolute;
-  top: 50%;                       /* Vertically center the icon */
+  top: 0;
   left: 0;
-  transform: translateY(-50%);    /* Adjust positioning to exactly center vertically */
-  line-height: 3.25rem;           /* Vertically center text within the icon (if any) */
+  line-height: 3.25rem;
+  text-align: center;
+}
+
+/* Ensure the margin-top is reset for the first two list items */
+ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
+  margin-top: 0;
 }
 
 @media screen and (max-width: 736px) {
