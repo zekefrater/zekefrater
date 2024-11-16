@@ -36,7 +36,7 @@
 <ul class="actions">
     <li><a href="#first" class="arrow scrolly" aria-label="Next section"><span class="label">Next</span></a></li>
 </ul>
-
+</header>
         <!-- Image -->
         <div class="content">
             <span class="image fill" data-position="flex">
@@ -628,6 +628,20 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
-
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var scrollLinks = document.querySelectorAll('.scrolly');
+    for (var i = 0; i < scrollLinks.length; i++) {
+        scrollLinks[i].addEventListener('click', function (e) {
+            e.preventDefault();
+            var target = document.querySelector(this.getAttribute('href'));
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    }
+});
+</script>
 </body>
 </html>
