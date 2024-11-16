@@ -3194,11 +3194,17 @@ ul.feature-icons li:before {
   transform: translateY(-50%); /* Adjust for perfect vertical centering */
 }
 
+/* Font Icon styling */
+ul.feature-icons li i {
+  font-size: 2.5rem; /* Adjust font size of the icon */
+  margin-right: 1rem; /* Space between icon and text */
+}
+
 /* Text styling inside the list items */
 ul.feature-icons li span {
-  margin-left: 1rem; /* Small gap between icon and text */
-  text-align: center; /* Center the text horizontally */
-  display: block;    /* Make the text take the remaining space */
+  text-align: left; /* Align the text to the left next to the icon */
+  display: block;   /* Make the text take the remaining space */
+  flex-grow: 1;     /* Allow the text to take up available space */
 }
 
 /* Mobile responsiveness */
