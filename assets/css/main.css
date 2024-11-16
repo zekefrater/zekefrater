@@ -3999,52 +3999,73 @@ input, select, textarea {
 	}
   }
   
-		* {
+/* CSS Reset */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-		
-/* Feature Icons Specific */
-.feature-icons {
+
+/* Feature Icons List */
+ul.feature-icons {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   margin: 3rem 0;
   padding-left: 0;
-  justify-content: center;
+  justify-content: center; /* Center the list items horizontally */
   width: 100%;
 }
 
-.feature-icons li {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 1.5rem;
+/* List Item Style (Icon and Text) */
+ul.feature-icons li {
+  display: flex;                /* Make each list item a flex container */
+  justify-content: flex-start;  /* Align content horizontally (icons and text) */
+  align-items: center;          /* Vertically center the icon and text */
+  margin: 1.5rem;               /* Spacing between list items */
   position: relative;
-  width: 50%;
-  box-sizing: border-box;
+  width: 50%;                   /* Two items per row on large screens */
+  padding-left: 1rem;           /* Add slight padding on the left to prevent the icon from touching the edge */
+  box-sizing: border-box;       /* Ensures padding is included in the width */
 }
 
-.feature-icons li:before {
+/* Icon styling (using pseudo-element :before for the background icon) */
+ul.feature-icons li:before {
   content: "";
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512'%3E%3Cpath d='M256,0l221.7,128v256L256,512L34.3,384V128L256,0z' fill='rgba(144, 144, 144, 0.1)' /%3E%3C/svg%3E");
-  background-position: center center;
+  background-position: center center; /* Ensure the icon is centered within the box */
   background-repeat: no-repeat;
   background-size: contain;
   display: block;
-  height: 3.25rem;
-  width: 3.25rem;
+  height: 3.25rem; /* Set the size of the icon */
+  width: 3.25rem;  /* Set the size of the icon */
   position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 0;                     /* Align the icon to the left edge of the li */
+  top: 50%;                    /* Vertically center the icon */
+  transform: translateY(-50%); /* Adjust for perfect vertical centering */
 }
 
-.feature-icons li span {
-  margin-left: 1rem;
-  text-align: left;
-  display: inline-block;
-  font-size: 1rem;
-  flex-grow: 1;
+/* Text styling inside the list items */
+ul.feature-icons li span {
+  margin-left: 1rem;    /* Small gap between icon and text */
+  text-align: left;     /* Align the text to the left next to the icon */
+  flex-grow: 1;         /* Allow the text to take up available space */
+  font-size: 1rem;      /* Adjust font size */
+  display: block;       /* Ensure text takes the available space */
+}
+
+@media screen and (max-width: 736px) {
+  ul.feature-icons {
+    margin: 0; /* Remove excessive margin */
+    padding-left: 0; /* Ensure no unwanted padding */
+  }
+
+  ul.feature-icons li {
+    width: 100%; /* Stack items vertically on smaller screens */
+    margin: 0;  /* Remove extra margin for a tighter layout */
+  }
+
+  ul.feature-icons li:nth-child(2) {
+    margin-top: 1rem; /* Add spacing between items when stacked */
+  }
 }
