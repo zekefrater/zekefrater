@@ -3163,7 +3163,6 @@ ul.feature-icons {
   margin: 3rem 0;
   padding-left: 0;
   justify-content: center; /* Center the list items horizontally */
-  text-align: left; /* Align text left */
   width: 100%;
 }
 
@@ -3173,21 +3172,33 @@ ul.feature-icons li {
   justify-content: flex-start;  /* Align content horizontally (icons and text) */
   align-items: center;          /* Vertically center the icon and text */
   margin: 1.5rem;               /* Spacing between list items */
-  padding-left: 3rem;           /* Create space for the icon */
   position: relative;
   width: 50%;                   /* Two items per row on large screens */
 }
 
-/* Icon styling (using FontAwesome icons directly) */
-ul.feature-icons li i {
-  font-size: 2rem; /* Icon size */
-  color: #000;     /* Icon color */
-  margin-right: 1rem; /* Gap between the icon and the text */
+/* Icon styling (using pseudo-element :before for the background icon) */
+ul.feature-icons li:before {
+  content: "";  /* Ensure pseudo-element renders */
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512'%3E%3Cpath d='M256,0l221.7,128v256L256,512L34.3,384V128L256,0z' fill='rgba(144, 144, 144, 0.1)' /%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #000000;
+  display: block;
+  font-size: 1.25rem;
+  height: 3.25rem;
+  width: 4rem;
+  position: absolute;
+  left: 0;                     /* Align the icon to the left */
+  top: 50%;                    /* Vertically center the icon */
+  transform: translateY(-50%); /* Adjust for perfect vertical centering */
 }
 
 /* Text styling inside the list items */
 ul.feature-icons li span {
+  margin-left: 1rem; /* Small gap between icon and text */
   text-align: center; /* Center the text horizontally */
+  display: block;    /* Make the text take the remaining space */
 }
 
 /* Mobile responsiveness */
@@ -3204,7 +3215,6 @@ ul.feature-icons li span {
     margin-top: 2rem; /* Add spacing between items when stacked */
   }
 }
-
 /* Wrapper */
 
 	#wrapper {
