@@ -150,28 +150,31 @@
 	}
 
 	input[type="checkbox"],
-	input[type="radio"], {
-		@include vendor('appearance', 'none');
-		display: block;
-		float: left;
-		margin-right: -2rem;
-		opacity: 0;
-		width: 1rem;
-		z-index: -1;
+	input[type="radio"] {
+	  appearance: none; /* Corrected syntax */
+	  display: block;
+	  float: left; /* Fixed property */
+	  margin-right: 0rem;
+	  opacity: 0;
+	  width: 1rem;
+	  z-index: -1;
+	}
+	
 
-		& + label {
-			@include icon(false, solid);
-			color: _palette(fg);
-			cursor: pointer;
-			display: inline-block;
-			font-family: _font(family);
-			font-size: 1rem;
-			font-weight: _font(weight);
-			letter-spacing: _font(kerning);
-			padding-left: (_size(element-height) * 0.6) + 0.875rem;
-			padding-right: 0.875rem;
-			position: relative;
-			text-transform: none;
+	label {
+		color: #333; /* Replace with your desired color */
+		cursor: pointer;
+		display: inline-block;
+		font-family: Arial, sans-serif; /* Replace with your font family */
+		font-size: 1rem;
+		font-weight: 400; /* Replace with desired weight */
+		letter-spacing: 0.05em; /* Replace with desired kerning */
+		padding-left: calc(1.5rem * 0.6 + 0.875rem); /* Replace with exact size */
+		padding-right: 0.875rem;
+		position: relative;
+		text-transform: none;
+	  }
+	  
 
 			&:before {
 				border-radius: _size(border-radius);
@@ -187,7 +190,6 @@
 				top: (_size(element-height) * -0.05);
 				width: (_size(element-height) * 0.75);
 			}
-		}
 
 		&:checked + label {
 			&:before {
@@ -204,7 +206,6 @@
 				box-shadow: 0 0 0 1px _palette(accent);
 			}
 		}
-	}
 
 	input[type="checkbox"] {
 		& + label {

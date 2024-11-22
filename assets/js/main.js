@@ -206,3 +206,13 @@
 					});
 
 })(jQuery);
+
+document.addEventListener("DOMContentLoaded", function () {
+    var iframeContainer = document.querySelector(".responsive-iframe-container");
+
+    if (iframeContainer) {
+        console.log("Iframe container found:", iframeContainer);
+    } else {
+        console.log("Iframe container not found.");
+    }
+});

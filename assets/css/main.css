@@ -185,17 +185,20 @@ input, select, textarea {
 			border-bottom-color: transparent;
 		}
 
-	strong, b {
-		font-weight: 600;
-		color: #000000;
-	}
+strong, b {
+	font-size: 0.8rem; /* Smaller font size for the strong element */
+		letter-spacing: 0.5px; /* Slight spacing between letters */
+	display: block; /* Make it a block element to add vertical spacing */
+	margin-top: 2rem; /* Space above the strong element */
+	color: #555; /* Slightly lighter color for emphasis */
+  }
 
 	em, i {
 		font-style: italic;
 	}
 
 	p {
-		margin: 0 0 2rem 0;
+		margin: 0 0 0rem 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -204,7 +207,7 @@ input, select, textarea {
 		font-weight: 600;
 		letter-spacing: 0.175em;
 		line-height: 1.75;
-		margin: 0 0 1.5rem 0;
+		margin: 0 0 0 0;
 		text-transform: uppercase;
 	}
 
@@ -374,27 +377,27 @@ input, select, textarea {
 		}
 
 		.row.aln-left {
-			justify-content: flex-start;
+			justify-content: flex;
 		}
 
 		.row.aln-center {
-			justify-content: center;
+			justify-content: flex;
 		}
 
 		.row.aln-right {
-			justify-content: flex-end;
+			justify-content: flex;
 		}
 
 		.row.aln-top {
-			align-items: flex-start;
+			align-items: flex;
 		}
 
 		.row.aln-middle {
-			align-items: center;
+			align-items: flex;
 		}
 
 		.row.aln-bottom {
-			align-items: flex-end;
+			align-items: flex;
 		}
 
 		.row > .imp {
@@ -617,27 +620,27 @@ input, select, textarea {
 				}
 
 				.row.aln-left {
-					justify-content: flex-start;
+					justify-content: flex;
 				}
 
 				.row.aln-center {
-					justify-content: center;
+					justify-content: flex;
 				}
 
 				.row.aln-right {
-					justify-content: flex-end;
+					justify-content: flex;
 				}
 
 				.row.aln-top {
-					align-items: flex-start;
+					align-items: flex;
 				}
 
 				.row.aln-middle {
-					align-items: center;
+					align-items: flex;
 				}
 
 				.row.aln-bottom {
-					align-items: flex-end;
+					align-items: flex;
 				}
 
 				.row > .imp-xlarge {
@@ -862,27 +865,27 @@ input, select, textarea {
 				}
 
 				.row.aln-left {
-					justify-content: flex-start;
+					justify-content: flex;
 				}
 
 				.row.aln-center {
-					justify-content: center;
+					justify-content: flex;
 				}
 
 				.row.aln-right {
-					justify-content: flex-end;
+					justify-content: flex;
 				}
 
 				.row.aln-top {
-					align-items: flex-start;
+					align-items: flex;
 				}
 
 				.row.aln-middle {
-					align-items: center;
+					align-items: flex;
 				}
 
 				.row.aln-bottom {
-					align-items: flex-end;
+					align-items: flex;
 				}
 
 				.row > .imp-large {
@@ -1107,27 +1110,27 @@ input, select, textarea {
 				}
 
 				.row.aln-left {
-					justify-content: flex-start;
+					justify-content: relative;
 				}
 
 				.row.aln-center {
-					justify-content: center;
+					justify-content: relative;
 				}
 
 				.row.aln-right {
-					justify-content: flex-end;
+					justify-content: relative;
 				}
 
 				.row.aln-top {
-					align-items: flex-start;
+					align-items: relative;
 				}
 
 				.row.aln-middle {
-					align-items: center;
+					align-items: relative;
 				}
 
 				.row.aln-bottom {
-					align-items: flex-end;
+					align-items: relative;
 				}
 
 				.row > .imp-medium {
@@ -1352,27 +1355,27 @@ input, select, textarea {
 				}
 
 				.row.aln-left {
-					justify-content: flex-start;
+					justify-content: relative;
 				}
 
 				.row.aln-center {
-					justify-content: center;
+					justify-content: relative;
 				}
 
 				.row.aln-right {
-					justify-content: flex-end;
+					justify-content: relative;
 				}
 
 				.row.aln-top {
-					align-items: flex-start;
+					align-items: relative;
 				}
 
 				.row.aln-middle {
-					align-items: center;
+					align-items: relative;
 				}
 
 				.row.aln-bottom {
-					align-items: flex-end;
+					align-items: relative;
 				}
 
 				.row > .imp-small {
@@ -1597,27 +1600,27 @@ input, select, textarea {
 				}
 
 				.row.aln-left {
-					justify-content: flex-start;
+					justify-content: relative;
 				}
 
 				.row.aln-center {
-					justify-content: center;
+					justify-content: relative;
 				}
 
 				.row.aln-right {
-					justify-content: flex-end;
+					justify-content: relative;
 				}
 
 				.row.aln-top {
-					align-items: flex-start;
+					align-items: relative;
 				}
 
 				.row.aln-middle {
-					align-items: center;
+					align-items: relative;
 				}
 
 				.row.aln-bottom {
-					align-items: flex-end;
+					align-items: relative;
 				}
 
 				.row > .imp-xsmall {
@@ -1872,7 +1875,7 @@ input, select, textarea {
 		letter-spacing: 0.175em;
 		line-height: 3rem;
 		padding: 0 2rem;
-		text-align: center;
+		text-align: relative;
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
@@ -2241,7 +2244,7 @@ input, select, textarea {
 				left: 0;
 				line-height: 2.25rem;
 				position: absolute;
-				text-align: center;
+				text-align: relative;
 				top: -0.15rem;
 				width: 2.25rem;
 			}
@@ -2526,23 +2529,23 @@ input, select, textarea {
 /* List */
 
 	ol {
-		list-style: decimal;
+		list-style: none;
 		margin: 0 0 2rem 0;
-		padding-left: 1.25rem;
+		padding-left: 0rem;
 	}
 
 		ol li {
-			padding-left: 0.25rem;
+			padding-left: 0rem;
 		}
 
 	ul {
-		list-style: disc;
-		margin: 0 0 2rem 0;
-		padding-left: 1rem;
+		list-style: none;
+		margin: 0 0 3rem 0;
+		padding-left: 0rem;
 	}
 
 		ul li {
-			padding-left: 0.325rem;
+			padding-left: 0rem;
 		}
 
 		ul.alt {
@@ -2552,7 +2555,7 @@ input, select, textarea {
 
 			ul.alt > li {
 				border-top: solid 1px rgba(255, 255, 255, 0.25);
-				padding: 0.75rem 0;
+				padding: 0rem 0;
 			}
 
 				ul.alt > li:first-child {
@@ -2700,7 +2703,7 @@ input, select, textarea {
 					-ms-flex-shrink: 1;
 					flex-shrink: 1;
 					padding: 1rem 0 0 0;
-					text-align: center;
+					text-align: relative;
 					width: 100%;
 				}
 
@@ -2753,7 +2756,7 @@ input, select, textarea {
 				transition: background-color 0.25s ease-in-out;
 				width: 2.25rem;
 				height: 2.25rem;
-				text-align: center;
+				text-align: relative;
 				line-height: 2.25rem;
 				border-radius: 2.25rem;
 				display: inline-block;
@@ -2798,7 +2801,7 @@ input, select, textarea {
 			font-size: 0.9rem;
 			font-weight: 600;
 			padding: 0 0.75rem 0.75rem 0.75rem;
-			text-align: left;
+			text-align: relative;
 		}
 
 		table thead {
@@ -2834,143 +2837,49 @@ input, select, textarea {
 			table.alt tfoot {
 				border-top: 0;
 			}
-/* General Reset for Layout */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body Styling */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-/* Wrapper Styles */
-#wrapper {
-  position: relative;
-  overflow: hidden; /* Prevents elements from overflowing */
-}
-
-/* Intro Section */
-.intro {
-  position: relative;
-  z-index: 10;
-  text-align: center;
-  padding: 0;
-  background-color: #f5f5f5;
-}
-
-/* Social Links Styles */
-ul.actions {
-  list-style: none;
-  margin: 20px 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-ul.actions li {
-  margin: 0 15px;
-}
-
-ul.actions a {
-  text-decoration: none;
-  color: #333;
-  font-size: 1.5rem;
-  display: inline-block;
-  transition: color 0.3s ease;
-}
-
-/* Add hover effect for better UX */
-ul.actions a:hover {
-  color: #007bff;
-}
-
-/* Image Section - Ensuring the image takes full screen */
-.intro .content {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* Ensure it takes up full viewport height */
-}
-
-.intro .content .image {
-  display: block;
-  width: 100%;
-  height: 100%; /* Take full height of the parent container */
-  object-fit: cover; /* Makes sure the image covers the container */
-  position: absolute; /* Makes sure the image stays in place */
-  top: 0;
-  left: 0;
-}
-
-/* Arrow Styles - Fixing positioning and visibility */
+/* Ensure no underline on the arrow link */
 a.arrow {
-  display: inline-block;
-  height: 4rem;
-  width: 6rem;
-  position: absolute; /* Ensures the arrow is positioned relative to its container */
-  top: 80%; /* Move arrow lower on the screen */
-  left: 50%;
-  z-index: 1500; /* Ensure it is above the image */
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
-  transform: translateX(-50%);
-  text-decoration: none;
-  opacity: 1; /* Ensure arrow is fully visible */
-}
-
-/* Arrow Icon Styling */
-a.arrow:before {
-  content: "";
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512'%3E%3Cpath d='M442.53,346.28L293.65,495.16c-0.33,0.33-0.7,0.62-1.05,0.94c-9.16,9.77-22.15,15.9-36.6,15.9 c-14.44,0-27.43-6.13-36.59-15.88c-0.35-0.33-0.72-0.62-1.06-0.96L69.47,346.28c-19.62-19.62-19.62-51.44,0-71.05 c19.62-19.62,51.43-19.62,71.06,0l65.23,65.23V50.24C205.76,22.5,228.25,0,256,0s50.24,22.5,50.24,50.24v290.21l65.23-65.23 c19.62-19.62,51.43-19.62,71.05,0C462.15,294.84,462.15,326.66,442.53,346.28z' fill='%23000000' /%3E%3C/svg%3E");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 3rem;
-  height: 3rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centers the icon */
-}
-
-/* Hover Effect for the Arrow */
-a.arrow:hover {
-  opacity: 0.7;
-  transform: translate(-50%, -50%) translateY(-5px);
-}
-
-/* Mobile responsiveness */
-@media screen and (max-width: 736px) {
-  /* Social Links Stack Vertically */
-  ul.actions {
-    flex-direction: column;
-    align-items: center;
+	height: 4rem;
+	width: 6rem;
+	position: absolute;
+	z-index: 1500;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	transform: translateX(-50%); /* Centers the arrow horizontally */
+	text-decoration: none !important; /* Enforce removal of underline */
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M442.53,346.28L293.65,495.16c-0.33,0.33-0.7,0.62-1.05,0.94c-9.16,9.77-22.15,15.9-36.6,15.9 c-14.44,0-27.43-6.13-36.59-15.88c-0.35-0.33-0.72-0.62-1.06-0.96L69.47,346.28c-19.62-19.62-19.62-51.44,0-71.05 c19.62-19.62,51.43-19.62,71.06,0l65.23,65.23V50.24C205.76,22.5,228.25,0,256,0s50.24,22.5,50.24,50.24v290.21l65.23-65.23 c19.62-19.62,51.43-19.62,71.05,0C462.15,294.84,462.15,326.66,442.53,346.28z' fill='%23000000' /%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
   }
-
-  ul.actions li {
-    margin: 10px 0;
+  
+  /* Reset link styles across all states */
+  a.arrow, 
+  a.arrow:link, 
+  a.arrow:visited, 
+  a.arrow:hover, 
+  a.arrow:active {
+	text-decoration: none !important; /* Fully remove underline */
+	border: none; /* Remove any potential border styling */
+	outline: none; /* Remove focus outlines */
   }
-
-  ul.actions a {
-    font-size: 1.2rem;
+  
+  /* Remove inherited text decoration from parent containers */
+  ul.actions a.arrow, 
+  ul.actions a.arrow:link, 
+  ul.actions a.arrow:visited, 
+  ul.actions a.arrow:hover, 
+  ul.actions a.arrow:active {
+	text-decoration: none !important; /* Ensure no underline */
   }
-
-  /* Mobile Arrow Size */
-  a.arrow {
-    width: 4rem;
-    height: 3rem;
+  
+  /* Hover Effect for the Arrow */
+  a.arrow:hover {
+	transform: translateX(-50%) scale(1.2); /* Scale effect */
+	opacity: 0.8;
   }
-
-  a.arrow:before {
-    width: 2.5rem;
-    height: auto;
-  }
-}}
+  
+  
 /* Gallery */
 
 	@-moz-keyframes gallery-modal-spinner {
@@ -3082,7 +2991,7 @@ a.arrow:hover {
 			-moz-align-items: center;
 			-webkit-align-items: center;
 			-ms-align-items: center;
-			align-items: center;
+			align-items: relative;
 			-moz-justify-content: center;
 			-webkit-justify-content: center;
 			-ms-justify-content: center;
@@ -3306,9 +3215,6 @@ a.arrow:hover {
 				text-align: right;
 			}
 
-				#wrapper section > header h2 {
-					margin: 0 0 5rem 0;
-				}
 
 				#wrapper section > header h1 + p {
 					font-family: "Raleway", Helvetica, sans-serif;
@@ -3334,7 +3240,7 @@ a.arrow:hover {
 			}
 
 				#wrapper section > footer ul.actions {
-					justify-content: flex-end;
+					justify-content: relative;
 				}
 
 		#wrapper > section {
@@ -3450,7 +3356,7 @@ a.arrow:hover {
     position: relative;  /* Make the header a containing block for absolute positioning */
     display: block;  /* Keeps the header text inline */
     margin: 0;  /* Remove any default margin to avoid affecting text spacing */
-    align-items: flex-end; /* Center items vertically */
+    align-items: relative; /* Center items vertically */
 }
 
 /* After pseudo-element: Dot on the right side of the text */
@@ -3598,577 +3504,522 @@ a.arrow:hover {
 		}
 
 		@media screen and (max-width: 1152px) {
-
 			#wrapper {
-				padding: 0;
+			  padding: 0;
 			}
-
-				#wrapper:before {
-					display: none;
-				}
-
-				#wrapper section {
-					grid-template-areas: "header" "content" "footer";
-					grid-template-columns: 1fr;
-					grid-template-rows: 3fr;
-				}
-
-					#wrapper section > header {
-						justify-self: start;
-						padding: 0;
-						text-align: center;
-						width: 100%;
-					}
-
-						#wrapper section > header ul.actions {
-							justify-content: flex;
-						}
-
-					#wrapper section > .content {
-						padding: 0;
-						width: 100%;
-						overflow-x: hidden;
-					}
-
-					#wrapper section > footer {
-						padding: 0;
-						text-align: flex;
-					}
-
-						#wrapper section > footer ul.actions {
-							justify-content: center;
-						}
-
-				#wrapper > section {
-					margin: 0;
-				}
-
-					#wrapper > section > header {
-						background-attachment: fixed;
-						background-color: #5CE1E6;
-						background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 920 1750' x='0px' y='0px'%3E %3Cpath style='fill: rgba(255, 255, 255, 1);' d='M889.72,1137.55l-2.91-0.75l-364.39,282.94l-0.7-0.9l-0.51,0.11l-94.77-451.5l-32.51-15.75l-16.73-8.11l0,0.68 l-1.46,0l0-1.39l-1.89-0.92l-112.41-54.47l-0.29,1.03l-1.41-0.37l0.37-1.31l-34.14-16.54l-98.56-47.76l-0.59,0.81l-1.16-0.88 l0.42-0.57L11.43,766.33l-0.25,0.2l-0.9-1.15l102.87-79.98l0.08-0.1l0.02,0.02l116.68-90.72l-0.18-0.34l1.3-0.66l0.05,0.09 l100.5-78.14l-0.07-0.32l0.65-0.14l42.3-32.89l-0.15-54.54l-0.59,0.29l-0.64-1.31l1.23-0.6l-0.01-4.54l-0.33-122.47l-0.99,0.18 l-0.28-1.43l1.27-0.23l-0.4-147.49l-0.87-0.16l0.28-1.43l0.58,0.1l-0.35-127.48l-0.13-0.06l0.64-1.31L489.97,76.8l0.73,0.19 l-0.04,0.14l132.63,65.11l0.33-0.45l1.16,0.88l-0.16,0.22l114.21,56.07l0.45-0.35l0.72,0.93l47.89,23.51l2.76-1.36l0.56,4.61 l-3.32-1.63L571.52,330.88L375.95,482.93l0.66,239.95l51.12,243.57l222.53,107.83l236.23,60.93l2.27-1.77 M375.8,425.34l17.25-8.47 l36.13-127.75l-53.73,9.66L375.8,425.34z M551,241.05l38.19-52.2l-123.83-22.27l-34.13,120.68l98.99-17.81L551,241.05z M532.3,269.09l151.34-27.22l37.63-29.25l-130.48-23.47L532.3,269.09z M303.38,733.9l-2.36-4.48l-44.18-83.78L182.5,747.25 l40.78,36.46l52.69,47.11L303.38,733.9z M277.18,831.91l56.95,50.93L375.69,920l-0.13-49.23l-71.19-135L277.18,831.91z M303.96,731.86l41.93-148.25l-9.74-46.39L257.8,644.33L303.96,731.86z M304.94,733.73l9.55,18.12l61.05,115.78l-0.39-144.6 l-16.9-80.53l-11.71-55.81L304.94,733.73z M375.21,211.79l0.23,85.51l54.17-9.74l34.29-121.23l-88.87-15.98L375.21,211.79z M430.78,288.83l-17.88,63.21L394.81,416l44.01-21.6l90.15-123.23L430.78,288.83z M287.76,898.62l87.99,42.64l-0.05-19.29 l-91.37-81.71l-7.59-6.78l-14.88,52.59L287.76,898.62z M174.26,843.62l86.26,41.8l15-53.03l-93.89-83.95l-53.34,72.91L174.26,843.62 z M113.18,687.22L12.71,765.33l55.69,26.99l58.56,28.38l53.58-73.24l-34.83-31.14L113.18,687.22z M230.62,595.92l-116.27,90.4 l63.02,56.36l4.03,3.61l74.67-102.08l-7.47-14.17L230.62,595.92z M331.94,517.15l-100.15,77.86l25.25,47.88l78.71-107.59l-1.71-8.14 L331.94,517.15z M333.22,516.15l2.02,9.64l1.66,7.92l34.65-47.37L333.22,516.15z M337.31,535.63l9.43,44.95l26.67-94.3 L337.31,535.63z M347.39,583.66l27.74,132.16l-0.62-228.04L347.39,583.66z M374.7,21.83l0.35,127.02l89.27,16.06l24.61-87 L374.7,21.83z M490.25,78.56l-22.26,78.7l-2.24,7.91l124.39,22.37l10.23-13.99l22.04-30.12L490.25,78.56z M623.74,144.09 l-12.29,16.8l-19.71,26.95l131.07,23.58l14.73-11.45L623.74,144.09z M739,200.67l-13.3,10.34l-0.96,0.74l58.14,10.46L739,200.67z M723.19,212.96l-25.33,19.69l-11.14,8.66l97.03-17.45L723.19,212.96z M782.89,225.5l-98.64,17.74l-107.06,83.23L782.89,225.5z M631.68,282.26l49.48-38.47l-150.1,27l-89.41,122.22l129.1-63.37L631.68,282.26z M565.06,334.05l-125.28,61.5l-45.94,62.8 l-14.96,20.44L565.06,334.05z M425.31,412.87l11.65-15.93l-42.69,20.96l-13.66,48.3l-3.58,12.67L425.31,412.87z M392.51,418.76 l-16.71,8.2l0.01,4.72l0.12,45.68L392.51,418.76z M377.21,941.96l21.37,10.36l24.14,11.7l-45.56-40.74L377.21,941.96z M377.15,921.31l34.83,31.15l12.57,11.24l-47.53-90.14L377.15,921.31z M376.63,730.07l0.38,140.33l48.29,91.59L376.63,730.07z M806.29,1197.48l75.8-58.86l-28.56,11.47l-25.6,10.28l14.96,7.25l-0.64,1.31l-16.16-7.83l-124.76,50.1l40.56,36.27L806.29,1197.48z M522.43,1146.18l58.88,111.66l52.71-21.17l64.61-25.95l-75.11-67.17L522.43,1146.18z M621.92,1142.14l-115.78-103.53l-46.8-12.07 l62.33,118.2l7.06-0.18L621.92,1142.14z M700.14,1210.12l124.19-49.87l-42.89-20.78l-155.8,4.04L700.14,1210.12z M679.7,1295.77 l61.03-47.39l-40.9-36.57l-117.85,47.32l42.09,79.82L679.7,1295.77z M522.48,1417.85l1.83-1.42l98.6-76.56l-42.28-80.19 l-84.25,33.83L522.48,1417.85z M496.08,1292.06l83.87-33.68l-59.14-112.16l-55.04,1.43L496.08,1292.06z M465.46,1146.2l54.58-1.42 l-62.61-118.74l-18.03-4.65l0.36-1.41l16.74,4.32l-27.63-52.4L465.46,1146.2z M458.42,1024.79l45.35,11.7l-74.14-66.29 L458.42,1024.79z M431.46,969.87l75.38,67.41l136.26,35.15L431.46,969.87z M649.76,1075.65l-140.54-36.25l114.83,102.68l154.53-4.01 L649.76,1075.65z M656.92,1077.5l124.84,60.5l51.97-1.35l47.7-1.24L656.92,1077.5z M784.62,1139.38l41.54,20.13l56.45-22.67 L784.62,1139.38z'/%3E %3C/svg%3E");
-						background-position: 25% 50%;
-						background-repeat: repeat-y;
-						background-size: 40rem auto;
-					}
-
-						#wrapper > section > header > * {
-							max-width: 25rem;
-						}
-
-						#wrapper > section > header > :last-child {
-							margin-bottom: 0;
-						}
-
-						#wrapper > section > header:before {
-							display: none;
-						}
-
-						#wrapper > section > header h1:before, #wrapper > section > header h2:before {
-							display: none;
-						}
-
-						#wrapper > section > header h1:after, #wrapper > section > header h2:after {
-							display: none;
-						}
-
-					#wrapper > section > .content > :last-child {
-						margin-bottom: 0;
-					}
-
-					#wrapper > section > .content > section {
-						left: 0;
-					}
-
-						#wrapper > section > .content > section:first-child {
-							margin-top: 0;
-						}
-
-						#wrapper > section > .content > section > header {
-							width: 100%;
-						}
-
-						#wrapper > section > .content > section:last-child {
-							margin-bottom: 0;
-						}
-
-					#wrapper > section > footer > :last-child {
-						margin-bottom: 0;
-					}
-
-					#wrapper > section.intro {
-						margin-bottom: 0;
-					}
-
-						#wrapper > section.intro > header {
-							margin-bottom: 0;
-						}
-
-							#wrapper > section.intro > header ul.actions {
-								display: none;
-							}
-
-							#wrapper > section.intro > header > * {
-								margin-left: 0;
-								margin-right: 0;
-								width: 100%;
-							}
-
-							#wrapper > section.intro > header > ul.actions {
-								margin-left: -1rem;
-							}
-
-							#wrapper > section.intro > header:before {
-								margin-left: 0;
-							}
-
-					#wrapper > section:last-of-type > header:after {
-						display: none;
-					}
-
-				#wrapper .copyright {
-					left: 0;
-					width: 100%;
-				}
-
-				#wrapper section {
-					margin: 6rem 0 0 0;
-				}
-
-				#wrapper > section {
-					margin: 0;
-				}
-
-					#wrapper > section > header {
-						padding: 4rem 4rem;
-					}
-
-					#wrapper > section > .content {
-						padding: 4rem 4rem;
-					}
-
-						#wrapper > section > .content > section {
-							margin: 4rem 0;
-						}
-
-					#wrapper > section > footer {
-						padding: 0 4rem 4rem 4rem;
-					}
-
-					#wrapper > section.intro > header {
-						padding: 8rem 4rem 5rem 4rem;
-					}
-
-				#wrapper .copyright {
-					padding: 0 4rem 4rem 4rem;
-				}
-
-		}
-
-		@media screen and (max-width: 736px) {
-
+		  
+			#wrapper:before {
+			  display: none;
+			}
+		  
 			#wrapper section {
-				margin: 3rem 0 0 0;
+			  grid-template-areas: "header" "content" "footer";
+			  grid-template-columns: 1fr;
+			  grid-template-rows: 3fr;
 			}
-
+		  
+			#wrapper section > header {
+			  justify-self: start;
+			  padding: 0;
+			  text-align: center;
+			  width: 100%;
+			}
+		  
+			#wrapper section > header ul.actions {
+			  justify-content: flex-start;
+			}
+		  
+			#wrapper section > .content {
+			  padding: 0;
+			  width: 100%;
+			  overflow-x: hidden;
+			}
+		  
+			#wrapper section > footer {
+			  padding: 0;
+			  text-align: center;
+			}
+		  
+			#wrapper section > footer ul.actions {
+			  justify-content: center;
+			}
+		  
 			#wrapper > section {
-				margin: 0;
+			  margin: 0;
 			}
-
-				#wrapper > section > header {
-					padding: 3rem 2rem;
-				}
-
-				#wrapper > section > .content {
-					padding: 3rem 2rem;
-				}
-
-					#wrapper > section > .content > section {
-						margin: 3rem 0;
-					}
-
-				#wrapper > section > footer {
-					padding: 0 2rem 3rem 2rem;
-				}
-
-				#wrapper > section.intro > header {
-					padding: 5.5rem 2rem 2.5rem 2rem;
-				}
-
+		  
+			#wrapper > section > header {
+			  background-attachment: fixed;
+			  background-color: #5ce1e6;
+			  background-image: url("data:image/svg+xml;charset=utf8,<svg>..."); /* Truncated for brevity */
+			  background-position: 25% 50%;
+			  background-repeat: repeat-y;
+			  background-size: 40rem auto;
+			}
+		  
+			#wrapper > section > header > * {
+			  max-width: 25rem;
+			}
+		  
+			#wrapper > section > header:before,
+			#wrapper > section > header h1:before,
+			#wrapper > section > header h1:after,
+			#wrapper > section > header h2:before,
+			#wrapper > section > header h2:after {
+			  display: none;
+			}
+		  
+			#wrapper > section > .content > :last-child,
+			#wrapper > section > footer > :last-child {
+			  margin-bottom: 0;
+			}
+		  
+			#wrapper > section > .content > section {
+			  left: 0;
+			}
+		  
+			#wrapper > section > .content > section:first-child {
+			  margin-top: 0;
+			}
+		  
+			#wrapper > section > .content > section > header {
+			  width: 100%;
+			}
+		  
+			#wrapper > section > .content > section:last-child {
+			  margin-bottom: 0;
+			}
+		  
+			#wrapper > section.intro {
+			  margin-bottom: 0;
+			}
+		  
+			#wrapper > section.intro > header {
+			  margin-bottom: 0;
+			}
+		  
+			#wrapper > section.intro > header ul.actions {
+			  display: none;
+			}
+		  
 			#wrapper .copyright {
-				padding: 0 2rem 2rem 2rem;
+			  left: 0;
+			  width: 100%;
+			  padding: 0 4rem 4rem 4rem;
 			}
-
-		}
-
-		@media screen and (max-width: 360px) {
-
+		  
 			#wrapper section {
-				margin: 2.25rem 0 0 0;
+			  margin: 6rem 0 0 0;
 			}
-
+		  
 			#wrapper > section {
-				margin: 0;
+			  margin: 0;
 			}
-
-				#wrapper > section > header {
-					padding: 2.25rem 1.5rem;
-				}
-
-				#wrapper > section > .content {
-					padding: 2.25rem 1.5rem;
-				}
-
-					#wrapper > section > .content > section {
-						margin: 2.25rem 0;
-					}
-
-				#wrapper > section > footer {
-					padding: 0 1.5rem 2.25rem 1.5rem;
-				}
-
-				#wrapper > section.intro > header {
-					padding: 4.875rem 1.5rem 1.875rem 1.5rem;
-				}
-
+		  
+			#wrapper > section > header {
+			  padding: 4rem 4rem;
+			}
+		  
+			#wrapper > section > .content {
+			  padding: 4rem 4rem;
+			}
+		  
+			#wrapper > section > footer {
+			  padding: 0 4rem 4rem 4rem;
+			}
+		  
+			#wrapper > section.intro > header {
+			  padding: 8rem 4rem 5rem 4rem;
+			}
+		  }
+		  
+		  @media screen and (max-width: 736px) {
+			#wrapper section {
+			  margin: 3rem 0 0 0;
+			}
+		  
+			#wrapper > section > header {
+			  padding: 3rem 2rem;
+			}
+		  
+			#wrapper > section > .content {
+			  padding: 3rem 2rem;
+			}
+		  
+			#wrapper > section > .content > section {
+			  margin: 3rem 0;
+			}
+		  
+			#wrapper > section > footer {
+			  padding: 0 2rem 3rem 2rem;
+			}
+		  
+			#wrapper > section.intro > header {
+			  padding: 5.5rem 2rem 2.5rem 2rem;
+			}
+		  
 			#wrapper .copyright {
-				padding: 0 1.5rem 1.5rem 1.5rem;
+			  padding: 0 2rem 2rem 2rem;
 			}
-
-		}
-
-	body.is-mobile #wrapper:before {
-		background-attachment: scroll;
-		background-position: 50% -3%;
-		background-repeat: repeat-y;
-		background-size: 150% auto;
-	}
-
-	body.is-mobile #wrapper > section > header {
-		background-attachment: scroll;
-		background-position: 25% 50%;
-	}
-
-	body.is-mobile #wrapper > section.intro > header {
-		background-position: 25% 23%;
-	}
-
-	#wrapper:before {
-		transition: opacity 1s ease;
-	}
-
-		body.is-preload #wrapper:before {
+		  }
+		  
+		  @media screen and (max-width: 360px) {
+			#wrapper section {
+			  margin: 2.25rem 0 0 0;
+			}
+		  
+			#wrapper > section > header {
+			  padding: 2.25rem 1.5rem;
+			}
+		  
+			#wrapper > section > .content {
+			  padding: 2.25rem 1.5rem;
+			}
+		  
+			#wrapper > section > .content > section {
+			  margin: 2.25rem 0;
+			}
+		  
+			#wrapper > section > footer {
+			  padding: 0 1.5rem 2.25rem 1.5rem;
+			}
+		  
+			#wrapper > section.intro > header {
+			  padding: 4.875rem 1.5rem 1.875rem 1.5rem;
+			}
+		  
+			#wrapper .copyright {
+			  padding: 0 1.5rem 1.5rem 1.5rem;
+			}
+		  }
+		  
+		  body.is-mobile #wrapper:before {
+			background-attachment: scroll;
+			background-position: 50% -3%;
+			background-repeat: repeat-y;
+			background-size: 150% auto;
+		  }
+		  
+		  body.is-mobile #wrapper > section > header {
+			background-attachment: scroll;
+			background-position: 25% 50%;
+		  }
+		  
+		  body.is-mobile #wrapper > section.intro > header {
+			background-position: 25% 23%;
+		  }
+		  
+		  #wrapper:before {
+			transition: opacity 1s ease;
+		  }
+		  
+		  body.is-preload #wrapper:before {
 			opacity: 0;
-		}
-
-	#wrapper > section.intro {
-		transition: opacity 1s ease;
-		opacity: 1;
-	}
-
-		#wrapper > section.intro > header {
+		  }
+		  
+		  #wrapper > section.intro {
+			transition: opacity 1s ease;
+			opacity: 1;
+		  }
+		  
+		  #wrapper > section.intro > header {
 			transition: transform 1s ease;
-		}
-
-		#wrapper > section.intro > .content {
-			transition: transform 1s ease;
-		}
-
-		body.is-preload #wrapper > section.intro {
+		  }
+		  
+		  body.is-preload #wrapper > section.intro {
 			opacity: 0;
-		}
-
-			body.is-preload #wrapper > section.intro > header {
-				transform: translateY(1rem);
-			}
-
-			body.is-preload #wrapper > section.intro > .content {
-				transform: translateY(-1rem);
-			}
-			
-
-		@media screen and (max-width: 1280px) {
-
+		  }
+		  
+		  body.is-preload #wrapper > section.intro > header {
+			transform: translateY(1rem);
+		  }
+		  
+		  @media screen and (max-width: 1280px) {
 			#wrapper > section.intro > header > * {
-				transition: transform 1s ease, opacity 1s ease;
+			  transition: transform 1s ease, opacity 1s ease;
 			}
-
-			body.is-preload #wrapper > section.intro > header {
-				transform: none;
+		  
+			body.is-preload #wrapper > section.intro > header > * {
+			  transform: translate(-0.5rem);
+			  opacity: 0;
 			}
-
-				body.is-preload #wrapper > section.intro > header > * {
-					transform: translate(-0.5rem);
-					opacity: 0;
-				}
-
-			body.is-preload #wrapper > section.intro > .content {
-				transform: none;
-			}
-
-		}
-
-	body.is-ie #wrapper section {
-		display: flex;
-		flex-wrap: wrap;
-	}
-
-		body.is-ie #wrapper section > header {
+		  }
+		  
+		  body.is-ie #wrapper section {
+			display: flex;
+			flex-wrap: wrap;
+		  }
+		  
+		  body.is-ie #wrapper section > header,
+		  body.is-ie #wrapper section > .content {
 			width: 50%;
-		}
-
-		body.is-ie #wrapper section > .content {
-			width: 50%;
-		}
-
-		body.is-ie #wrapper section > footer {
+		  }
+		  
+		  body.is-ie #wrapper section > footer {
 			width: 50%;
 			text-align: center;
-			margin-left: 50%;
-			padding: 0rem;
-		}
+		  }
+		  
+  
+/* Video Section Styling (Preserve Margins and Framing) */
+.youtube-embed-container,
+.responsive-iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
 
-		body.is-ie #wrapper > section > .content > section > * {
-			max-width: 100vw;
-		}
-  
-  body {
-	font-family: 'Source Sans Pro', sans-serif;
-  }
-  
-  /* Header Container Styling */
-.header-container {
-	display: flex;
-	justify-content: center; /* Default: Center items on mobile */
-	align-items: flex-start;
-	width: 100%;
-	padding: 0;
-  }
-  
-  @media (min-width: 768px) {
-	.header-container {
-	  justify-content: flex; /* Align to the left on larger screens */
-	  padding-right: 0rem; /* Add space from the right edge */
-	}
-  }
-  
-  /* General Heading Styling */
-  h2 {
-	font-size: 2rem;
-	font-weight: bold;
-	letter-spacing: 1px;
-	color: #333;
-	margin-bottom: 20px; /* Consistent spacing */
-	text-align: center; /* Default alignment for mobile */
-  }
-  
-  /* Animated Heading */
-  .animated-heading {
-	animation: fadeInUp 1s ease-out forwards;
-	opacity: 0; /* Initially hidden */
-  }
-  
-  @media (min-width: 768px) {
-	h2,
-	.animated-heading {
-	  text-align: right; /* Align to the right on larger screens */
-	}
-  }
-  
-  /* Keyframes for Animation */
-  @keyframes fadeInUp {
-	0% {
-	  opacity: 0;
-	  transform: translateY(20px);
-	}
-	100% {
-	  opacity: 1;
-	  transform: translateY(0);
-	}
-  }
-  
-  /* Video Section Styling (Preserve Margins and Framing) */
-  .youtube-embed-container,
-  .responsive-iframe-container {
-	position: relative;
-	width: 100%;
-	padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
-	height: 0;
-	overflow: hidden;
-  }
-  
-  .youtube-embed-container iframe,
-  .responsive-iframe-container iframe {
-	position: absolute;			
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	border: none;
-  }
-  
-  /* Contact Section Styling */
-  .section {
-	margin: 20px auto; /* Add spacing between sections */
-	padding: 10px;
-	max-width: 1200px;
-  }
-  
-  .content {
-	text-align: center;
-	padding: 0 0px;
-  }
-  
-  /* Contact Form Styling */
-  form {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 20px;
-	justify-content: center; /* Center align the form on all screens */
-  }
-  
-  .fields {
-	width: 100%;
-  }
-  
-  .field {
-	width: 100%;
-	margin-bottom: 20px;
-  }
-  
+.youtube-embed-container iframe,
+.responsive-iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px; /* Ensure iframe matches container corners */
+}
+
+/* Contact Section Styling */
+.section {
+  margin: 20px auto; /* Compact vertical spacing */
+  padding: 20px; /* Smaller padding */
+  max-width: 500px; /* Restrict width to make it smaller */
+}
+
+/* Center content and reduce padding */
+.content {
+  text-align: center;
+  padding: 10px; /* Reduce overall padding */
+}
+
+/* Contact Form Styling */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; /* Reduce gap between form fields */
+  justify-content: center; /* Center align the form */
+}
+
+/* Reduce field spacing */
+.fields {
+  width: 100%;
+}
+
+.field {
+  width: 100%;
+  margin-bottom: 8px; /* Reduce spacing between fields */
+}
+
+.field.half {
+  width: 48%; /* Maintain two fields per row for larger screens */
+}
+
+/* Input and Textarea Styling */
+textarea,
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 6px; /* Reduce padding inside inputs */
+  border-radius: 4px; /* Keep rounded corners */
+  border: 1px solid #ccc;
+  font-size: 0.85rem; /* Standardize input font size */
+}
+
+/* Action Buttons */
+ul.actions {
+  list-style: none;
+  margin: 10px 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+ul.actions li {
+  margin: 0; /* Remove extra spacing around button */
+}
+
+input[type="submit"] {
+  padding: 6px 10px; /* Compact button size */
+  font-size: 0.85rem; /* Smaller font size for button text */
+  border: none;
+  border-radius: 4px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3; /* Add hover effect */
+}
+
+/* Contact Info Styling */
+.items {
+  list-style: none;
+  padding: 0;
+  text-align: center; /* Center align contact info */
+}
+
+.items li {
+  margin-bottom: 10px; /* Reduce spacing between items */
+}
+
+.items h3 {
+  font-size: 1.2rem; /* Smaller font size */
+  margin-bottom: 3px; /* Reduce margin below headings */
+}
+
+.items a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem; /* Reduce font size for links */
+}
+
+/* Icon List Styling */
+.icons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 5px;
+  justify-content: center; /* Center icons by default */
+}
+
+.icons .icon {
+  font-size: 30px;
+  color: #333;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icons .icon:hover {
+  color: #5CE1E6;
+  transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
   .field.half {
-	width: 48%; /* Two fields per row on larger screens */
+    width: 100%; /* Stack form fields on smaller screens */
   }
-  
-  textarea,
-  input[type='text'],
-  input[type='email'] {
-	width: 100%;
-	padding: 10px;
-	border-radius: 4px;
-	border: 1px solid #ccc;
-  }
-  
-  /* Contact Info Styling */
-  .items {
-	list-style: none;
-	padding: 0;
-	text-align: center; /* Center align contact info */
-  }
-  
+
   .items li {
-	margin-bottom: 20px;
+    text-align: center; /* Center contact info items on smaller screens */
   }
-  
-  .items h3 {
-	font-size: 1.5rem;
-	margin-bottom: 5px;
-  }
-  
-  .items a {
-	text-decoration: none;
-	color: #333;
-  }
-  
-  .items a:hover {
-	color: #5CE1E6;
-  }
-  
-  /* Icon List Styling */
-  .icons {
+}
+
+/* Responsive Iframe Container */
+.responsive-iframe-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000; /* Optional background for better aesthetics */
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+/* Header Styling */
+.header-container {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.animated-heading {
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Playlist Container */
+.youtube-playlist-container h3 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.content strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+/* Social Icons Container */
+.social.icons {
 	list-style: none;
 	padding: 0;
 	display: flex;
-	gap: 5px;
-	justify-content: center; /* Center icons by default */
+	gap: 15px; /* Space between icons and text */
+	justify-content: center;
+	align-items: center; /* Vertically center the items */
   }
   
-  .icons .icon {
-	font-size: 30px;
-	color: #333;
+  .social.icons .icon {
+	display: flex; /* Flexbox for icon and text alignment */
+	align-items: center; /* Vertically center the icon and text */
+	text-decoration: none; /* Remove default anchor styling */
+	color: #333; /* Default color for icon and text */
 	transition: color 0.3s ease, transform 0.3s ease;
   }
   
-  .icons .icon:hover {
-	color: #5CE1E6;
-	transform: scale(1.1);
+  .social.icons .icon:hover {
+	color: #5CE1E6; /* Icon and text color on hover */
+	transform: scale(1.1); /* Slightly enlarge icon and text on hover */
   }
   
-  /* Responsive Adjustments */
+  .social.icons .icon .label {
+	font-size: 0.9rem; /* Text size */
+	color: inherit; /* Inherit color from icon */
+	margin-left: 8px; /* Space between icon and text */
+  }
+  
+  .social.icons .icon:hover .label {
+	color: inherit; /* Text color on hover */
+  }
+  
+  /* Optional: Responsive adjustments for small screens */
   @media (max-width: 768px) {
-	.field.half {
-	  width: 100%; /* Stack form fields on smaller screens */
+	.social.icons {
+	  flex-direction: column; /* Stack icons and labels vertically on smaller screens */
+	  align-items: flex-start; /* Align left for better readability */
 	}
   
-	.items li {
-	  text-align: center; /* Center contact info items on smaller screens */
+	.social.icons .icon {
+	  margin-bottom: 10px; /* Space between stacked items */
+	}
+  
+	.social.icons .icon .label {
+	  margin-left: 0; /* Remove margin-left when stacked */
+	  margin-top: 5px; /* Space between icon and text when stacked */
 	}
   }
+
+/* Styling for the experience highlights section */
+.experience-highlights {
+	margin: 20px auto;
+	padding: 20px;
+	max-width: 600px; /* Adjust the max width as needed */
+  }
   
-/* CSS Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
-/* Feature Icons List */
-ul.feature-icons {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 3rem 0;
-  padding-left: 0;
-  justify-content: center; /* Center the list items horizontally */
-  width: 100%;
-  gap: 2rem; /* Add space between list items */
-}
-
-/* List Item Style (Icon and Text) */
-ul.feature-icons li {
-  display: flex;                /* Make each list item a flex container */
-  justify-content: flex-start;  /* Align content horizontally (icons and text) */
-  align-items: center;          /* Vertically center the icon and text */
-  position: relative;
-  width: 20%;                   /* Adjust width to make icons and text more centered */
-  padding-left: 2rem;           /* Space for the icon */
-}
-
-/* Icon styling (using pseudo-element :before for the background icon) */
-ul.feature-icons li:before {
-  content: "";  /* Ensure pseudo-element renders */
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512'%3E%3Cpath d='M256,0l221.7,128v256L256,512L34.3,384V128L256,0z' fill='rgba(144, 144, 144, 0.1)' /%3E%3C/svg%3E");
-  background-position: center;  /* Ensure background image is centered */
-  background-repeat: no-repeat;
-  background-size: contain;    /* Scale the icon to fit */
-  height: 2.5rem;  /* Adjust height */
-  width: 2.5rem;   /* Adjust width */
-  position: absolute;
-  left: 0;                     /* Align the icon to the left */
-  top: 50%;                    /* Vertically center the icon */
-  transform: translateY(-50%); /* Adjust for perfect vertical centering */
-}
-
-/* Text styling inside the list items */
-ul.feature-icons li span {
-  text-align: left;   /* Align text to the left */
-  font-size: 1.25rem; /* Text size */
-}
-
-/* Mobile responsiveness */
-@media screen and (max-width: 736px) {
-  ul.feature-icons {
-    margin: 0; /* Remove excessive margin */
-    padding-left: 0; /* Ensure no unwanted padding */
+  .experience-highlights h3 {
+	font-size: 1rem; /* Larger, bold header */
+	font-weight: bold; /* Ensure bold text for emphasis */
+	text-align: center; /* Center-align the header */
+	margin-bottom: 1rem;
   }
-
-  ul.feature-icons li {
-    width: 100%; /* Stack items vertically on smaller screens */
-    margin-bottom: 2rem;  /* Add spacing between items */
+  
+  .experience-highlights ul {
+	list-style-type: disc; /* Use bullet points */
+	padding-left: 0px; /* Indent the list */
   }
-
-  ul.feature-icons li:nth-child(2) {
-    margin-top: 1rem; /* Add spacing between items when stacked */
+  
+  .experience-highlights ul li {
+	margin-bottom: 0.5rem; /* Space out list items */
+	font-size: 1rem; /* Adjust font size for readability */
+	line-height: 1.5; /* Improve line spacing */
   }
-}
+  
+  .experience-highlights ul li strong {
+	font-weight: bold; /* Ensure the key terms are bold */
+	color: #333; /* Darker color for emphasis */
+  }
