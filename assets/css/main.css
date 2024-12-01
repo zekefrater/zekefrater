@@ -3806,7 +3806,7 @@ strong, b {
 form {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; /* Reduce gap between form fields */
+  gap: 20px; /* Reduce gap between form fields */
   justify-content: center; /* Center align the form */
 }
 
