@@ -166,7 +166,7 @@ input, select, textarea {
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 1rem;
 		font-weight: 300;
-		letter-spacing: 0.0375em;
+		letter-spacing: 0.05em;
 		line-height: 2;
 	}
 
@@ -186,10 +186,10 @@ input, select, textarea {
 		}
 
 strong, b {
-	font-size: 0.8rem; /* Smaller font size for the strong element */
+	font-size: 1rem; /* Smaller font size for the strong element */
 		letter-spacing: 0.5px; /* Slight spacing between letters */
 	display: block; /* Make it a block element to add vertical spacing */
-	margin-top: 2rem; /* Space above the strong element */
+	margin-top: 0rem; /* Space above the strong element */
 	color: #555; /* Slightly lighter color for emphasis */
   }
 
@@ -198,16 +198,16 @@ strong, b {
 	}
 
 	p {
-		margin: 0 0 0rem 0;
+		margin: 0 0 1rem 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #000000;
 		font-family: "Raleway", Helvetica, sans-serif;
 		font-weight: 600;
-		letter-spacing: 0.175em;
+		letter-spacing: 0rem;
 		line-height: 1.75;
-		margin: 0 0 0 0;
+		margin: 0rem 0px 1rem 0px;
 		text-transform: uppercase;
 	}
 
@@ -218,26 +218,26 @@ strong, b {
 
 	h1 {
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 5rem;
+		font-size: 6rem;
 		font-weight: 700;
-		letter-spacing: -0.05em;
-		line-height: 1.1;
-		margin: 0 0 1.5rem 0;
+		letter-spacing: 0;
+		line-height: .8;
+		margin: 0rem 0 0rem 0;
 		text-transform: none;
 	}
 
 	h2 {
-		font-size: 1.25rem;
+		font-size: 1rem;
 		font-weight: 800;
 		margin: 0 0 2rem 0;
 	}
 
 	h3 {
-		font-size: 0.875rem;
+		font-size: 1.5rem;
 	}
 
 	h4 {
-		font-size: 0.875rem;
+		font-size: 1rem;
 	}
 
 	h5 {
@@ -2507,7 +2507,7 @@ strong, b {
 			}
 
 			.image.main:first-child {
-				margin-top: 0;
+				margin-top: 0px;
 			}
 
 		.image.fill {
@@ -2530,7 +2530,7 @@ strong, b {
 
 	ol {
 		list-style: none;
-		margin: 0 0 2rem 0;
+		margin: 0 0 0rem 0;
 		padding-left: 0rem;
 	}
 
@@ -2540,7 +2540,7 @@ strong, b {
 
 	ul {
 		list-style: none;
-		margin: 0 0 3rem 0;
+		margin: 0 0 1rem 0;
 		padding-left: 0rem;
 	}
 
@@ -3256,7 +3256,7 @@ strong, b {
 				background: hsl(0, 0%, 100%);
 				content: '';
 				display: block;
-				margin-top: 1rem;
+				margin-top: 0rem;
 				position: absolute;
 				width: 2px;
 			}
@@ -3264,15 +3264,15 @@ strong, b {
 
 
 			#wrapper > section > header h1 {
-				margin-top: -2rem;
+				margin-top: 0rem;
 			}
 
 				#wrapper > section > header h1:before {
-					top: 3rem;
+					top: 0rem;
 				}
 
 				#wrapper > section > header h1:after {
-					top: 2.75rem;
+					top: 0rem;
 				}
 
 			#wrapper > section > .content > section {
@@ -3280,7 +3280,7 @@ strong, b {
 			}
 
 				#wrapper > section > .content > section:first-child {
-					margin-top: 6rem;
+					margin-top: 0rem;
 				}
 
 			#wrapper > section.intro {
@@ -3288,7 +3288,7 @@ strong, b {
 			}
 
 				#wrapper > section.intro > header {
-					padding-top: 2rem;
+					padding-top: 0rem;
 					width: 100%;
 				}
 
@@ -3312,7 +3312,7 @@ strong, b {
 			#wrapper > section:last-of-type > header:after {
 				background: #ffffff;
 				border-radius: 0.5rem;
-				bottom: -1.5rem;
+				bottom: 0rem;
 				content: '';
 				display: block;
 				height: 0.5rem;
@@ -3334,7 +3334,7 @@ strong, b {
 			}
 
 		#wrapper section {
-			margin: 7.5rem 0 0 0;
+			margin: 5rem 0 0rem 0;
 		}
 
 			#wrapper section > header {
@@ -3343,11 +3343,11 @@ strong, b {
 			}
 
 			#wrapper section > .content {
-				padding: 0 5rem;
+				padding: 0 2.5rem;
 			}
 
 			#wrapper section > footer {
-				padding: 0 10rem;
+				padding: 0 rem;
 			}
 
 		#wrapper > section > header:before {
@@ -3432,11 +3432,11 @@ strong, b {
 		@media screen and (max-width: 1280px) {
 
 			#wrapper {
-				padding: 0 0 8rem 0;
+				padding: 0 0 0rem 0;
 			}
 
 				#wrapper section {
-					margin: 6rem 0 0 0;
+					margin: 0 0 0rem 0;
 				}
 
 					#wrapper section > header {
@@ -3445,11 +3445,11 @@ strong, b {
 					}
 
 					#wrapper section > .content {
-						padding: 0 4rem;
+						padding: 0 0rem;
 					}
 
 					#wrapper section > footer {
-						padding: 0 8rem;
+						padding: 0 0rem;
 					}
 
 				#wrapper > section > header:before {
@@ -3773,7 +3773,9 @@ strong, b {
   width: 100%;
   padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
   height: 0;
+  top: 0;
   overflow: hidden;
+  margin-top: 50px; /* Add top margin */
 }
 
 .youtube-embed-container iframe,
@@ -3797,14 +3799,14 @@ strong, b {
 /* Center content and reduce padding */
 .content {
   text-align: center;
-  padding: 10px; /* Reduce overall padding */
+  padding: 0px; /* Reduce overall padding */
 }
 
 /* Contact Form Styling */
 form {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px; /* Reduce gap between form fields */
+  gap: 10px; /* Reduce gap between form fields */
   justify-content: center; /* Center align the form */
 }
 
@@ -3938,7 +3940,7 @@ input[type="submit"]:hover {
 
 /* Playlist Container */
 .youtube-playlist-container h3 {
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-size: 1.5rem;
   color: #555;
 }
