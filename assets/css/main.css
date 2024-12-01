@@ -2847,7 +2847,7 @@ strong, b {
   height: 4rem;
   width: 6rem;
   position: absolute;
-  z-index: 1500; /* Ensure the arrow is in front */
+  z-index: 2000; /* Ensure the arrow is in front */
   cursor: pointer;
   transition: all 0.3s ease;
   transform: translateX(-50%); /* Centers the arrow horizontally */
