@@ -1833,7 +1833,7 @@ strong, b {
 		border: solid 2px rgba(144, 144, 144, 0.25);
 		border-radius: 0.325rem;
 		margin-bottom: 2rem;
-		padding: 1.5rem;
+		padding: 0rem;
 	}
 
 		.box > :last-child {
@@ -3817,7 +3817,7 @@ form {
 
 .field {
   width: 100%;
-  margin-bottom: 8px; /* Reduce spacing between fields */
+  margin-bottom: 1rem; /* Reduce spacing between fields */
 }
 
 .field.half {
