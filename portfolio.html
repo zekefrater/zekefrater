@@ -3,151 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-
-        .header-container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .animated-heading {
-            font-size: 2em;
-            margin: 20px 0;
-            color: #333;
-        }
-
-        .content {
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px; /* Space between boxes */
-            padding: 20px;
-            max-width: 1200px; /* limit the width of the grid */
-            margin: 0 auto; /* center the grid */
-        }
-
-        .grid-item {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .grid-item:hover {
-            transform: translateY(-5px); /* Slight lift on hover */
-        }
-
-        h3 {
-            color: #333;
-            margin: 0 0 10px 0; /* Space below h3 */
-        }
-    </style>
+    <title>Zekiel Frater | Portfolio</title>
+    <meta name="description" content="Zekiel Frater - Digital Content Creator">
+    <meta name="keywords" content="Videography, Portfolio, Zekiel Frater">
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Include FontAwesome for icons (optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
 
-<!-- Section (Official Tumblers) -->
-<section id="officialtumblers">
-    <header class="header-container">
-        <h2 class="animated-heading">Official Tumblers</h2>
-    </header>
-    <div class="content">
-        <div class="grid-container">
-            <div class="grid-item">
-                <h3>Content Creator</h3>
-            </div>
-            <div class="grid-item">
-                <h3>YouTube Playlist</h3>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- Wrapper for the content -->
+<div id="wrapper">
 
-<!-- Yoobee College Experience Section -->
-<section id="yoobee-college">
-    <header class="header-container">
-        <h2 class="animated-heading">Yoobee College</h2>
-    </header>
-    <div class="content">
-        <div class="grid-container">
-            <div class="grid-item">
-                <h3>Diploma in Screen Production</h3>
-            </div>
-            <div class="grid-item">
-                <h3>My Short Films</h3>
-            </div>
-            <div class="grid-item">
-                <h3>My Showreels</h3>
+    <!-- Portfolio Section -->
+    <section class="portfolio-section">
+        <!-- First item: Video 1 -->
+        <div class="portfolio-item">
+            <div class="responsive-iframe-container">
+                <iframe src="https://www.youtube.com/embed/lboJzLklSzk" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
         </div>
-    </div>
-</section> 
+        
+        <!-- Second item: Video 2 -->
+        <div class="portfolio-item">
+            <div class="responsive-iframe-container">
+                <iframe src="https://www.youtube.com/embed/videoseries?list=PL2dajLdOczqhgFDQMZN_kK9acY0ptjgpN" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <!-- Third item: Image 1 -->
+        <div class="portfolio-item">
+            <img src="images/gallery/fulls/InternationalHosp-2.JPG" alt="International Hospitality">
+        </div>
+        
+        <!-- Fourth item: Image 2 -->
+        <div class="portfolio-item">
+            <img src="images/gallery/fulls/SomeOtherImage.jpg" alt="Some Other Image">
+        </div>
+    </section>
 
-<!-- Canterbury Cricket Section -->
-<section id="canterbury-cricket">
-    <header class="header-container">
-        <h2 class="animated-heading">Canterbury Cricket</h2>
-    </header>
-    <div class="content">
-        <div class="grid-container">
-            <div class="grid-item">
-                <h3>Digital Content Creator</h3>
-            </div>
-            <div class="grid-item">
-                <h3>Q4 Highlights Reel</h3>
-            </div>
-            <div class="grid-item">
-                <h3>International Hospitality</h3>
-            </div>
-            <div class="grid-item">
-                <h3>Canterbury Community Cricket</h3>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Section (Feature projects) -->
-<section id="features">
-    <header>
-        <h2 class="animated-heading">Features</h2>
-    </header>
-    <div class="content">
-        <div class="grid-container">
-            <div class="grid-item">
-                <h3>University of Otago</h3>
-            </div>
-            <div class="grid-item">
-                <h3>JP Athlete Management</h3>
-            </div>
-            <div class="grid-item">
-                <h3>Christchurch City Council</h3>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Get in Touch Section -->
-<section id="contact">
-    <header>
-        <h2 class="animated-heading">CONTACT</h2>
-    </header>
-    <div class="content">
-        <div class="grid-item" style="margin: 0 auto; max-width: 600px;">
-            <h3>Get in Touch</h3>
-        </div>
-    </div>
-</section>
+</div> <!-- End of Wrapper -->
 
 </body>
 </html>
