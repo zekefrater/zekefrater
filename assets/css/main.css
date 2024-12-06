@@ -2608,14 +2608,14 @@ input[type="submit"]:hover {
 }
 
 /* Ensuring 2-column layout on mobile and smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .portfolio-section {
-        grid-template-columns: repeat(3, 2fr); /* Keep two columns even on small screens */
+        grid-template-columns: repeat(2, 2fr); /* Keep two columns even on small screens */
     }
 }
 
 /* Container to control responsive image */
-.image.fill.responsive {
+.image.responsive {
     display: block; /* Ensures the container acts like a block element */
     position: relative;
     width: 100%; /* Ensures the container can stretch to full width */
@@ -2624,7 +2624,7 @@ input[type="submit"]:hover {
 }
 
 /* Image inside the container */
-.image.fill.responsive img {
+.image.responsive img {
     position: absolute;
     top: 0;
     left: 0;
