@@ -215,11 +215,9 @@ pre code {
 }
 
 hr {
-    border: 0;  /* Remove default borders */
-    border-bottom: solid 2px rgba(144, 144, 144, 0.25); /* Semi-transparent bottom border */
-    height: 2px; /* Line thickness */
-    background-color: #ccc; /* Fallback color if border-bottom doesn't render properly */
-    margin: 3rem 0; /* Larger space above and below the line */
+    border: 0;
+    border-bottom: solid 2px rgba(144, 144, 144, 0.25);
+    margin: 3rem 0;
 }
 
 hr.major {
@@ -876,81 +874,119 @@ hr.major {
 
 /* Image */
 
-/* Ensure the wrapper has a relative position */
-.image {
-  border: 0;
-  display: inline-block;
-  position: relative;
-}
+	.image {
+		border: 0;
+		display: inline-block;
+		position: relative;
+	}
 
-.image img {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;  /* Apply object-fit for all cases */
-}
+		.image img {
+			display: block;
+		}
 
-/* Handle various positions using [data-position] */
-.image[data-position] img {
-  object-position: center;  /* Default to center if no specific position is provided */
-}
+		.image[data-position] img {
+			-moz-object-fit: cover;
+			-webkit-object-fit: cover;
+			-ms-object-fit: cover;
+			object-fit: cover;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
 
-/* Define specific object positions */
-.image[data-position="top left"] img {
-  object-position: top left;
-}
+		.image[data-position="top left"] img {
+			-moz-object-position: top left;
+			-webkit-object-position: top left;
+			-ms-object-position: top left;
+			object-position: top left;
+		}
 
-.image[data-position="top"] img {
-  object-position: top;
-}
+		.image[data-position="top"] img {
+			-moz-object-position: top;
+			-webkit-object-position: top;
+			-ms-object-position: top;
+			object-position: top;
+		}
 
-.image[data-position="top right"] img {
-  object-position: top right;
-}
+		.image[data-position="top right"] img {
+			-moz-object-position: top right;
+			-webkit-object-position: top right;
+			-ms-object-position: top right;
+			object-position: top right;
+		}
 
-.image[data-position="right"] img {
-  object-position: right;
-}
+		.image[data-position="right"] img {
+			-moz-object-position: right;
+			-webkit-object-position: right;
+			-ms-object-position: right;
+			object-position: right;
+		}
 
-.image[data-position="bottom right"] img {
-  object-position: bottom right;
-}
+		.image[data-position="bottom right"] img {
+			-moz-object-position: bottom right;
+			-webkit-object-position: bottom right;
+			-ms-object-position: bottom right;
+			object-position: bottom right;
+		}
 
-.image[data-position="bottom"] img {
-  object-position: bottom;
-}
+		.image[data-position="bottom"] img {
+			-moz-object-position: bottom;
+			-webkit-object-position: bottom;
+			-ms-object-position: bottom;
+			object-position: bottom;
+		}
 
-.image[data-position="bottom left"] img {
-  object-position: bottom left;
-}
+		.image[data-position="bottom left"] img {
+			-moz-object-position: bottom left;
+			-webkit-object-position: bottom left;
+			-ms-object-position: bottom left;
+			object-position: bottom left;
+		}
 
-.image[data-position="left"] img {
-  object-position: left;
-}
+		.image[data-position="left"] img {
+			-moz-object-position: left;
+			-webkit-object-position: left;
+			-ms-object-position: left;
+			object-position: left;
+		}
 
-.image[data-position="center"] img {
-  object-position: center;
-}
+		.image[data-position="center"] img {
+			-moz-object-position: center;
+			-webkit-object-position: center;
+			-ms-object-position: center;
+			object-position: center;
+		}
 
-/* Support percentage-based positioning */
-.image[data-position="25% 25%"] img {
-  object-position: 25% 25%;
-}
+		.image[data-position="25% 25%"] img {
+			-moz-object-position: 25% 25%;
+			-webkit-object-position: 25% 25%;
+			-ms-object-position: 25% 25%;
+			object-position: 25% 25%;
+		}
 
-.image[data-position="75% 25%"] img {
-  object-position: 75% 25%;
-}
+		.image[data-position="75% 25%"] img {
+			-moz-object-position: 75% 25%;
+			-webkit-object-position: 75% 25%;
+			-ms-object-position: 75% 25%;
+			object-position: 75% 25%;
+		}
 
-.image[data-position="75% 75%"] img {
-  object-position: 75% 75%;
-}
+		.image[data-position="75% 75%"] img {
+			-moz-object-position: 75% 75%;
+			-webkit-object-position: 75% 75%;
+			-ms-object-position: 75% 75%;
+			object-position: 75% 75%;
+		}
 
-.image[data-position="25% 75%"] img {
-  object-position: 25% 75%;
-}
+		.image[data-position="25% 75%"] img {
+			-moz-object-position: 25% 75%;
+			-webkit-object-position: 25% 75%;
+			-ms-object-position: 25% 75%;
+			object-position: 25% 75%;
+		}
 
 		.image.left, .image.right {
 			max-width: 40%;
@@ -968,13 +1004,13 @@ hr.major {
 
 		.image.right {
 			float: right;
-			margin: 0 0 0rem 0rem;
-			top: 0rem;
+			margin: 0 0 2rem 2rem;
+			top: 0.25rem;
 		}
 
 		.image.fit {
 			display: block;
-			margin: 0 0 0 0;
+			margin: 0 0 2rem 0;
 			width: 100%;
 		}
 
@@ -984,7 +1020,7 @@ hr.major {
 
 		.image.main {
 			display: block;
-			margin: 0 0;
+			margin: 3rem 0;
 			width: 100%;
 		}
 
@@ -1279,7 +1315,7 @@ hr.major {
 			}
 
 		table td {
-			padding: 1rem 1rem;
+			padding: 0.75rem 0.75rem;
 		}
 
 		table th {
@@ -1322,33 +1358,18 @@ hr.major {
 
 			table.alt tfoot {
 				border-top: 0;
-
-
+			}
 /* Ensure no underline on the arrow link */
-.image-wrapper a {
-  text-decoration: none; /* Removes the underline from the link */
-}
-
-/* Ensure the wrapper has a relative position */
 .image-wrapper {
-  position: relative; /* Allows absolutely positioned elements inside it */
-  z-index: 1; /* Sets the stacking context of the wrapper */
+  position: relative; /* Ensure the wrapper has a relative position */
+  z-index: 1; /* Ensure the image wrapper is below the arrow */
 }
 
-/* Ensure the arrow (if an absolutely positioned element) is above the image */
-.image-wrapper .arrow {
-  position: absolute; /* Position the arrow relative to the image wrapper */
-  top: 50%; /* Adjust as needed to position the arrow */
-  left: 50%; /* Center the arrow horizontally */
-  transform: translate(-50%, -50%); /* Center it perfectly */
-  z-index: 2; /* Ensure the arrow is above the image */
-}
-/* Arrow Styling */
 .arrow {
-  height: 5rem; /* Increased height */
-  width: 4rem;  /* Width stays the same, adjust as needed */
+  height: 4rem;
+  width: 6rem;
   position: absolute;
-  z-index: 10; /* Ensure the arrow is in front */
+  z-index: 1; /* Ensure the arrow is in front */
   cursor: pointer;
   transition: all 0.3s ease;
   transform: translateX(-50%); /* Centers the arrow horizontally */
@@ -1357,42 +1378,33 @@ hr.major {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  top: 50%; /* Adjusted position to be vertically centered */
-  left: 50%; /* Horizontally center it */
-  margin-top: -2.5rem; /* Adjusted to make it vertically centered with the new height */
-  margin-left: -2rem; /* Adjusted for finer centering */
 }
-
-/* Mobile-specific fixes */
-@media (max-width: 767px) {
-  .arrow {
-    height: 4rem; /* Smaller height for mobile */
-    width: 3.5rem; /* Adjust the width for mobile */
-    margin-top: -2rem; /* Adjust the vertical positioning for mobile */
-    margin-left: -1.75rem; /* Adjust the horizontal positioning for mobile */
+  
+  /* Reset link styles across all states */
+  a.arrow, 
+  a.arrow:link, 
+  a.arrow:visited, 
+  a.arrow:hover, 
+  a.arrow:active {
+	text-decoration: none !important; /* Fully remove underline */
+	border: none; /* Remove any potential border styling */
+	outline: none; /* Remove focus outlines */
   }
-}
-
-
-ul.actions a.arrow,
-ul.actions a.arrow:link,
-ul.actions a.arrow:visited,
-ul.actions a.arrow:hover,
-ul.actions a.arrow:active {
-text-decoration: none !important;}
-
-
-/* Hover Effect for the Arrow */
-a.arrow:hover {
-  transform: translateX(-50%) scale(1.2); /* Scale effect */
-  opacity: 0.8;
-}
-
-/* Optional: Focus effect for accessibility */
-a.arrow:focus {
-  outline: 2px solid #ff6600; /* Add outline on focus */
-  outline-offset: 4px;
-}
+  
+  /* Remove inherited text decoration from parent containers */
+  ul.actions a.arrow, 
+  ul.actions a.arrow:link, 
+  ul.actions a.arrow:visited, 
+  ul.actions a.arrow:hover, 
+  ul.actions a.arrow:active {
+	text-decoration: none !important; /* Ensure no underline */
+  }
+  
+  /* Hover Effect for the Arrow */
+  a.arrow:hover {
+	transform: translateX(-50%) scale(1.2); /* Scale effect */
+	opacity: 0.8;
+  }
   
   
 /* Gallery */
@@ -1853,7 +1865,7 @@ a.arrow:focus {
 			}
 
 			#wrapper section > .content {
-				padding:0 1rem;
+				padding: 0 0rem;
 			}
 
 			#wrapper section > footer {
@@ -1927,6 +1939,8 @@ a.arrow:focus {
 			#wrapper > section.intro > header:before {
 				margin-left: 0;
 			}
+
+		}
 		
 
 		#wrapper > section:last-of-type > header:after {
@@ -1990,6 +2004,8 @@ a.arrow:focus {
 					margin-left: calc(50vw - 8rem);
 				}
 
+		}
+
 		@media screen and (max-width: 1280px) and (max-width: 1152px) {
 
 			#wrapper > section.intro > header > * {
@@ -2007,6 +2023,12 @@ a.arrow:focus {
 				#wrapper > section:last-of-type > header:after {
 					left: calc(50vw - 4rem - 0.25rem + 1px);
 				}
+
+				#wrapper .copyright {
+					padding: 0 4rem;
+				}
+
+		}
 
 		@media screen and (max-width: 1152px) {
 			#wrapper {
@@ -2136,6 +2158,7 @@ a.arrow:focus {
 			#wrapper > section.intro > header {
 			  padding: 8rem 4rem 5rem 4rem;
 			}
+		  }
 		  
 		  @media screen and (max-width: 736px) {
 			#wrapper section {
@@ -2165,7 +2188,7 @@ a.arrow:focus {
 			#wrapper .copyright {
 			  padding: 0 2rem 2rem 2rem;
 			}
-
+		  }
 		  
 		  @media screen and (max-width: 360px) {
 			#wrapper section {
@@ -2247,7 +2270,7 @@ a.arrow:focus {
 			  transform: translate(-0.5rem);
 			  opacity: 0;
 			}
-
+		  }
 		  
 		  body.is-ie #wrapper section {
 			display: flex;
@@ -2333,23 +2356,6 @@ input[type="email"] {
   font-size: 0.85rem; /* Standardize input font size */
 }
 
-/* Button Styling */
-.button {
-    display: inline;
-    padding: 10px 10px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-    background-color: inherit;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;  /* Remove underline */
-    transition: background-color 0.3s ease;
-}
-
-
-
 /* Action Buttons */
 ul.actions {
   list-style: none;
@@ -2428,6 +2434,19 @@ input[type="submit"]:hover {
   .items li {
     text-align: center; /* Center contact info items on smaller screens */
   }
+}
+
+/* Responsive Iframe Container */
+.responsive-iframe-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000; /* Optional background for better aesthetics */
+  border-radius: 8px;
+  margin: 1rem 0;
+}
 
 /* Header Styling */
 .header-container {
@@ -2447,6 +2466,11 @@ input[type="submit"]:hover {
   color: #555;
 }
 
+.content strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
 
 /* Social Icons Container */
 .social.icons {
@@ -2481,6 +2505,13 @@ input[type="submit"]:hover {
 	color: inherit; /* Text color on hover */
   }
   
+  /* Optional: Responsive adjustments for small screens */
+  @media (max-width: 768px) {
+	.social.icons {
+	  flex-direction: column; /* Stack icons and labels vertically on smaller screens */
+	  align-items: flex-start; /* Align left for better readability */
+	}
+  
 	.social.icons .icon {
 	  margin-bottom: 10px; /* Space between stacked items */
 	}
@@ -2489,6 +2520,7 @@ input[type="submit"]:hover {
 	  margin-left: 0; /* Remove margin-left when stacked */
 	  margin-top: 5px; /* Space between icon and text when stacked */
 	}
+  }
 
 /* Styling for the experience highlights section */
 .experience-highlights {
@@ -2520,36 +2552,4 @@ input[type="submit"]:hover {
 	color: #333; /* Darker color for emphasis */
   }
 
-/* Portfolio Section */
-.portfolio-section {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Always two columns */
-    gap: 20px; /* Space between items */
-    margin-top: 20px;
-}
-
-/* Portfolio Item Styling */
-.portfolio-item {
-    background-color: #f4f4f4; /* Light background for each item */
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for items */
-    overflow: hidden; /* Ensures content does not overflow */
-}
-
-/* Make sure .fill class and image styles are correct */
-.image.fill {
-  display: block;
-  position: relative;
-  width: 100%; /* Ensures image takes up full width of its container */
-  height: auto; /* Maintains aspect ratio */
-  overflow: hidden;
-}
-
-/* Make the image responsive */
-.image.fill img {
-  width: 100%; /* Make the image fill the container */
-  height: auto;
-  object-fit: cover; /* Cover the container without distorting the image */
-}
-
+  
