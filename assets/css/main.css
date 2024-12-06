@@ -2360,13 +2360,13 @@ input[type="email"] {
 
 /* Button Styling */
 .button {
-    display: inline-block;
-    padding: 10px 20px;
+    display: inline;
+    padding: 10px 10px;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
     color: white;
-    background-color: #007BFF;  /* Blue background */
+    background-color: inherit;
     border: none;
     border-radius: 5px;
     text-decoration: none;  /* Remove underline */
@@ -2577,20 +2577,3 @@ input[type="submit"]:hover {
         height: auto; /* Maintain the aspect ratio */
     }
 }
-
-/* Ensure the image container is responsive */
-.portfolio-image .image {
-    position: relative;
-    width: 100%; /* Makes the container span the full width */
-    height: auto; /* Maintain aspect ratio */
-    overflow: hidden; /* Ensures the image doesn't overflow the container */
-}
-
-/* Make the image fill the container and be responsive */
-.portfolio-image .image img {
-    width: 100%;  /* Ensures the image fills the full width of its parent container */
-    height: auto; /* Maintains the aspect ratio */
-    display: block; /* Prevents any unwanted inline spacing */
-    margin: 0; /* Removes any default margin */
-}
-
