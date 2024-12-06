@@ -2606,28 +2606,6 @@ input[type="submit"]:hover {
     border: none;
 }
 
-/* Styling for the back button */
-.back-button-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.back-button {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #2a9d8f;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.back-button:hover {
-    background-color: #1f7a67;
-}
-
 /* Ensuring 2-column layout on mobile and smaller screens */
 @media (max-width: 768px) {
     .portfolio-section {
