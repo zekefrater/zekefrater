@@ -128,7 +128,7 @@ em, i {
 }
 
 p {
-    margin: 0 0 1rem; /* Maintained bottom margin */
+    margin: 0 0 0rem; /* Maintained bottom margin */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -204,7 +204,7 @@ code {
 pre {
     font-family: "Courier New", monospace;
     font-size: 0.9rem;
-    margin: 0 0 2rem;
+    margin: 0 0 0rem;
     width: 100%;
 }
 
@@ -218,16 +218,16 @@ pre code {
 hr {
     border: 0;
     border-bottom: solid 2px rgba(144, 144, 144, 0.25);
-    margin: 3rem 0;
+    margin: 0rem 0;
 }
 
 hr.major {
-    margin: 5rem 0;
+    margin: 0rem 0;
 }
 
 @media screen and (max-width: 736px) {
     hr.major {
-        margin: 3rem 0;
+        margin: 0rem 0;
     }
 }
 
@@ -237,7 +237,7 @@ hr.major {
     flex-wrap: wrap;
     justify-content: center; /* Center items within the row */
     align-items: center; /* Align items vertically */
-    margin: 0 -1rem; /* Adjust margins for spacing between items */
+    margin: 0 1rem; /* Adjust margins for spacing between items */
     box-sizing: border-box; /* Consistent box-sizing */
 }
 
