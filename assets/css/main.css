@@ -1006,8 +1006,8 @@ hr.major {
 
 		.image.right {
 			float: right;
-			margin: 0 0 2rem 2rem;
-			top: 0.25rem;
+			margin: 0 0 0rem 0rem;
+			top: 0rem;
 		}
 
 		.image.fit {
@@ -2614,22 +2614,4 @@ input[type="submit"]:hover {
     }
 }
 
-/* Container to control responsive image */
-.image.responsive {
-    display: block; /* Ensures the container acts like a block element */
-    position: relative;
-    width: 100%; /* Ensures the container can stretch to full width */
-    padding-bottom: 56.25%; /* For a 16:9 aspect ratio */
-    overflow: hidden;
-}
-
-/* Image inside the container */
-.image.responsive img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image fills the container without distortion */
-}}
 
