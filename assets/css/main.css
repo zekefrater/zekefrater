@@ -1361,12 +1361,26 @@ hr.major {
 			table.alt tfoot {
 				border-top: 0;
 
+
 /* Ensure no underline on the arrow link */
-.image-wrapper {
-  position: relative; /* Ensure the wrapper has a relative position */
-  z-index: 1; /* Ensure the image wrapper is below the arrow */
+.image-wrapper a {
+  text-decoration: none; /* Removes the underline from the link */
 }
 
+/* Ensure the wrapper has a relative position */
+.image-wrapper {
+  position: relative; /* Allows absolutely positioned elements inside it */
+  z-index: 1; /* Sets the stacking context of the wrapper */
+}
+
+/* Ensure the arrow (if an absolutely positioned element) is above the image */
+.image-wrapper .arrow {
+  position: absolute; /* Position the arrow relative to the image wrapper */
+  top: 50%; /* Adjust as needed to position the arrow */
+  left: 50%; /* Center the arrow horizontally */
+  transform: translate(-50%, -50%); /* Center it perfectly */
+  z-index: 2; /* Ensure the arrow is above the image */
+}
 /* Arrow Styling */
 .arrow {
   height: 5rem; /* Increased height */
