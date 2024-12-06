@@ -1317,7 +1317,7 @@ hr.major {
 			}
 
 		table td {
-			padding: 0.75rem 0.75rem;
+			padding: 0rem 0rem;
 		}
 
 		table th {
@@ -1360,7 +1360,7 @@ hr.major {
 
 			table.alt tfoot {
 				border-top: 0;
-			}
+
 /* Ensure no underline on the arrow link */
 .image-wrapper {
   position: relative; /* Ensure the wrapper has a relative position */
@@ -1376,7 +1376,6 @@ hr.major {
   transition: all 0.3s ease;
   transform: translateX(-50%); /* Centers the arrow horizontally */
   text-decoration: none !important; /* Enforce removal of underline */
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M442.53,346.28L293.65,495.16c-0.33,0.33-0.7,0.62-1.05,0.94c-9.16,9.77-22.15,15.9-36.6,15.9 c-14.44,0-27.43-6.13-36.59-15.88c-0.35-0.33-0.72-0.62-1.06-0.96L69.47,346.28c-19.62-19.62-19.62-51.44,0-71.05 c19.62-19.62,51.43-19.62,71.06,0l65.23,65.23V50.24C205.76,22.5,228.25,0,256,0s50.24,22.5,50.24,50.24v290.21l65.23-65.23 c19.62-19.62,51.43-19.62,71.05,0C462.15,294.84,462.15,326.66,442.53,346.28z' fill='%23000000' /%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1395,32 +1394,27 @@ hr.major {
     margin-left: -1.75rem; /* Adjust the horizontal positioning */
   }
 }
-  
-  /* Reset link styles across all states */
-  a.arrow, 
-  a.arrow:link, 
-  a.arrow:visited, 
-  a.arrow:hover, 
-  a.arrow:active {
-	text-decoration: none !important; /* Fully remove underline */
-	border: none; /* Remove any potential border styling */
-	outline: none; /* Remove focus outlines */
-  }
-  
-  /* Remove inherited text decoration from parent containers */
-  ul.actions a.arrow, 
-  ul.actions a.arrow:link, 
-  ul.actions a.arrow:visited, 
-  ul.actions a.arrow:hover, 
-  ul.actions a.arrow:active {
-	text-decoration: none !important; /* Ensure no underline */
-  }
-  
-  /* Hover Effect for the Arrow */
-  a.arrow:hover {
-	transform: translateX(-50%) scale(1.2); /* Scale effect */
-	opacity: 0.8;
-  }
+
+/* Remove inherited text decoration from parent containers */
+ul.actions a.arrow,
+ul.actions a.arrow:link,
+ul.actions a.arrow:visited,
+ul.actions a.arrow:hover,
+ul.actions a.arrow:active {
+  text-decoration: none !important; /* Ensure no underline */
+}
+
+/* Hover Effect for the Arrow */
+a.arrow:hover {
+  transform: translateX(-50%) scale(1.2); /* Scale effect */
+  opacity: 0.8;
+}
+
+/* Optional: Focus effect for accessibility */
+a.arrow:focus {
+  outline: 2px solid #ff6600; /* Add outline on focus */
+  outline-offset: 4px;
+}
   
   
 /* Gallery */
