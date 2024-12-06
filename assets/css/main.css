@@ -2455,7 +2455,11 @@ input[type="submit"]:hover {
     text-align: center; /* Center contact info items on smaller screens */
   }
 }
-
+.responsive-iframe-container .image {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 /* Responsive Iframe Container */
 .responsive-iframe-container {
   position: relative;
