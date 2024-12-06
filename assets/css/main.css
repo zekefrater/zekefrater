@@ -1390,7 +1390,7 @@ hr.major {
   .arrow {
     height: 2.5rem; /* Smaller arrow size */
     width: 3.5rem; /* Smaller width */
-    margin-top: -1.25rem; /* Adjust the vertical positioning */
+    margin-top: 2rem; /* Adjust the vertical positioning */
     margin-left: -1.75rem; /* Adjust the horizontal positioning */
   }
 }
