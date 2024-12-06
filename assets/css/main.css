@@ -1397,6 +1397,15 @@ hr.major {
   }
 }
 
+
+ul.actions a.arrow,
+ul.actions a.arrow:link,
+ul.actions a.arrow:visited,
+ul.actions a.arrow:hover,
+ul.actions a.arrow:active {
+text-decoration: none !important;}
+
+
 /* Hover Effect for the Arrow */
 a.arrow:hover {
   transform: translateX(-50%) scale(1.2); /* Scale effect */
