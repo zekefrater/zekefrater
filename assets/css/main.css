@@ -2570,3 +2570,27 @@ input[type="submit"]:hover {
 	font-weight: bold; /* Ensure the key terms are bold */
 	color: #333; /* Darker color for emphasis */
   }
+
+@media (max-width: 768px) {
+    .portfolio-image .image img {
+        width: 100%; /* Ensures the image is full width on smaller screens */
+        height: auto; /* Maintain the aspect ratio */
+    }
+}
+
+/* Ensure the image container is responsive */
+.portfolio-image .image {
+    position: relative;
+    width: 100%; /* Makes the container span the full width */
+    height: auto; /* Maintain aspect ratio */
+    overflow: hidden; /* Ensures the image doesn't overflow the container */
+}
+
+/* Make the image fill the container and be responsive */
+.portfolio-image .image img {
+    width: 100%;  /* Ensures the image fills the full width of its parent container */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Prevents any unwanted inline spacing */
+    margin: 0; /* Removes any default margin */
+}
+
