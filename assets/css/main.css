@@ -2358,6 +2358,23 @@ input[type="email"] {
   font-size: 0.85rem; /* Standardize input font size */
 }
 
+/* Button Styling */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: #007BFF;  /* Blue background */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;  /* Remove underline */
+    transition: background-color 0.3s ease;
+}
+
+
+
 /* Action Buttons */
 ul.actions {
   list-style: none;
