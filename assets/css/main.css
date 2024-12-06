@@ -1868,7 +1868,7 @@ a.arrow:focus {
 			}
 
 			#wrapper section > .content {
-				padding: 0 0rem;
+				padding:0 1rem;
 			}
 
 			#wrapper section > footer {
@@ -2486,23 +2486,6 @@ input[type="submit"]:hover {
   color: #555;
 }
 
-.content {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-}
-
-.content .image {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.content .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Optionally crop to cover the area */
-}
 
 /* Social Icons Container */
 .social.icons {
@@ -2536,13 +2519,6 @@ input[type="submit"]:hover {
   .social.icons .icon:hover .label {
 	color: inherit; /* Text color on hover */
   }
-  
-  /* Optional: Responsive adjustments for small screens */
-  @media (max-width: 768px) {
-	.social.icons {
-	  flex-direction: column; /* Stack icons and labels vertically on smaller screens */
-	  align-items: flex-start; /* Align left for better readability */
-	}
   
 	.social.icons .icon {
 	  margin-bottom: 10px; /* Space between stacked items */
