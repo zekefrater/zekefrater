@@ -9,66 +9,66 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f9f9f9;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .video-item {
-            flex: 1 1 calc(50% - 20px); /* Two columns with space */
-            margin: 10px;
-            text-align: center;
-        }
-        .video-item iframe {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        @media (max-width: 768px) {
-            .video-item {
-                flex: 1 1 100%; /* Single column on mobile */
-            }
-        }
+
         .header-container {
             text-align: center;
             margin-bottom: 20px;
         }
+
+        .animated-heading {
+            font-size: 2em;
+            margin: 20px 0;
+            color: #333;
+        }
+
         .content {
             margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px; /* Space between boxes */
+            padding: 20px;
+            max-width: 1200px; /* limit the width of the grid */
+            margin: 0 auto; /* center the grid */
+        }
+
+        .grid-item {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px); /* Slight lift on hover */
+        }
+
+        h3 {
+            color: #333;
+            margin: 0 0 10px 0; /* Space below h3 */
         }
     </style>
 </head>
 <body>
-    
+
 <!-- Section (Official Tumblers) -->
 <section id="officialtumblers">
     <header class="header-container">
         <h2 class="animated-heading">Official Tumblers</h2>
     </header>
     <div class="content">
-        <img src="images/gallery/Logos/OfficialTumblers.jpg" alt="Official Tumblers logo" style="max-width: 15%; display: block; margin: 0 auto;">
-        <h3>Content Creator</h3>
-        <h5>Dec 2013 - Aug 2016</h5>
-        <ul class="icons" aria-label="Official Tumblers social media links">
-            <li><a href="https://www.youtube.com/@OfficialTumblers/" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-            <li><a href="https://www.instagram.com/officialtumblers/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-        </ul>
-        <p>I was responsible for creating engaging video content for YouTube and Instagram, writing social media posts, analyzing data, scheduling posts, engaging with fans, and running sponsorships, partnerships, and advertisements.</p>
-        
-        <div class="container">
-            <div class="video-item">
-                <iframe 
-                    src="https://www.youtube.com/embed/videoseries?list=PLRN51YrTcW1LREt269G5ouTtNf8EP_gRs" 
-                    sandbox="allow-scripts allow-same-origin" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-                <h4>YouTube Playlist</h4>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h3>Content Creator</h3>
+            </div>
+            <div class="grid-item">
+                <h3>YouTube Playlist</h3>
             </div>
         </div>
     </div>
@@ -80,36 +80,18 @@
         <h2 class="animated-heading">Yoobee College</h2>
     </header>
     <div class="content">
-        <img src="images/gallery/Logos/YoobeeLogo.png" alt="Yoobee College Logo" style="max-width: 15%; display: block; margin: 0 auto;">
-        <h3>Diploma in Screen Production</h3><h4>(Level 5) & (Level 6)</h4>
-        <h5>2021 - 2022</h5>
-        <p>For the Screen Production course at Yoobee College, I conceptualized and coordinated diverse projects, balancing various roles, content development, and on-field videography.</p>
-        
-        <div class="container">
-            <div class="video-item">
-                <h4>My Short Films</h4>
-                <iframe 
-                    src="https://www.youtube.com/embed/videoseries?list=PLpzfyru_5qD1hlpS54Jdxj5ltmWLO-s7W" 
-                    title="My Short Films Playlist" 
-                    sandbox="allow-scripts allow-same-origin" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h3>Diploma in Screen Production</h3>
             </div>
-            <div class="video-item">
-                <h4>My Showreels</h4>
-                <iframe 
-                    src="https://www.youtube.com/embed/videoseries?list=PLpzfyru_5qD1Ww85crHM0ZNvt2srToFKD" 
-                    title="My Showreels Playlist" 
-                    sandbox="allow-scripts allow-same-origin" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
+            <div class="grid-item">
+                <h3>My Short Films</h3>
+            </div>
+            <div class="grid-item">
+                <h3>My Showreels</h3>
             </div>
         </div>
-    </div> 
+    </div>
 </section> 
 
 <!-- Canterbury Cricket Section -->
@@ -118,46 +100,18 @@
         <h2 class="animated-heading">Canterbury Cricket</h2>
     </header>
     <div class="content">
-        <img src="https://upload.wikimedia.org/wikipedia/en/2/24/CanterburyCricket.png" alt="Canterbury Cricket Logo" style="max-width: 15%; display: block; margin: 0 auto;">
-        <h3>Digital Content Creator</h3>
-        <h5>Oct 2023 - Apr 2024</h5>
-        <p>As the Digital Content Creator, I conceptualized and coordinated diverse projects, balancing social media administration, content development, and on-field sports videography.</p>
-
-        <div class="container">
-            <div class="video-item">
-                <h4>Q4 Highlights Reel</h4>
-                <iframe
-                    src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7140976295697338368"
-                    sandbox="allow-scripts allow-same-origin" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h3>Digital Content Creator</h3>
             </div>
-            <div class="video-item">
-                <h4>International Hospitality</h4>
-                <h5>BLACKCAPS V AUSTRALIA - TEST 2024</h5>
-                <iframe
-                    src="https://player.vimeo.com/video/1032729219" 
-                    sandbox="allow-scripts allow-same-origin" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
+            <div class="grid-item">
+                <h3>Q4 Highlights Reel</h3>
             </div>
-        </div>
-        
-        <div class="container">
-            <div class="video-item">
-                <h4>Canterbury Community Cricket</h4>
-                <h5>Girls Smash | Term 1 Registration 2024</h5>
-                <iframe 
-                    src="https://www.youtube.com/embed/S6HyNqEpaEc" 
-                    sandbox="allow-scripts allow-same-origin" 
-                    frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
+            <div class="grid-item">
+                <h3>International Hospitality</h3>
+            </div>
+            <div class="grid-item">
+                <h3>Canterbury Community Cricket</h3>
             </div>
         </div>
     </div>
@@ -169,39 +123,16 @@
         <h2 class="animated-heading">Features</h2>
     </header>
     <div class="content">
-        <h3>University of Otago</h3>
-        <h5>Jul 2022 - Sep 2022</h5>
-        <p>Created a short video "A Youth Guide To E-Cigarettes" for informational and educational purposes.</p>
-        <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/lboJzLklSzk?autoplay=0" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-        </div>
-        <hr>
-        
-        <h3>JP Athlete Management</h3>
-        <h5>Jan 2023 - Aug 2023</h5>
-        <p>Developed a distinctive brand identity and social media strategy, growing visibility for the recruitment agency.</p>
-        <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/videoseries?list=PL2dajLdOczqhgFDQMZN_kK9acY0ptjgpN&autoplay=0" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-        </div>
-        <hr>
-
-        <h3>Christchurch City Council</h3>
-        <h5>Nov 2024 - Dec 2024</h5>
-        <p>Developed a short video as part of a 2-part series related to the renovation of Linwood Village.</p>
-        <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/QuVU6T3PsMk" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h3>University of Otago</h3>
+            </div>
+            <div class="grid-item">
+                <h3>JP Athlete Management</h3>
+            </div>
+            <div class="grid-item">
+                <h3>Christchurch City Council</h3>
+            </div>
         </div>
     </div>
 </section>
@@ -212,22 +143,9 @@
         <h2 class="animated-heading">CONTACT</h2>
     </header>
     <div class="content">
-        <h3>Get in Touch</h3>
-        <p>Feel free to reach out, and I'll get back to you as soon as possible!</p>
-        <form action="https://formsubmit.co/zekefrater@gmail.com" method="POST" class="form">
-            <div class="fields">
-                <div class="field half">
-                    <input 
-                        type="text" 
-                        name="name" 
-                        id="name" 
-                        placeholder="Your Name" 
-                        required>
-                </div>
-                <!-- Additional fields can be added here -->
-            </div>
-            <button type="submit">Send</button>
-        </form>
+        <div class="grid-item" style="margin: 0 auto; max-width: 600px;">
+            <h3>Get in Touch</h3>
+        </div>
     </div>
 </section>
 
