@@ -1927,8 +1927,6 @@ a.arrow:focus {
 			#wrapper > section.intro > header:before {
 				margin-left: 0;
 			}
-
-		}
 		
 
 		#wrapper > section:last-of-type > header:after {
@@ -1992,8 +1990,6 @@ a.arrow:focus {
 					margin-left: calc(50vw - 8rem);
 				}
 
-		}
-
 		@media screen and (max-width: 1280px) and (max-width: 1152px) {
 
 			#wrapper > section.intro > header > * {
@@ -2011,12 +2007,6 @@ a.arrow:focus {
 				#wrapper > section:last-of-type > header:after {
 					left: calc(50vw - 4rem - 0.25rem + 1px);
 				}
-
-				#wrapper .copyright {
-					padding: 0 4rem;
-				}
-
-		}
 
 		@media screen and (max-width: 1152px) {
 			#wrapper {
@@ -2146,7 +2136,6 @@ a.arrow:focus {
 			#wrapper > section.intro > header {
 			  padding: 8rem 4rem 5rem 4rem;
 			}
-		  }
 		  
 		  @media screen and (max-width: 736px) {
 			#wrapper section {
@@ -2176,7 +2165,7 @@ a.arrow:focus {
 			#wrapper .copyright {
 			  padding: 0 2rem 2rem 2rem;
 			}
-		  }
+
 		  
 		  @media screen and (max-width: 360px) {
 			#wrapper section {
@@ -2258,7 +2247,7 @@ a.arrow:focus {
 			  transform: translate(-0.5rem);
 			  opacity: 0;
 			}
-		  }
+
 		  
 		  body.is-ie #wrapper section {
 			display: flex;
@@ -2500,7 +2489,6 @@ input[type="submit"]:hover {
 	  margin-left: 0; /* Remove margin-left when stacked */
 	  margin-top: 5px; /* Space between icon and text when stacked */
 	}
-  }
 
 /* Styling for the experience highlights section */
 .experience-highlights {
