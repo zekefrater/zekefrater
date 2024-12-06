@@ -1,44 +1,235 @@
 <!DOCTYPE html>
-<html>
-<title>W3.CSS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
-.mySlides {display:none;}
-</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .video-item {
+            flex: 1 1 calc(50% - 20px); /* Two columns with space */
+            margin: 10px;
+            text-align: center;
+        }
+        .video-item iframe {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        @media (max-width: 768px) {
+            .video-item {
+                flex: 1 1 100%; /* Single column on mobile */
+            }
+        }
+        .header-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .content {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
 <body>
+    
+<!-- Section (Official Tumblers) -->
+<section id="officialtumblers">
+    <header class="header-container">
+        <h2 class="animated-heading">Official Tumblers</h2>
+    </header>
+    <div class="content">
+        <img src="images/gallery/Logos/OfficialTumblers.jpg" alt="Official Tumblers logo" style="max-width: 15%; display: block; margin: 0 auto;">
+        <h3>Content Creator</h3>
+        <h5>Dec 2013 - Aug 2016</h5>
+        <ul class="icons" aria-label="Official Tumblers social media links">
+            <li><a href="https://www.youtube.com/@OfficialTumblers/" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+            <li><a href="https://www.instagram.com/officialtumblers/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        </ul>
+        <p>I was responsible for creating engaging video content for YouTube and Instagram, writing social media posts, analyzing data, scheduling posts, engaging with fans, and running sponsorships, partnerships, and advertisements.</p>
+        
+        <div class="container">
+            <div class="video-item">
+                <iframe 
+                    src="https://www.youtube.com/embed/videoseries?list=PLRN51YrTcW1LREt269G5ouTtNf8EP_gRs" 
+                    sandbox="allow-scripts allow-same-origin" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+                <h4>YouTube Playlist</h4>
+            </div>
+        </div>
+    </div>
+</section>
 
-<h2 class="w3-center">Portfolio</h2>
+<!-- Yoobee College Experience Section -->
+<section id="yoobee-college">
+    <header class="header-container">
+        <h2 class="animated-heading">Yoobee College</h2>
+    </header>
+    <div class="content">
+        <img src="images/gallery/Logos/YoobeeLogo.png" alt="Yoobee College Logo" style="max-width: 15%; display: block; margin: 0 auto;">
+        <h3>Diploma in Screen Production</h3><h4>(Level 5) & (Level 6)</h4>
+        <h5>2021 - 2022</h5>
+        <p>For the Screen Production course at Yoobee College, I conceptualized and coordinated diverse projects, balancing various roles, content development, and on-field videography.</p>
+        
+        <div class="container">
+            <div class="video-item">
+                <h4>My Short Films</h4>
+                <iframe 
+                    src="https://www.youtube.com/embed/videoseries?list=PLpzfyru_5qD1hlpS54Jdxj5ltmWLO-s7W" 
+                    title="My Short Films Playlist" 
+                    sandbox="allow-scripts allow-same-origin" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-item">
+                <h4>My Showreels</h4>
+                <iframe 
+                    src="https://www.youtube.com/embed/videoseries?list=PLpzfyru_5qD1Ww85crHM0ZNvt2srToFKD" 
+                    title="My Showreels Playlist" 
+                    sandbox="allow-scripts allow-same-origin" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div> 
+</section> 
 
-<div class="w3-content w3-display-container">
-  <img class="mySlides" src="images/gallery/fulls/01.jpg" style="width:100%"
-  <img class="mySlides" src="images/gallery/fulls/02.jpg" style="width:100%">
-  <img class="mySlides" src="images/gallery/fulls/03.jpg" style="width:100%">
-  <img class="mySlides" src="images/gallery/fulls/04.jpg" style="width:100%">
+<!-- Canterbury Cricket Section -->
+<section id="canterbury-cricket">
+    <header class="header-container">
+        <h2 class="animated-heading">Canterbury Cricket</h2>
+    </header>
+    <div class="content">
+        <img src="https://upload.wikimedia.org/wikipedia/en/2/24/CanterburyCricket.png" alt="Canterbury Cricket Logo" style="max-width: 15%; display: block; margin: 0 auto;">
+        <h3>Digital Content Creator</h3>
+        <h5>Oct 2023 - Apr 2024</h5>
+        <p>As the Digital Content Creator, I conceptualized and coordinated diverse projects, balancing social media administration, content development, and on-field sports videography.</p>
 
-  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-</div>
+        <div class="container">
+            <div class="video-item">
+                <h4>Q4 Highlights Reel</h4>
+                <iframe
+                    src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7140976295697338368"
+                    sandbox="allow-scripts allow-same-origin" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-item">
+                <h4>International Hospitality</h4>
+                <h5>BLACKCAPS V AUSTRALIA - TEST 2024</h5>
+                <iframe
+                    src="https://player.vimeo.com/video/1032729219" 
+                    sandbox="allow-scripts allow-same-origin" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="video-item">
+                <h4>Canterbury Community Cricket</h4>
+                <h5>Girls Smash | Term 1 Registration 2024</h5>
+                <iframe 
+                    src="https://www.youtube.com/embed/S6HyNqEpaEc" 
+                    sandbox="allow-scripts allow-same-origin" 
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
 
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
+<!-- Section (Feature projects) -->
+<section id="features">
+    <header>
+        <h2 class="animated-heading">Features</h2>
+    </header>
+    <div class="content">
+        <h3>University of Otago</h3>
+        <h5>Jul 2022 - Sep 2022</h5>
+        <p>Created a short video "A Youth Guide To E-Cigarettes" for informational and educational purposes.</p>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/lboJzLklSzk?autoplay=0" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <hr>
+        
+        <h3>JP Athlete Management</h3>
+        <h5>Jan 2023 - Aug 2023</h5>
+        <p>Developed a distinctive brand identity and social media strategy, growing visibility for the recruitment agency.</p>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PL2dajLdOczqhgFDQMZN_kK9acY0ptjgpN&autoplay=0" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <hr>
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+        <h3>Christchurch City Council</h3>
+        <h5>Nov 2024 - Dec 2024</h5>
+        <p>Developed a short video as part of a 2-part series related to the renovation of Linwood Village.</p>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/QuVU6T3PsMk" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</section>
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-</script>
+<!-- Get in Touch Section -->
+<section id="contact">
+    <header>
+        <h2 class="animated-heading">CONTACT</h2>
+    </header>
+    <div class="content">
+        <h3>Get in Touch</h3>
+        <p>Feel free to reach out, and I'll get back to you as soon as possible!</p>
+        <form action="https://formsubmit.co/zekefrater@gmail.com" method="POST" class="form">
+            <div class="fields">
+                <div class="field half">
+                    <input 
+                        type="text" 
+                        name="name" 
+                        id="name" 
+                        placeholder="Your Name" 
+                        required>
+                </div>
+                <!-- Additional fields can be added here -->
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</section>
 
 </body>
 </html>
