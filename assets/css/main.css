@@ -2640,3 +2640,8 @@ body {
     }
 }
 
+.image.responsive img {
+    width: 100%;  /* Ensures the image takes up the full width of the container */
+    height: auto; /* Maintains the aspect ratio */
+}
+
