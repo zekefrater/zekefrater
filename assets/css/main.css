@@ -3765,12 +3765,6 @@ strong, b {
 			text-align: center;
 		  }
 		  
-  
-/* General styling for the content section */
-.content {
-  margin-bottom: 50px; /* Ensure there's space between each content block */
-}
-
 /* Video Section Styling (Preserve Margins and Framing) */
 .youtube-embed-container,
 .responsive-iframe-container {
@@ -3781,7 +3775,6 @@ strong, b {
   top: 0;
   overflow: hidden;
   margin-top: 50px; /* Add top margin */
-  margin-bottom: 50px; /* Add bottom margin between embedded content and next section */
 }
 
 .youtube-embed-container iframe,
@@ -3793,38 +3786,6 @@ strong, b {
   height: 100%;
   border: none;
   border-radius: 8px; /* Ensure iframe matches container corners */
-}
-
-/* Additional adjustments for iframe container heights */
-.responsive-iframe-container iframe {
-  height: 500px; /* Set fixed height for iframe if needed */
-}
-
-/* Ensure there's space above sections */
-header.header-container {
-  margin-bottom: 20px;
-}
-
-/* Optional: Add spacing around images if needed */
-img {
-  display: block;
-  margin: 20px auto; /* Center image and provide space around it */
-}
-
-/* Specific margin adjustments for Features section */
-#features {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-#features .content {
-  margin-bottom: 30px; /* Space between projects */
-}
-
-/* Add padding to the content areas if needed */
-#canterbury-cricket .content,
-#features .content {
-  padding: 20px;
 }
 
 /* Contact Section Styling */
