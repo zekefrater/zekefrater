@@ -2570,17 +2570,6 @@ input[type="submit"]:hover {
 	font-weight: bold; /* Ensure the key terms are bold */
 	color: #333; /* Darker color for emphasis */
   }
-/* Reset default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Container for the Portfolio */
-#wrapper {
-    padding: 20px;
-}
 
 /* Portfolio Section */
 .portfolio-section {
