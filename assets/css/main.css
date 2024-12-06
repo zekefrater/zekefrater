@@ -2570,44 +2570,6 @@ input[type="submit"]:hover {
 	font-weight: bold; /* Ensure the key terms are bold */
 	color: #333; /* Darker color for emphasis */
   }
-
-@media (max-width: 768px) {
-    .portfolio-image .image img {
-        width: 100%; /* Ensures the image is full width on smaller screens */
-        height: auto; /* Maintain the aspect ratio */
-    }
-}
-
-/* Ensure the image container and the image have no margins */
-.portfolio-image .image {
-    position: relative;
-    width: 100%;
-    height: auto;
-    overflow: hidden; /* Prevent overflow */
-    margin: 0; /* Remove any margin */
-    padding: 0; /* Remove padding if any */
-}
-
-/* Ensure the image itself is responsive */
-.portfolio-image .image img {
-    width: 100%;
-    height: auto;
-    display: block; /* Ensures the image is treated as a block element */
-    margin: 0; /* Remove any default margin */
-}
-
-/* Optional: Adjust spacing below the image if necessary */
-.portfolio-image {
-    margin-bottom: 0; /* Removes margin below the image container */
-}
-
-/* Mobile responsiveness: Stack items in a single column */
-@media (max-width: 768px) {
-    .portfolio-section {
-        grid-template-columns: 1fr; /* Stack items vertically on mobile */
-    }
-}
-
 /* Reset default styles */
 * {
     margin: 0;
@@ -2669,5 +2631,12 @@ body {
 /* Optional: Add some spacing below the portfolio section */
 .portfolio-section {
     margin-bottom: 3rem;
+}
+
+/* Mobile responsiveness: Stack items in a single column */
+@media (max-width: 768px) {
+    .portfolio-section {
+        grid-template-columns: 1fr; /* Stack items vertically on mobile */
+    }
 }
 
