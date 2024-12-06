@@ -2549,5 +2549,19 @@ input[type="submit"]:hover {
     overflow: hidden; /* Ensures content does not overflow */
 }
 
+/* Make sure .fill class and image styles are correct */
+.image.fill {
+  display: block;
+  position: relative;
+  width: 100%; /* Ensures image takes up full width of its container */
+  height: auto; /* Maintains aspect ratio */
+  overflow: hidden;
+}
 
+/* Make the image responsive */
+.image.fill img {
+  width: 100%; /* Make the image fill the container */
+  height: auto;
+  object-fit: cover; /* Cover the container without distorting the image */
+}
 
