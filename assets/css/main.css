@@ -1368,10 +1368,10 @@ hr.major {
 }
 
 .arrow {
-  height: 4rem;
-  width: 6rem;
+  height: 3rem;
+  width: 4rem;
   position: absolute;
-  z-index: 1; /* Ensure the arrow is in front */
+  z-index: 10; /* Ensure the arrow is in front */
   cursor: pointer;
   transition: all 0.3s ease;
   transform: translateX(-50%); /* Centers the arrow horizontally */
@@ -1380,6 +1380,20 @@ hr.major {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  top: 50%; /* Adjusted position to be vertically centered */
+  left: 50%; /* Horizontally center it */
+  margin-top: -1.5rem; /* Adjusted to make it truly centered */
+  margin-left: -2rem; /* Adjusted for finer centering */
+}
+
+/* Mobile-specific fixes */
+@media (max-width: 767px) {
+  .arrow {
+    height: 2.5rem; /* Smaller arrow size */
+    width: 3.5rem; /* Smaller width */
+    margin-top: -1.25rem; /* Adjust the vertical positioning */
+    margin-left: -1.75rem; /* Adjust the horizontal positioning */
+  }
 }
   
   /* Reset link styles across all states */
