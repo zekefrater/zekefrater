@@ -876,119 +876,81 @@ hr.major {
 
 /* Image */
 
-	.image {
-		border: 0;
-		display: inline-block;
-		position: relative;
-	}
+/* Ensure the wrapper has a relative position */
+.image {
+  border: 0;
+  display: inline-block;
+  position: relative;
+}
 
-		.image img {
-			display: block;
-		}
+.image img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Apply object-fit for all cases */
+}
 
-		.image[data-position] img {
-			-moz-object-fit: cover;
-			-webkit-object-fit: cover;
-			-ms-object-fit: cover;
-			object-fit: cover;
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-		}
+/* Handle various positions using [data-position] */
+.image[data-position] img {
+  object-position: center;  /* Default to center if no specific position is provided */
+}
 
-		.image[data-position="top left"] img {
-			-moz-object-position: top left;
-			-webkit-object-position: top left;
-			-ms-object-position: top left;
-			object-position: top left;
-		}
+/* Define specific object positions */
+.image[data-position="top left"] img {
+  object-position: top left;
+}
 
-		.image[data-position="top"] img {
-			-moz-object-position: top;
-			-webkit-object-position: top;
-			-ms-object-position: top;
-			object-position: top;
-		}
+.image[data-position="top"] img {
+  object-position: top;
+}
 
-		.image[data-position="top right"] img {
-			-moz-object-position: top right;
-			-webkit-object-position: top right;
-			-ms-object-position: top right;
-			object-position: top right;
-		}
+.image[data-position="top right"] img {
+  object-position: top right;
+}
 
-		.image[data-position="right"] img {
-			-moz-object-position: right;
-			-webkit-object-position: right;
-			-ms-object-position: right;
-			object-position: right;
-		}
+.image[data-position="right"] img {
+  object-position: right;
+}
 
-		.image[data-position="bottom right"] img {
-			-moz-object-position: bottom right;
-			-webkit-object-position: bottom right;
-			-ms-object-position: bottom right;
-			object-position: bottom right;
-		}
+.image[data-position="bottom right"] img {
+  object-position: bottom right;
+}
 
-		.image[data-position="bottom"] img {
-			-moz-object-position: bottom;
-			-webkit-object-position: bottom;
-			-ms-object-position: bottom;
-			object-position: bottom;
-		}
+.image[data-position="bottom"] img {
+  object-position: bottom;
+}
 
-		.image[data-position="bottom left"] img {
-			-moz-object-position: bottom left;
-			-webkit-object-position: bottom left;
-			-ms-object-position: bottom left;
-			object-position: bottom left;
-		}
+.image[data-position="bottom left"] img {
+  object-position: bottom left;
+}
 
-		.image[data-position="left"] img {
-			-moz-object-position: left;
-			-webkit-object-position: left;
-			-ms-object-position: left;
-			object-position: left;
-		}
+.image[data-position="left"] img {
+  object-position: left;
+}
 
-		.image[data-position="center"] img {
-			-moz-object-position: center;
-			-webkit-object-position: center;
-			-ms-object-position: center;
-			object-position: center;
-		}
+.image[data-position="center"] img {
+  object-position: center;
+}
 
-		.image[data-position="25% 25%"] img {
-			-moz-object-position: 25% 25%;
-			-webkit-object-position: 25% 25%;
-			-ms-object-position: 25% 25%;
-			object-position: 25% 25%;
-		}
+/* Support percentage-based positioning */
+.image[data-position="25% 25%"] img {
+  object-position: 25% 25%;
+}
 
-		.image[data-position="75% 25%"] img {
-			-moz-object-position: 75% 25%;
-			-webkit-object-position: 75% 25%;
-			-ms-object-position: 75% 25%;
-			object-position: 75% 25%;
-		}
+.image[data-position="75% 25%"] img {
+  object-position: 75% 25%;
+}
 
-		.image[data-position="75% 75%"] img {
-			-moz-object-position: 75% 75%;
-			-webkit-object-position: 75% 75%;
-			-ms-object-position: 75% 75%;
-			object-position: 75% 75%;
-		}
+.image[data-position="75% 75%"] img {
+  object-position: 75% 75%;
+}
 
-		.image[data-position="25% 75%"] img {
-			-moz-object-position: 25% 75%;
-			-webkit-object-position: 25% 75%;
-			-ms-object-position: 25% 75%;
-			object-position: 25% 75%;
-		}
+.image[data-position="25% 75%"] img {
+  object-position: 25% 75%;
+}
 
 		.image.left, .image.right {
 			max-width: 40%;
