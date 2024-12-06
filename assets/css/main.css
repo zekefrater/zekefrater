@@ -2577,3 +2577,32 @@ input[type="submit"]:hover {
         height: auto; /* Maintain the aspect ratio */
     }
 }
+/* Ensure the image container and the image have no margins */
+.portfolio-image .image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden; /* Prevent overflow */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove padding if any */
+}
+
+/* Ensure the image itself is responsive */
+.portfolio-image .image img {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensures the image is treated as a block element */
+    margin: 0; /* Remove any default margin */
+}
+
+/* Optional: Adjust spacing below the image if necessary */
+.portfolio-image {
+    margin-bottom: 0; /* Removes margin below the image container */
+}
+
+/* Reset margins and padding on the sections */
+section {
+    margin: 0;
+    padding: 0;
+}
+
