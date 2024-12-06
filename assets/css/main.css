@@ -2589,29 +2589,5 @@ input[type="submit"]:hover {
     overflow: hidden; /* Ensures content does not overflow */
 }
 
-/* Responsive iframe container */
-.responsive-iframe-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-}
-
-.responsive-iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-/* Ensuring 2-column layout on mobile and smaller screens */
-@media (max-width: 900px) {
-    .portfolio-section {
-        grid-template-columns: repeat(2, 2fr); /* Keep two columns even on small screens */
-    }
-}
 
 
