@@ -1360,35 +1360,34 @@ hr.major {
 				border-top: 0;
 			}
 /* Ensure no underline on the arrow link */
-.image-wrapper {
-  position: relative; /* Ensure the wrapper has a relative position */
-  z-index: 1; /* Ensure the image wrapper is below the arrow */
-}
+.image-wrapper {	
+	position: relative; /* Ensure the wrapper has a relative position */
+	z-index: 0; /* Set the z-index appropriately */		
+  }
+
 
 .arrow {
-  height: 4rem;
-  width: 6rem;
-  position: absolute;
-  z-index: 1; /* Ensure the arrow is in front */
-  cursor: pointer;
-  transition: all 0.3s ease;
-  transform: translateX(-50%); /* Centers the arrow horizontally */
-  text-decoration: none !important; /* Enforce removal of underline */
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M442.53,346.28L293.65,495.16c-0.33,0.33-0.7,0.62-1.05,0.94c-9.16,9.77-22.15,15.9-36.6,15.9 c-14.44,0-27.43-6.13-36.59-15.88c-0.35-0.33-0.72-0.62-1.06-0.96L69.47,346.28c-19.62-19.62-19.62-51.44,0-71.05 c19.62-19.62,51.43-19.62,71.06,0l65.23,65.23V50.24C205.76,22.5,228.25,0,256,0s50.24,22.5,50.24,50.24v290.21l65.23-65.23 c19.62-19.62,51.43-19.62,71.05,0C462.15,294.84,462.15,326.66,442.53,346.28z' fill='%23000000' /%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
+	height: 5vh; /* Use viewport height for size */
+	width: 5vh;  /* Maintain aspect ratio */	
+	position: absolute; /* Use absolute positioning */	 
+	cursor: pointer; 	
+	z-index: 1; /* Ensure the arrow is on top of the image */
+
+	transition: transform 0.3s ease, opacity 0.3s ease; /* Separate transition properties for better performance */
+	text-decoration: none !important; 	
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M442.53,346.28L293.65,495.16c-0.33,0.33-0.7,0.62-1.05,0.94c-9.16,9.77-22.15,15.9-36.6,15.9 c-14.44,0-27.43-6.13-36.59-15.88c-0.35-0.33-0.72-0.62-1.06-0.96L69.47,346.28c-19.62-19.62-19.62-51.44,0-71.05 c19.62-19.62,51.43-19.62,71.06,0l65.23,65.23V50.24C205.76,22.5,228.25,0,256,0s50.24,22.5,50.24,50.24v290.21l65.23-65.23 c19.62-19.62,51.43-19.62,71.05,0C462.15,294.84,462.15,326.66,442.53,346.28z' fill='%23000000' /%3E%3C/svg%3E");		
+	background-repeat: no-repeat;	
+  }
   
   /* Reset link styles across all states */
   a.arrow, 
-  a.arrow:link, 
+  a.arrow:link, 	
   a.arrow:visited, 
   a.arrow:hover, 
   a.arrow:active {
-	text-decoration: none !important; /* Fully remove underline */
-	border: none; /* Remove any potential border styling */
-	outline: none; /* Remove focus outlines */
+	text-decoration: none !important; 
+	border: none; 
+	outline: none; 
   }
   
   /* Remove inherited text decoration from parent containers */
@@ -1397,13 +1396,13 @@ hr.major {
   ul.actions a.arrow:visited, 
   ul.actions a.arrow:hover, 
   ul.actions a.arrow:active {
-	text-decoration: none !important; /* Ensure no underline */
+	text-decoration: none !important; 
   }
   
   /* Hover Effect for the Arrow */
   a.arrow:hover {
-	transform: translateX(-50%) scale(1.2); /* Scale effect */
-	opacity: 0.8;
+	transform: scale(1.1); /* Enlarge the arrow on hover */
+	opacity: 0.5; /*ight opacity adjustment */
   }
   
   
@@ -1705,7 +1704,7 @@ hr.major {
 	#wrapper {
 		position: relative;
 		width: 100vw;
-		padding: 0 0 10rem 0;
+		padding: 0 0 5rem 0;
 	}
 
 		#wrapper:before {
@@ -1716,10 +1715,10 @@ hr.major {
 			background-repeat: repeat-y;
 			background-size: 75% auto;
 			content: '';
-			display: block;
+			display: block;	
 			height: 100%;
 			left: 0;
-			position: absolute;
+			position: absolute;	
 			top: 0;
 			width: 50vw;
 			z-index: -1;
@@ -1758,8 +1757,8 @@ hr.major {
 			#wrapper section > .content {
 				grid-area: content;
 				max-width: 60rem;
-				position: relative;
-			}
+				position: relative;				
+			}	
 
 			#wrapper section > footer {
 				grid-area: footer;
@@ -1767,7 +1766,7 @@ hr.major {
 			}
 
 				#wrapper section > footer ul.actions {
-					justify-content: relative;
+					justify-content: flex-end;
 				}
 
 		#wrapper > section {
@@ -1779,8 +1778,9 @@ hr.major {
 				content: '';
 				display: block;
 				margin-top: 0rem;
-				position: absolute;
-				width: 2px;
+				position: 	absolute;		
+				top: 0rem;
+				width: 3px;
 			}
 
 
@@ -2290,13 +2290,10 @@ hr.major {
 /* Video Section Styling (Preserve Margins and Framing) */
 .youtube-embed-container,
 .responsive-iframe-container {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
   height: 0;
+  scale: 0.8;
   top: 0;
-  overflow: hidden;
-  margin-top: 50px; /* Add top margin */
+  border-radius: 8px; /* Ensure container matches iframe corners */		
 }
 
 .youtube-embed-container iframe,
@@ -2551,5 +2548,6 @@ input[type="submit"]:hover {
 	font-weight: bold; /* Ensure the key terms are bold */
 	color: #333; /* Darker color for emphasis */
   }
-
+  
+  .experience-highlights ul li span {
   
