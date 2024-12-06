@@ -215,9 +215,11 @@ pre code {
 }
 
 hr {
-    border: 0;
-    border-bottom: solid 2px rgba(144, 144, 144, 0.25);
-    margin: 3rem 0;
+    border: 0;  /* Remove default borders */
+    border-bottom: solid 2px rgba(144, 144, 144, 0.25); /* Semi-transparent bottom border */
+    height: 2px; /* Line thickness */
+    background-color: #ccc; /* Fallback color if border-bottom doesn't render properly */
+    margin: 3rem 0; /* Larger space above and below the line */
 }
 
 hr.major {
@@ -2551,5 +2553,3 @@ input[type="submit"]:hover {
 	font-weight: bold; /* Ensure the key terms are bold */
 	color: #333; /* Darker color for emphasis */
   }
-
-  
