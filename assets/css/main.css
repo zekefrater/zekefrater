@@ -2631,7 +2631,7 @@ input[type="submit"]:hover {
 /* Ensuring 2-column layout on mobile and smaller screens */
 @media (max-width: 768px) {
     .portfolio-section {
-        grid-template-columns: repeat(2, 1fr); /* Keep two columns even on small screens */
+        grid-template-columns: repeat(3, 2fr); /* Keep two columns even on small screens */
     }
 }
 
