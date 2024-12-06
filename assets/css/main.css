@@ -392,7 +392,7 @@ button,
     height: 3rem;
     letter-spacing: 0.175em;
     line-height: 3rem;
-    padding: 0 2rem;
+    padding: 0 0rem;
     text-align: center; /* Correcting text align to center */
     text-decoration: none;
     text-transform: uppercase;
@@ -438,7 +438,7 @@ button.large,
     font-size: 0.7rem;
     height: 3.2625rem;
     line-height: 3.2625rem;
-    padding: 0 3.25rem;
+    padding: 0 0rem;
 }
 
 input[type="submit"].wide,
@@ -556,7 +556,7 @@ form > .fields > .field {
     flex-grow: 0; /* Prevent field from growing */
     flex-shrink: 0; /* Prevent field from shrinking */
     padding: 2rem 0 0 2rem; /* Maintain padding */
-    width: calc(100% - 2rem); /* Width adjustment for fields */
+    width: calc(100%); /* Width adjustment for fields */
 }
 
 form > .fields > .field > :last-child {
@@ -568,7 +568,7 @@ form > .fields > .field.half {
 }
 
 form > .fields > .field.third {
-    width: calc(100%/3 - 0.66667rem); /* Third width fields */
+    width: calc(100%); /* Third width fields */
 }
 
 form > .fields > .field.quarter {
@@ -578,24 +578,24 @@ form > .fields > .field.quarter {
 @media screen and (max-width: 480px) {
     form > .fields {
         margin: -1.5rem 0 2rem -1.5rem; /* Margin adjustments */
-        width: calc(100% + 3rem); /* Width adjustments */
+        width: calc(100%); /* Width adjustments */
     }
 
     form > .fields > .field {
         padding: 1.5rem 0 0 1.5rem; /* Padding adjustments */
-        width: calc(100% - 1.5rem); /* Width adjustments */
+        width: calc(100%); /* Width adjustments */
     }
 
     form > .fields > .field.half {
-        width: calc(100% - 1.5rem); /* Full width for half fields */
+        width: calc(100%); /* Full width for half fields */
     }
 
     form > .fields > .field.third {
-        width: calc(100% - 1.5rem); /* Full width for third fields */
+        width: calc(100%); /* Full width for third fields */
     }
 
     form > .fields > .field.quarter {
-        width: calc(100% - 1.5rem); /* Full width for quarter fields */
+        width: calc(100%); /* Full width for quarter fields */
     }
 }
 
@@ -614,7 +614,7 @@ textarea {
     display: block; /* Display block */
     outline: 0; /* Remove outline */
     padding: 0 1rem; /* Padding for input fields */
-    width: 100%; /* Full width */
+    width: 100%auto; /* Full width */
 }
 
 input[type="text"]:invalid,
