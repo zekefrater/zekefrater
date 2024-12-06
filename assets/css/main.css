@@ -2577,13 +2577,6 @@ input[type="submit"]:hover {
     box-sizing: border-box;
 }
 
-/* Body and general layout */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    line-height: 1.6;
-}
-
 /* Portfolio section styling */
 .portfolio-section {
     display: grid; /* Enable grid layout */
