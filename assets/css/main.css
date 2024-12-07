@@ -26,6 +26,10 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
+form {
+    text-align: center; /* Center the button */
+}
+
 body {
     line-height: 1;
     background: #ffffff;
@@ -548,7 +552,8 @@ button.primary,
     background-color: #5CE1E6; /* Set primary background color */
     box-shadow: none; /* Remove shadow */
     color: #000000 !important; /* Set text color */
-}
+    font-size: 0.875rem; /* Adjust this value as needed */
+    font-weight: 600; /* Adjust this value as needed */}
 
 input[type="submit"].primary:hover,
 input[type="reset"].primary:hover,
@@ -758,7 +763,6 @@ input[type="radio"] {
     -ms-appearance: none;
     appearance: none;
     display: block; /* Block display */
-    float: left; /* Align left */
     margin-right: -2rem; /* Negative margin */
     opacity: 0; /* Hide default radio/check */
     width: 1rem; /* Set width */
@@ -1112,16 +1116,15 @@ dl dd {
 }
 
 /* Actions */
-ul.actions {
-    display: flex; /* Flex display */
-    cursor: default; /* Default cursor */
-    list-style: none; /* No styles for actions */
-    margin-left: -1rem; /* Negative margin */
-    padding-left: 0; /* No padding */
+.actions {
+    display: flex;
+    justify-content: center; /* Center the button */
+    list-style: none; /* Remove default list styling */
+    padding: 0 0 0 0; /* Remove default padding */
 }
 
 ul.actions li {
-    padding: 0 0 0 1rem; /* Padding adjustments */
+    padding: 0 0 0 0rem; /* Padding adjustments */
     vertical-align: middle; /* Vertical alignment for items */
 }
 
