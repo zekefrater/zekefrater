@@ -14,7 +14,7 @@ canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
     margin: 0;
-    padding: 0px;
+    padding: 0;
     border: 0;
     font-size: 100%;
     font: inherit;
@@ -24,6 +24,13 @@ section, summary, time, mark, audio, video {
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
+}
+
+@media screen and (min-width: 600px) {
+    p {
+        font-size: 1rem;
+        padding: 1rem 1rem;
+    }
 }
 
 form {
@@ -50,14 +57,13 @@ body {
 }
 
 .intro h1, .intro h2, .intro h3, .intro p {
-    margin: 0;
-    text-align: center;
+    margin: 0 auto;
+    text-align: flex-end;
 }
 
 ol, ul {
     list-style: none;
 }
-
 @media screen and (max-width: 736px) {
     h1, h2, h3, h4, h5, h6 {
         text-align: center;
@@ -67,7 +73,7 @@ ol, ul {
 
 @media screen and (min-width: 736px) {
     .intro {
-        text-align: left;
+        text-align: flex-end;
     }
 
     .intro h1 {
@@ -83,6 +89,10 @@ ol, ul {
     .intro p {
         font-size: 1.2rem;
         margin: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        text-align: flex-end; /* Ensures consistent alignment for larger screens */
     }
 }
 
@@ -124,6 +134,7 @@ input, select, textarea {
 /* Basic Styles */
 html {
     box-sizing: border-box;
+    font-size: 110%; /* Increase base size */
 }
 
 *, *:before, *:after {
@@ -133,21 +144,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* This can help prevent horizontal scrolling */
-}
-
-/* Typography */
-html {
-    font-size: 14pt;
-}
-
-@media screen and (max-width: 736px) {
-    html {
-        font-size: 12pt;
-    }
-}
-
-body, input, select, textarea {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-size: 1rem;
     font-weight: 300;
@@ -155,11 +152,18 @@ body, input, select, textarea {
     line-height: 1.6;
 }
 
+/* Typography */
+@media screen and (max-width: 736px) {
+    html {
+        font-size: 12pt; /* Responsive font size */
+    }
+}
+
 a {
     transition: border-bottom-color 0.25s ease-in-out;
     text-decoration: none;
-    color: #000000;
-    border-bottom: dotted 1px;
+    color: #000;
+    border-bottom: 1px dotted;
 }
 
 a:hover {
@@ -168,10 +172,10 @@ a:hover {
 
 strong, b {
     font-size: 2rem;
-    letter-spacing: 0.5px; 
     display: block; 
-    margin-top: 0rem; 
+    margin-top: 0;
     color: #555; 
+    letter-spacing: 0.5px;
 }
 
 em, i {
@@ -179,37 +183,35 @@ em, i {
 }
 
 p {
-    margin: 0 0 0rem;
+    margin: 0; /* Consistent margin */
+    font-size: 1rem; /* Standardize paragraph size */
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #000000;
+    color: #000;
     font-family: "Raleway", Helvetica, sans-serif;
     font-weight: 600;
-    letter-spacing: 0rem;
     line-height: 1.75;
-    margin: 0 0 rem;
+    margin: 0; /* Reset margin */
     text-transform: uppercase;
 }
 
 h1 {
-    font-family: "Source Sans Pro", Helvetica, sans-serif;
-    font-size: 6rem;
+    font-size: 5rem; /* Increase heading size */
     font-weight: 700;
-    letter-spacing: 0; 
     line-height: 1;
-    margin-bottom: 0rem;
+    margin-bottom: 0;
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 3rem; /* Increase heading size */
     font-weight: 800;
     line-height: 1;
     margin-bottom: 2rem;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 2rem; /* Increase heading size */
 }
 
 h4 {
@@ -226,7 +228,7 @@ h6 {
 
 @media screen and (max-width: 736px) {
     h1 {
-        font-size: 4.5rem;
+        font-size: 6rem; /* Consistent size for smaller screens */
     }
     h2 {
         font-size: 1.5rem;
@@ -236,8 +238,12 @@ h6 {
     }
 }
 
+.small-text {
+    font-size: 0.9rem; /* Adjust smaller text */
+}
+
 blockquote {
-    border-left: solid 0.5rem rgba(144, 144, 144, 0.25);
+    border-left: 0.5rem solid rgba(144, 144, 144, 0.25);
     font-style: italic;
     margin: 0 0 2rem;
     padding: 1rem 0 1rem 2rem;
@@ -255,7 +261,7 @@ code {
 pre {
     font-family: "Courier New", monospace;
     font-size: 0.9rem;
-    margin: 0 0 0rem;
+    margin: 0 0 0; /* Consistent margin */
     width: 100%;
 }
 
@@ -265,6 +271,7 @@ pre code {
     padding: 1rem 1.5rem;
     overflow-x: auto;
 }
+
 @media (max-width: 600px) {
     pre code {
         padding: 0.5rem; /* Adjust padding for smaller screens */
@@ -898,7 +905,7 @@ input[type="radio"] + label:before {
     font-variant: normal; /* Normal variant */
     text-rendering: auto; /* Auto rendering */
     line-height: 1; /* Line height */
-    text-transform: none !important; /* Prevent text transformation */
+    text-transform: none !important; /* Prevent transformation */
     font-family: 'Font Awesome 5 Free'; /* Font awesome family */
     font-weight: 400; /* Normal font weight */
 }
@@ -1338,7 +1345,7 @@ table.alt tfoot {
 
     transition: transform 0.3s ease, opacity 0.3s ease; /* Separate transition properties for better performance */
     text-decoration: none !important; 	
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M442.53,346.28L293.65,495.16c-0.33,0.33-0.7,0.62-1.05,0.94c-9.16,9.77-22.15,15.9-36.6,15.9 c-14.44,0-27.43-6.13-36.59-15.88c-0.35-0.33-0.72-0.62-1.06-0.96L69.47,346.28c-19.62-19.62-19.62-51.44,0-71.05 c19.62-19.62,51.43-19.62,71.06,0l65.23,65.23V50.24C205.76,22.5,228.25,0,256,0s50.24,22.5,50.24,50.24v290.21l65.23-65.23 c19.62-19.62,51.43-19.62,71.05,0C462.15,294.84,462.15,326.66,442.53,346.28z' fill='%23000000' /%3E%3C/svg%3E");	
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M442.53,346.28L293.65,495.16c-0.33,0.33-0.7,0.62-1.05,0.94c-9.16,9.77-22.15,15.9-36.6,15.9 c-14.44,0-27.43-6.13-36.59-15.88c-0.35-0.33-0.72-0.62-1.06-0.96L69.47,346.28c-19.62-19.62-19.62-51.44,0-71.05 c19.62-19.62,51.43-19.62,71.06,0l65.23,65.23V50.24C205.76,22.5,228.25,0,256,0s50.24,22.5,50.24,50.24v290.21l65.23-65.23 c19.62-19.62,51.43-19.62,71.05,0C462.15,294.84,462.15,326.66,442.53,346.28z'/%3E %3C/svg%3E");	
     background-repeat: no-repeat;	
 }
   
@@ -1598,7 +1605,7 @@ a.arrow:hover {
 
 #wrapper section > header h1 + p {
     font-family: "Raleway", Helvetica, sans-serif; /* Font family */
-    font-size: 0.8rem; /* Font size */
+    font-size: 1rem; /* Font size */
     letter-spacing: 0.175em; /* Letter spacing */
     line-height: 2.5; /* Line height */
     text-transform: uppercase; /* Text transformation */
@@ -1656,6 +1663,10 @@ a.arrow:hover {
 
 #wrapper > section > .content > section:first-child {
     margin-top: 0rem; /* No top margin for first child */
+}
+
+#wrapper > section > .content > section > header {
+    width: 100%; /* Reset width to full size */
 }
 
 #wrapper > section.intro {
@@ -1772,7 +1783,7 @@ a.arrow:hover {
 }
 
 #wrapper > section > .content > section > header {
-    width: 32rem; /* Width adjustment for headers */
+    width: 100%; /* Reset width to full size */
 }
 
 #wrapper > section.intro > header > * {
@@ -1870,7 +1881,7 @@ a.arrow:hover {
         }
 
             #wrapper > section > .content > section > header {
-                width: 32rem;
+                width: 100%; /* Reset width to full size */
             }
 
         #wrapper > section.intro > header > * {
@@ -2065,7 +2076,7 @@ a.arrow:hover {
 			}
 		  
 			#wrapper > section > .content > section > header {
-			  width: 100%;
+			  width: 100%; /* Reset width to full size */
 			}
 		  
 			#wrapper > section > .content > section:last-child {
