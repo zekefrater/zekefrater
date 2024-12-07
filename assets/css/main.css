@@ -743,7 +743,7 @@ input[type="url"] {
 }
 
 select {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='rgba(144, 144, 144, 0.25)' /%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='rgba(144, 144, 144, 0.25)' /%3E%3C/svg%3E");
     background-position: calc(100% - 1rem) center;
     background-repeat: no-repeat;
     background-size: 1.25rem;
@@ -2262,141 +2262,32 @@ body.is-ie #wrapper section > footer {
     border-radius: 8px; 
 }
 
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+html, body {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    background: #ffffff;
+    color: #000000;
+}
+
 /* Contact Section Styling */
 .section {
     margin: 20px auto; 
     padding: 20px; 
     max-width: 500px; 
+    text-align: center; /* Center align the section content */
 }
 
 /* Center content and reduce padding */
 .content {
-    text-align: center;
-    padding: 0px; 
-}
-
-/* Contact Form Styling */
-form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; 
-    justify-content: center; 
-}
-
-/* Field Styles */
-.fields {
-    width: 100%;
-}
-
-.field {
-    width: 100%;
-    margin-bottom: 1rem; 
-}
-
-.field.half {
-    width: 48%; 
-}
-
-/* Input and Textarea Styling */
-textarea,
-input[type="text"],
-input[type="email"] {
-    margin: 4px 0; /* Removed unnecessary 'px' for zero */
-    padding: 20px; 
-    border-radius: 4px; 
-    border: 1.5px solid #000; /* Shortened hex code */
-    font-size: 0.8rem; 
-}
-
-/* Action Buttons */
-ul.actions {
-    list-style: none;
-    margin: 10px 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-ul.actions li {
-    margin: 0; 
-}
-
-input[type="submit"] {
-    padding: 6px 10px; 
-    font-size: 0.85rem; 
-    border: none;
-    border-radius: 4px;
-    background-color: #000000;
-    color: white;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #000000; 
-}
-
-/* Contact Info Styling */
-.items {
-    list-style: none;
-    padding: 0;
-    text-align: center; 
-}
-
-.items li {
-    margin-bottom: 10px; 
-}
-
-.items h3 {
-    font-size: 1rem; 
-    margin-bottom: 3px; 
-}
-
-.items a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1rem; 
-}
-
-/* Icon List Styling */
-.icons {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 5px;
-    justify-content: center; 
-}
-
-.icons .icon {
-    font-size: 30px;
-    color: #333;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.icons .icon:hover {
-    color: #5CE1E6;
-    transform: scale(1.1);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .field.half {
-        width: 100%; 
-    }
-
-    .items li {
-        text-align: center; 
-    }
-}
-
-/* Header Styling */
-.header-container {
-    text-align: center;
-    margin-bottom: 1.5rem; 
-}
-
-.animated-heading {
-    font-size: 2rem;
-    color: #333; 
+    padding: 0; /* Keep padding as is */
 }
 
 /* Playlist Container */
@@ -2445,11 +2336,50 @@ input[type="submit"]:hover {
     color: inherit; 
 }
 
-/* Responsive adjustments for small screens */
+.connect-with {
+    text-align: center; /* Center align text */
+    margin: 40px 0; /* Space above and below the section */
+}
+
+.social-icons {
+    display: flex; /* Use flexbox to align icons horizontally */
+    justify-content: center; /* Center the icons */
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+.social-icons li {
+    margin: 0 10px; /* Space between icons */
+}
+
+.social-icons a {
+    color: #333; /* Icon color */
+    font-size: 24px; /* Size of the icons */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
+    .contact-form {
+        padding: 10px;
+    }
+    
+    .btn-submit {
+        width: 100%;
+    }
+
+    .field.half {
+        flex: 0 0 100%; /* Stack fields on smaller screens */
+        max-width: 100%;
+    }
+
     .social.icons {
-        flex-direction: column; 
-        align-items: flex-start; 
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .social.icons .icon {
@@ -2461,6 +2391,59 @@ input[type="submit"]:hover {
     }
 }
 
+.fields {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack fields vertically */
+    justify-content: center; /* Center align fields */
+    align-items: center; /* Center align items */
+}
+
+.field {
+    margin-bottom: 20px; /* Space between fields */
+    width: 100%; /* Ensure full width for fields */
+    max-width: 600px; /* Optional: Set a max width for better appearance */
+}
+
+.field.half {
+    flex: 0 0 100%; /* Increase width for name, email, and phone fields */
+    max-width: 100%; /* Ensure maximum width */
+}
+
+.field.full-width {
+    width: 100%; /* Full width for the textarea */
+}
+
+/* Ensure the textarea takes full width */
+textarea {
+    width: 100%; /* Full width for textarea */
+}
+
+/* New class for better alignment */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.arrow {
+    height: 5vh; /* Use viewport height for size */
+    width: 5vh;  /* Maintain aspect ratio */	
+    position: absolute; /* Use absolute positioning */	 
+    cursor: pointer; 	
+    z-index: 1; /* Ensure the arrow is on top of the image */
+
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Separate transition properties for better performance */
+    text-decoration: none !important; 	
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M442.53,346.28L293.65,495.16c-0.33,0.33-0.7,0.62-1.05,0.94c-9.16,9.77-22.15,15.9-36.6,15.9 c-14.44,0-27.43-6.13-36.59-15.88c-0.35-0.33-0.72-0.62-1.06-0.96L69.47,346.28c-19.62-19.62-19.62-51.44,0-71.05 c19.62-19.62,51.43-19.62,71.06,0l65.23,65.23V50.24C205.76,22.5,228.25,0,256,0s50.24,22.5,50.24,50.24v290.21l65.23-65.23 c19.62-19.62,51.43-19.62,71.05,0C462.15,294.84,462.15,326.66,442.53,346.28z'/%3E %3C/svg%3E");	
+    background-repeat: no-repeat;	
+}
+  
+/* Hover Effect for the Arrow */
+.arrow:hover {
+    transform: scale(1.1); /* Enlarge the arrow on hover */
+    opacity: 0.5; /* Light opacity adjustment */
+}
+  
 #wrapper section.intro > header h1,
 #wrapper section.intro > header h2,
 #wrapper section.intro > header h3 {
@@ -2479,13 +2462,13 @@ input[type="submit"]:hover {
 #wrapper section.intro > header h3 {
     font-size: 1.5rem; /* Adjust font size for smaller headers */
 }  
+
 .arrow {
     height: 5vh; /* Use viewport height for size */
     width: 5vh;  /* Maintain aspect ratio */	
     position: absolute; /* Use absolute positioning */	 
     cursor: pointer; 	
     z-index: 1; /* Ensure the arrow is on top of the image */
-
     transition: transform 0.3s ease, opacity 0.3s ease; /* Separate transition properties for better performance */
     text-decoration: none !important; 	
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M442.53,346.28L293.65,495.16c-0.33,0.33-0.7,0.62-1.05,0.94c-9.16,9.77-22.15,15.9-36.6,15.9 c-14.44,0-27.43-6.13-36.59-15.88c-0.35-0.33-0.72-0.62-1.06-0.96L69.47,346.28c-19.62-19.62-19.62-51.44,0-71.05 c19.62-19.62,51.43-19.62,71.06,0l65.23,65.23V50.24C205.76,22.5,228.25,0,256,0s50.24,22.5,50.24,50.24v290.21l65.23-65.23 c19.62-19.62,51.43-19.62,71.05,0C462.15,294.84,462.15,326.66,442.53,346.28z'/%3E %3C/svg%3E");	
