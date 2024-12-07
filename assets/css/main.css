@@ -265,20 +265,25 @@ pre code {
     padding: 1rem 1.5rem;
     overflow-x: auto;
 }
+@media (max-width: 600px) {
+    pre code {
+        padding: 0.5rem; /* Adjust padding for smaller screens */
+    }
+}
 
 hr {
     border: 0;
     border-bottom: solid 2px rgba(144, 144, 144, 0.25);
-    margin: 0rem 0;
+    margin: 2rem 2rem; /* Increased vertical space and added more horizontal space */
 }
 
 hr.major {
-    margin: 0rem 0;
+    margin: 2rem 2rem; /* Increased vertical space and added more horizontal space for major hr */
 }
 
 @media screen and (max-width: 736px) {
     hr.major {
-        margin: 0rem 0;
+        margin: 2rem 2rem; /* Increased margin for mobile */
     }
 }
 
