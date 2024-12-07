@@ -2,9 +2,13 @@
 	"folders": [
 		{
 			"path": "../.."
-		},
-		{
-			"path": "../.."
 		}
-	]
+	],
+	"settings": {
+		"liveServerSettings": {
+			"ignore": [
+				"**/*.html"
+			]
+		}
+	}
 }

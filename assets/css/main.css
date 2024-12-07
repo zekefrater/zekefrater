@@ -59,7 +59,7 @@ body {
 
 .intro h1, .intro h2, .intro h3, .intro p {
     margin: 0 auto;
-    text-align: flex-end;
+    text-align: right;
 }
 
 ol, ul {
@@ -74,7 +74,7 @@ ol, ul {
 
 @media screen and (min-width: 736px) {
     .intro {
-        text-align: flex-end;
+        text-align: center;
     }
 
     .intro h1 {
@@ -92,8 +92,8 @@ ol, ul {
         margin: 0;
     }
 
-    h1, h2, h3, h4, h5, h6 {
-        text-align: flex-end; /* Ensures consistent alignment for larger screens */
+    h4, h5, h6 {
+        text-align: center; /* Ensures consistent alignment for larger screens */
     }
 }
 
@@ -830,7 +830,7 @@ input[type="radio"] + label:before {
     left: 0; /* Left position */
     line-height: 2.25rem; /* Line height */
     position: absolute; /* Position absolutely */
-    text-align: relative; /* Relative text alignment */
+    text-align: center; /* Relative text alignment */
     top: -0.15rem; /* Top position */
     width: 2.25rem; /* Width */
 }
@@ -1081,24 +1081,24 @@ ul.items {
 
 ul.items > li {
     padding-left: 0; /* No padding for items */
-    margin: 1 0 1rem 0; /* Margin adjustments */
+    margin: 0rem 1rem; /* Margin adjustments */
 }
 
 ul.items > li > h3 {
-    margin: 1 0 1rem 0; /* Margin adjustments for h3 */
+    margin: 0rem 1rem; /* Margin adjustments for h3 */
 }
 
 ul.items > li > :last-child {
-    margin-bottom: 0; /* No margin for last child */
+    margin-bottom: 0rem; /* No margin for last child */
 }
 
 ul.items > li:last-child {
-    margin-bottom: 0; /* No margin for last child */
+    margin-bottom: 0rem; /* No margin for last child */
 }
 
 @media screen and (max-width: 736px) {
     ul.items > li {
-        margin: 0 0 0rem 0; /* Adjust margin for smaller screens */
+        margin: 0rem; /* Adjust margin for smaller screens */
     }
 }
 
@@ -1182,7 +1182,7 @@ ul.actions.fit.stacked {
         flex-grow: 1; /* Allow flex-grow for actions */
         flex-shrink: 1; /* Allow flex-shrink for actions */
         padding: 1rem 0 0 0; /* Padding adjustments */
-        text-align: relative; /* Text alignment */
+        text-align: center; /* Text alignment */
         width: 100%; /* Full width for actions */
     }
 
@@ -1230,7 +1230,7 @@ ul.icons li .icon {
     transition: background-color 0.25s ease-in-out; /* Transition for hover effects */
     width: 2.25rem; /* Icon width */
     height: 2.25rem; /* Icon height */
-    text-align: relative; /* Text alignment */
+    text-align: center; /* Text alignment */
     line-height: 2.25rem; /* Line height for icon */
     border-radius: 2.25rem; /* Rounded corners for icon */
     display: inline-block; /* Inline-block for icon */
@@ -1273,7 +1273,7 @@ table th {
     font-size: 0.9rem; /* Header font size */
     font-weight: 600; /* Header font weight */
     padding: 0 0.75rem 0.75rem 0.75rem; /* Padding */
-    text-align: relative; /* Align text */
+    text-align: center; /* Align text */
 }
 
 table thead {
@@ -1727,7 +1727,7 @@ a.arrow:hover {
     position: relative; /* Relative positioning */
     display: block; /* Block display */
     margin: 0; /* No margin */
-    align-items: relative; /* Align items */
+    align-items: center; /* Align items */
 }
 
 /* After pseudo-element: Dot on the right side of the text */
@@ -1825,7 +1825,7 @@ a.arrow:hover {
     position: relative;  /* Make the header a containing block for absolute positioning */
     display: block;  /* Keeps the header text inline */
     margin: 0;  /* Remove any default margin to avoid affecting text spacing */
-    align-items: relative; /* Center items vertically */
+    align-items: center; /* Center items vertically */
 }
 
 /* After pseudo-element: Dot on the right side of the text */
@@ -2301,7 +2301,7 @@ form {
 textarea,
 input[type="text"],
 input[type="email"] {
-    width: 100%;
+    width: 100% auto;
     margin: 4px 0px;
     padding: 20px; 
     border-radius: 4px; 
@@ -2479,4 +2479,4 @@ input[type="submit"]:hover {
 
 #wrapper section.intro > header h3 {
     font-size: 1.5rem; /* Adjust font size for smaller headers */
-}
+}   
