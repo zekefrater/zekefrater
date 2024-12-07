@@ -254,8 +254,8 @@ code {
     border-radius: 0.325rem;
     font-family: "Courier New", monospace;
     font-size: 0.9rem;
-    margin: 0 0.25rem;
-    padding: 0.25rem 0.65rem;
+    margin: 0 0rem;
+    padding: 0rem 0rem;
 }
 
 pre {
@@ -268,7 +268,7 @@ pre {
 pre code {
     display: block;
     line-height: 1.75;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1rem;
     overflow-x: auto;
 }
 
@@ -775,7 +775,7 @@ select::-ms-expand {
 }
 
 textarea {
-    padding: 0.75rem 1rem; /* Padding for textarea */
+    padding: 1rem 1rem; /* Padding for textarea */
 }
 
 input[type="checkbox"],
@@ -801,8 +801,6 @@ input[type="radio"] + label {
     font-size: 1rem; /* Font size */
     font-weight: 300; /* Font weight */
     letter-spacing: 0.0375em; /* Letter spacing */
-    padding-left: 2.675rem; /* Padding on the left */
-    padding-right: 0.875rem; /* Padding on the right */
     position: relative; /* Relative positioning */
     text-transform: none; /* Remove text transformation */
 }
@@ -931,12 +929,13 @@ input[type="radio"] + label:before {
 
 .image img {
     display: block; /* Block display */
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .image[data-position] img {
     object-fit: cover; /* Cover image */
-    display: block; /* Block display */
-    position: absolute; /* Absolutely position */
+    position: absolute; /* Absolutely positioned */
     top: 0; /* Top position */
     left: 0; /* Left position */
     width: 100%; /* Full width */
@@ -999,10 +998,6 @@ input[type="radio"] + label:before {
     max-width: 40%; /* Max width for left/right images */
 }
 
-.image.left img, .image.right img {
-    width: 100%; /* Full width for images */
-}
-
 .image.left {
     float: left; /* Float left */
     margin: 0 2rem 2rem 0; /* Margin adjustments */
@@ -1021,18 +1016,10 @@ input[type="radio"] + label:before {
     width: 100%; /* Full width */
 }
 
-.image.fit img {
-    width: 100%; /* Full width for fit images */
-}
-
 .image.main {
     display: block; /* Block display */
     margin: 3rem 0; /* Margin adjustments */
     width: 100%; /* Full width */
-}
-
-.image.main img {
-    width: 100%; /* Full width for main images */
 }
 
 .image.main:first-child {
@@ -1040,19 +1027,11 @@ input[type="radio"] + label:before {
 }
 
 .image.fill {
+    position: absolute; /* Absolutely positioned */
+    top: 0; /* Top position */
+    left: 0; /* Left position */
+    width: 100%; /* Full width */
     height: 100%; /* Full height */
-    left: 0; /* Left position */
-    position: absolute; /* Absolutely positioned */
-    top: 0; /* Top position */
-    width: 100%; /* Full width */
-}
-
-.image.fill img {
-    height: 100%; /* Full height for fill images */
-    left: 0; /* Left position */
-    position: absolute; /* Absolutely positioned */
-    top: 0; /* Top position */
-    width: 100%; /* Full width */
 }
 
 /* List */
@@ -1102,11 +1081,11 @@ ul.items {
 
 ul.items > li {
     padding-left: 0; /* No padding for items */
-    margin: 0 0 3rem 0; /* Margin adjustments */
+    margin: 1 0 1rem 0; /* Margin adjustments */
 }
 
 ul.items > li > h3 {
-    margin: 0 0 1rem 0; /* Margin adjustments for h3 */
+    margin: 1 0 1rem 0; /* Margin adjustments for h3 */
 }
 
 ul.items > li > :last-child {
@@ -1119,9 +1098,10 @@ ul.items > li:last-child {
 
 @media screen and (max-width: 736px) {
     ul.items > li {
-        margin: 0 0 2rem 0; /* Adjust margin for smaller screens */
+        margin: 0 0 0rem 0; /* Adjust margin for smaller screens */
     }
 }
+
 
 dl {
     margin: 0 0 2rem 0; /* Margin adjustments for definition list */
