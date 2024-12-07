@@ -56,17 +56,17 @@ body {
 .intro .group {
     margin: 0 auto;
 }
-
 .intro h1, .intro h2, .intro h3, .intro p {
     margin: 0 auto;
-    text-align: right;
+    text-align: center;
 }
 
 ol, ul {
     list-style: none;
 }
+
 @media screen and (max-width: 736px) {
-    h1, h2, h3, h4, h5, h6 {
+    .intro h1, .intro h2, .intro h3, .intro h4, .intro h5, .intro h6 {
         text-align: center;
         margin: 0 auto;
     }
@@ -315,7 +315,7 @@ hr.major {
         margin-left: 0;
         margin: 0;
     }
-
+    
     .row > * {
         margin: 0.5rem 0;
         width: 100%;
@@ -1350,7 +1350,7 @@ ul.actions a.arrow:active {
 }
 
 /* Hover Effect for the Arrow */
-a.arrow:hover {
+.arrow:hover {
     transform: scale(1.1); /* Enlarge the arrow on hover */
     opacity: 0.5; /* Light opacity adjustment */
 }
@@ -1727,7 +1727,7 @@ a.arrow:hover {
     position: relative; /* Relative positioning */
     display: block; /* Block display */
     margin: 0; /* No margin */
-    align-items: center; /* Align items */
+    align-items: center; /* Align items vertically */
 }
 
 /* After pseudo-element: Dot on the right side of the text */
@@ -2301,11 +2301,10 @@ form {
 textarea,
 input[type="text"],
 input[type="email"] {
-    width: 100% auto;
-    margin: 4px 0px;
+    margin: 4px 0; /* Removed unnecessary 'px' for zero */
     padding: 20px; 
     border-radius: 4px; 
-    border: 1.5px solid #000000;
+    border: 1.5px solid #000; /* Shortened hex code */
     font-size: 0.8rem; 
 }
 
@@ -2460,7 +2459,7 @@ input[type="submit"]:hover {
     .social.icons .icon + .icon {
         margin-top: 10px; 
     }
-} 
+}
 
 #wrapper section.intro > header h1,
 #wrapper section.intro > header h2,
@@ -2479,4 +2478,22 @@ input[type="submit"]:hover {
 
 #wrapper section.intro > header h3 {
     font-size: 1.5rem; /* Adjust font size for smaller headers */
-}   
+}  
+.arrow {
+    height: 5vh; /* Use viewport height for size */
+    width: 5vh;  /* Maintain aspect ratio */	
+    position: absolute; /* Use absolute positioning */	 
+    cursor: pointer; 	
+    z-index: 1; /* Ensure the arrow is on top of the image */
+
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Separate transition properties for better performance */
+    text-decoration: none !important; 	
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M442.53,346.28L293.65,495.16c-0.33,0.33-0.7,0.62-1.05,0.94c-9.16,9.77-22.15,15.9-36.6,15.9 c-14.44,0-27.43-6.13-36.59-15.88c-0.35-0.33-0.72-0.62-1.06-0.96L69.47,346.28c-19.62-19.62-19.62-51.44,0-71.05 c19.62-19.62,51.43-19.62,71.06,0l65.23,65.23V50.24C205.76,22.5,228.25,0,256,0s50.24,22.5,50.24,50.24v290.21l65.23-65.23 c19.62-19.62,51.43-19.62,71.05,0C462.15,294.84,462.15,326.66,442.53,346.28z'/%3E %3C/svg%3E");	
+    background-repeat: no-repeat;	
+    right: 50%; /* Start centered */
+    transform: translateX(50%); /* Center it */
+}
+
+.arrow:hover {
+    transform: translateX(50%); /* Keep it centered on hover */
+}
