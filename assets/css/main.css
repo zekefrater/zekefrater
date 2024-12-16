@@ -196,6 +196,11 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+}
+
 h1 {
     font-size: 5rem; /* Increase heading size */
     font-weight: 700;
