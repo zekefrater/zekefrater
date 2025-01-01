@@ -2496,26 +2496,31 @@ body {
 /* Dark Mode (CSS Media Query) */
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: grey;
+    background-color: #333;  /* Dark grey background for dark mode */
     color: white;  /* Lighter text color for dark mode */
   }
 }
 
 /* Dark Mode (Manual Toggle Class) */
 body.dark {
-  background-color: grey;
+  background-color: #333;  /* Dark grey background for dark mode */
   color: white;  /* Lighter text color for dark mode */
 }
 
-/* Button styling */
+/* Button Styling */
 button {
+  position: fixed;           /* Fixed position to stay at the corner */
+  top: 20px;                 /* Space from top */
+  right: 20px;               /* Space from right */
   padding: 10px 20px;
   background-color: #ddd;
   border: none;
   cursor: pointer;
   font-size: 16px;
+  z-index: 1000;             /* Ensure the button is above other elements */
+  transition: background-color 0.3s ease; /* Smooth transition for background */
 }
 
 button:hover {
-  background-color: #bbb;
+  background-color: #bbb;    /* Slightly darker on hover */
 }
