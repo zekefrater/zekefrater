@@ -216,3 +216,31 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Iframe container not found.");
     }
 });
+
+<script>
+  // Access the toggle button and check the current theme preference in localStorage
+  const toggleButton = document.getElementById('toggle-theme');
+  const currentTheme = localStorage.getItem('theme');
+
+  // If a theme is stored in localStorage, apply it
+  if (currentTheme) {
+    document.body.classList.add(currentTheme);
+  } else {
+    // If no theme is saved, apply the system's preferred theme
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.body.classList.add('dark');
+    }
+  }
+
+  // Add event listener to toggle the theme when the button is clicked
+  toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    
+    // Save the user's theme preference in localStorage
+    if (document.body.classList.contains('dark')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  });
+</script>
