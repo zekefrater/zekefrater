@@ -2244,8 +2244,8 @@ body.is-ie #wrapper section > footer {
 /* Video Section Styling (Preserve Margins and Framing) */
 .youtube-embed-container,
 .responsive-iframe-container {
-    display:  block;
-    position:   relative;
+    display: block;
+    position: relative;
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
     overflow: hidden;
     margin: 1rem 0; /* Consistent margins */
@@ -2266,7 +2266,6 @@ body.is-ie #wrapper section > footer {
     border: none;
     border-radius: 8px; 
 }
-
 /* Reset styles */
 * {
     margin: 0;
@@ -2488,32 +2487,13 @@ textarea {
 
 /* Default (Light Mode) */
 body {
-  background-color: white;
-  color: black;  /* Text color in light mode */
+  background-color: inherit;
+  color: inherit;  /* Text color in light mode */
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Intro Section */
-.intro {
-  background-image: url('path-to-your-image.jpg'); /* Your intro image */
-  background-size: cover;
-  background-position: center;
-  height: 100vh;  /* Adjust based on your layout */
-  color: white;  /* Text color for intro section */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.intro h1 {
-  font-size: 3em;
-  font-weight: bold;
-  margin: 0;
-}
-
 /* Ensure all text elements are black in light mode */
-a, p, h1, h2, h3 {
+a, p, h1, h2, h3, h4, h5 {
   color: black;
 }
 
@@ -2526,7 +2506,7 @@ a, p, h1, h2, h3 {
 
   /* Dark mode for the intro section */
   .intro {
-    background-image: url('path-to-your-image.jpg'); /* Keep the same intro image */
+    background-image: url('InternationalHospitality.jpg'); /* Keep the same intro image */
     background-color: #333; /* Optional: you can add a dark overlay for better contrast */
     color: white;  /* Text color in dark mode */
   }
@@ -2536,7 +2516,7 @@ a, p, h1, h2, h3 {
   }
 
   /* Make sure all text elements are white in dark mode */
-  a, p, h1, h2, h3 {
+  a, p, h1, h2, h3, h4, h5 {
     color: white !important;
   }
 }

@@ -217,31 +217,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    
-    // Check for saved theme in localStorage
-    const currentTheme = localStorage.getItem('theme');
-
-    // Apply the saved theme, or default to system preference if none exists
-    if (currentTheme) {
-      document.body.classList.add(currentTheme);
-    } else {
-      // Default to the system's theme preference
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-      }
-    }
-
-    // Listen for system theme changes and update theme dynamically
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-      if (e.matches) {
-        document.body.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        document.body.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-      }
-    });
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+	if (e.matches) {
+	  document.body.classList.add('dark');
+	  document.body.style.backgroundColor = '#404040'; // Set the desired dark background color
+	} else {
+	  document.body.classList.remove('dark');
+	  document.body.style.backgroundColor = ''; // Reset to default background color
+	}
   });
-</script>
+  
