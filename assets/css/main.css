@@ -2493,10 +2493,50 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Dark Mode (System Preference) */
+/* Intro Section */
+.intro {
+  background-image: url('path-to-your-image.jpg'); /* Your intro image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;  /* Adjust based on your layout */
+  color: white;  /* Text color for intro section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Ensure all text elements are black in light mode */
+a, p, h1, h2, h3 {
+  color: black;
+}
+
+/* Dark Mode (CSS Media Query) */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #404040;  /* Dark grey background for dark mode */
-    color: white;  /* White text color in dark mode */
+    color: white;  /* Text color in dark mode */
+  }
+
+  /* Dark mode for the intro section */
+  .intro {
+    background-image: url('path-to-your-image.jpg'); /* Keep the same intro image */
+    background-color: #333; /* Optional: you can add a dark overlay for better contrast */
+    color: white;  /* Text color in dark mode */
+  }
+
+  .intro h1 {
+    color: white;  /* Ensure heading text is white in dark mode */
+  }
+
+  /* Make sure all text elements are white in dark mode */
+  a, p, h1, h2, h3 {
+    color: white !important;
   }
 }
