@@ -2486,17 +2486,36 @@ textarea {
     transform: translateX(50%); /* Keep it centered on hover */
 }
 
-/* Light Mode (default) */
+/* Default (Light Mode) */
 body {
   background-color: white;
-  color: black;
+  color: black;  /* Text color in light mode */
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Dark Mode */
+/* Dark Mode (CSS Media Query) */
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: black;
-    color: white;
+    background-color: grey;
+    color: white;  /* Lighter text color for dark mode */
   }
+}
+
+/* Dark Mode (Manual Toggle Class) */
+body.dark {
+  background-color: grey;
+  color: white;  /* Lighter text color for dark mode */
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #bbb;
 }
