@@ -2493,10 +2493,10 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Dark Mode (CSS Media Query) */
+/* Dark Mode (System Preference) */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #404040;  /* Dark grey background for dark mode */
-    color: white;  /* Lighter text color for dark mode */
+    color: white;  /* White text color in dark mode */
   }
 }
