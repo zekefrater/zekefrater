@@ -21,6 +21,24 @@ section, summary, time, mark, audio, video {
     vertical-align: baseline;
 }
 
+
+/* Ensure consistent font family across all elements */
+html, header, body, div, span, label, input, textarea, select {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+/* Additional styles for specific elements */
+pre {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 0.9rem; /* Maintain existing size for pre */
+}
+
+.social.icons .icon .label {
+    font-size: 0.9rem; 
+    color: inherit; 
+}
+
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
@@ -145,7 +163,6 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-size: 1rem;
     font-weight: 300;
     letter-spacing: 0.05em;
@@ -189,7 +206,6 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
     color: #000;
-    font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-weight: 600;
     line-height: 1.75;
     margin: 0; /* Reset margin */
@@ -257,14 +273,12 @@ blockquote {
 code {
     background: rgba(144, 144, 144, 0.1);
     border-radius: 0.325rem;
-    font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-size: 0.9rem;
     margin: 0 0rem;
     padding: 0rem 0rem;
 }
 
 pre {
-    font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-size: 0.9rem;
     margin: 0 0 0; /* Consistent margin */
     width: 100%;
@@ -471,7 +485,6 @@ button,
     color: #000000 !important;
     cursor: pointer;
     display: inline-block;
-    font-family: "Raleway", Helvetica, sans-serif;
     font-size: 0.6rem;
     font-weight: 600;
     height: 3rem;
@@ -728,7 +741,6 @@ textarea:focus {
 label {
     color: #000000; /* Label color */
     display: block; /* Block display */
-    font-family: "Source Sans Pro", Helvetica, sans-serif;/* Font family */
     font-size: 1rem; /* Font size */
     font-weight: 600; /* Font weight */
     letter-spacing: 0.175em; /* Letter spacing */
@@ -802,7 +814,6 @@ input[type="radio"] + label {
     color: #000000; /* Label color */
     cursor: pointer; /* Pointer cursor */
     display: inline-block; /* Inline-block for labels */
-    font-family: "Source Sans Pro", Helvetica, sans-serif; /* Font family */
     font-size: 1rem; /* Font size */
     font-weight: 300; /* Font weight */
     letter-spacing: 0.0375em; /* Letter spacing */
@@ -1589,7 +1600,6 @@ ul.actions a.arrow:active {
 }
 
 #wrapper section > header h1 + p {
-    font-family: "Source Sans Pro", Helvetica, sans-serif; /* Font family */
     font-size: 1rem; /* Font size */
     letter-spacing: 0.175em; /* Letter spacing */
     line-height: 2.5; /* Line height */
@@ -2274,7 +2284,6 @@ body.is-ie #wrapper section > footer {
 }
 
 html, body {
-    font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-size: 1rem;
     line-height: 1.6;
     background: #ffffff;
