@@ -189,7 +189,7 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
     color: #000;
-    font-family: "Raleway", Helvetica, sans-serif;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-weight: 600;
     line-height: 1.75;
     margin: 0; /* Reset margin */
@@ -257,14 +257,14 @@ blockquote {
 code {
     background: rgba(144, 144, 144, 0.1);
     border-radius: 0.325rem;
-    font-family: "Courier New", monospace;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-size: 0.9rem;
     margin: 0 0rem;
     padding: 0rem 0rem;
 }
 
 pre {
-    font-family: "Courier New", monospace;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-size: 0.9rem;
     margin: 0 0 0; /* Consistent margin */
     width: 100%;
@@ -728,7 +728,7 @@ textarea:focus {
 label {
     color: #000000; /* Label color */
     display: block; /* Block display */
-    font-family: "Raleway", Helvetica, sans-serif; /* Font family */
+    font-family: "Source Sans Pro", Helvetica, sans-serif;/* Font family */
     font-size: 1rem; /* Font size */
     font-weight: 600; /* Font weight */
     letter-spacing: 0.175em; /* Letter spacing */
@@ -1589,7 +1589,7 @@ ul.actions a.arrow:active {
 }
 
 #wrapper section > header h1 + p {
-    font-family: "Raleway", Helvetica, sans-serif; /* Font family */
+    font-family: "Source Sans Pro", Helvetica, sans-serif; /* Font family */
     font-size: 1rem; /* Font size */
     letter-spacing: 0.175em; /* Letter spacing */
     line-height: 2.5; /* Line height */
